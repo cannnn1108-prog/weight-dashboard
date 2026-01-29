@@ -106,9 +106,13 @@ const DataManager = {
 
     const cols = data.table.cols.map(col => col.label || '');
     const rows = data.table.rows.map(row => {
-      return row.c.map(cell => {
+      return row.c.map((cell, idx) => {
         if (!cell) return '';
         if (cell.v === null || cell.v === undefined) return '';
+        // 日付列（最初の列）はフォーマット済みの値を優先
+        if (idx === 0 && cell.f) {
+          return cell.f;
+        }
         return cell.v;
       });
     });
@@ -140,6 +144,13 @@ const DataManager = {
           const day = String(match[3]).padStart(2, '0');
           dateStr = `${year}-${month}-${day}`;
         }
+      } else if (typeof dateStr === 'string' && dateStr.match(/^\d{4}\/\d{1,2}\/\d{1,2}$/)) {
+        // "2026/1/8" 形式
+        const parts = dateStr.split('/');
+        const year = parts[0];
+        const month = parts[1].padStart(2, '0');
+        const day = parts[2].padStart(2, '0');
+        dateStr = `${year}-${month}-${day}`;
       } else if (typeof dateStr === 'string' && dateStr.match(/^\d{1,2}\/\d{1,2}$/)) {
         // "1/8" 形式
         const parts = dateStr.split('/');

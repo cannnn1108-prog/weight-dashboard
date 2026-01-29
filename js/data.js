@@ -176,12 +176,19 @@ const DataManager = {
         dateStr = dateStr.toISOString().split('T')[0];
       }
 
+      // 空文字列やundefinedを正しくnullに変換
+      const parseNum = (val) => {
+        if (val === null || val === undefined || val === '') return null;
+        const num = Number(val);
+        return isNaN(num) ? null : num;
+      };
+
       const entry = {
         date: dateStr,
-        weight: row[1] ? Number(row[1]) : null,
-        waist: row[2] ? Number(row[2]) : null,
-        steps: row[3] ? Number(row[3]) : null,
-        calories_intake: row[4] ? Number(row[4]) : null,
+        weight: parseNum(row[1]),
+        waist: parseNum(row[2]),
+        steps: parseNum(row[3]),
+        calories_intake: parseNum(row[4]),
         protein: null,
         fat: null,
         carbs: null,
@@ -511,11 +518,20 @@ const DataManager = {
       stepsData: stepsData,
       yesterdayCalories: this.getYesterdayCalories(sortedDaily, goals),
 
-      // テーブル用（新しい順、データがある行のみ）
-      recentLogs: [...sortedDaily]
-        .filter(d => d.weight !== null || d.calories_intake !== null || d.waist !== null || d.steps !== null)
-        .reverse()
-        .slice(0, 14),
+      // テーブル用（新しい順、今日以前かつデータがある行のみ）
+      recentLogs: (() => {
+        const today = new Date();
+        today.setHours(23, 59, 59, 999);  // 今日の終わりまで含める
+        return [...sortedDaily]
+          .filter(d => {
+            const entryDate = new Date(d.date);
+            // 今日以前 かつ データがある行のみ
+            return entryDate <= today &&
+              (d.weight !== null || d.calories_intake !== null || d.waist !== null || d.steps !== null);
+          })
+          .reverse()
+          .slice(0, 14);
+      })(),
 
       // 食事データ
       meals: data.meals || {},

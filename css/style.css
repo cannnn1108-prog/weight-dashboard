@@ -687,6 +687,15 @@ footer {
   color: var(--accent-secondary);
 }
 
+/* Calorie balance display */
+.calorie-balance {
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+.calorie-balance.positive { color: var(--success); }
+.calorie-balance.warning { color: var(--warning); }
+.calorie-balance.negative { color: var(--danger); }
+
 /* PFC display in table */
 .pfc-display {
   font-size: 0.75rem;

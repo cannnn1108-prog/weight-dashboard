@@ -183,16 +183,45 @@ const DataManager = {
         return isNaN(num) ? null : num;
       };
 
+      // PFC列をパース（例: "P150 F60 C200" or "150/60/200"）
+      const parsePFC = (val) => {
+        if (!val || val === '') return { protein: null, fat: null, carbs: null };
+
+        // "P150 F60 C200" 形式
+        const pfcMatch = String(val).match(/P\s*(\d+)\s*F\s*(\d+)\s*C\s*(\d+)/i);
+        if (pfcMatch) {
+          return {
+            protein: Number(pfcMatch[1]),
+            fat: Number(pfcMatch[2]),
+            carbs: Number(pfcMatch[3])
+          };
+        }
+
+        // "150/60/200" 形式
+        const slashMatch = String(val).match(/(\d+)\s*\/\s*(\d+)\s*\/\s*(\d+)/);
+        if (slashMatch) {
+          return {
+            protein: Number(slashMatch[1]),
+            fat: Number(slashMatch[2]),
+            carbs: Number(slashMatch[3])
+          };
+        }
+
+        return { protein: null, fat: null, carbs: null };
+      };
+
+      const pfc = parsePFC(row[4]);
+
       const entry = {
         date: dateStr,
         weight: parseNum(row[1]),
         waist: parseNum(row[2]),
         steps: parseNum(row[3]),
-        calories_intake: parseNum(row[4]),
-        protein: null,
-        fat: null,
-        carbs: null,
-        notes: row[5] || ''
+        calories_intake: parseNum(row[5]),  // カロリーは列5に移動
+        protein: pfc.protein,
+        fat: pfc.fat,
+        carbs: pfc.carbs,
+        notes: row[6] || ''  // メモは列6に移動
       };
 
       data.push(entry);
@@ -231,6 +260,8 @@ const DataManager = {
       start_date: '2026-01-08',
       basal_metabolism: 2200,
       height: 184,
+      age: 30,      // 年齢（BMR計算用）
+      gender: 'male', // 性別（BMR計算用）
       goals: {
         calories: 2600,
         protein: 195,
@@ -239,6 +270,28 @@ const DataManager = {
         pfc_ratio: '3:2:5'
       }
     };
+  },
+
+  /**
+   * 推定消費カロリーを計算
+   * Harris-Benedict式で基礎代謝を計算し、歩数から活動代謝を加算
+   */
+  calculateEstimatedBurn(weight, steps, settings) {
+    if (!weight) return null;
+
+    // 基礎代謝（BMR）: Harris-Benedict式（男性）
+    // BMR = 88.362 + (13.397 × 体重kg) + (4.799 × 身長cm) - (5.677 × 年齢)
+    const height = settings.height || 184;
+    const age = settings.age || 30;
+    const bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+
+    // 歩数による消費カロリー（おおよそ1歩 = 0.04-0.05 kcal）
+    const stepsCalories = steps ? steps * 0.045 : 0;
+
+    // 基礎活動（座り仕事）として BMR × 1.2 + 歩数消費
+    const totalBurn = Math.round(bmr * 1.2 + stepsCalories);
+
+    return totalBurn;
   },
 
   /**

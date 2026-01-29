@@ -605,7 +605,7 @@ const App = {
     const goals = settings.goals || {};
 
     if (!logs || logs.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="7" class="empty-state"><p>データがありません</p></td></tr>';
+      tbody.innerHTML = '<tr><td colspan="8" class="empty-state"><p>データがありません</p></td></tr>';
       return;
     }
 
@@ -626,20 +626,33 @@ const App = {
         }
       }
 
-      // カロリー表示（食事詳細がある場合はクリック可能）
+      // 摂取カロリー表示（食事詳細がある場合はクリック可能）
       let caloriesHtml = '-';
       if (log.calories_intake) {
         if (hasMeals) {
-          caloriesHtml = `<span class="calorie-clickable" data-date="${log.date}">${log.calories_intake.toLocaleString()} kcal</span>`;
+          caloriesHtml = `<span class="calorie-clickable" data-date="${log.date}">${log.calories_intake.toLocaleString()}</span>`;
         } else {
-          caloriesHtml = `${log.calories_intake.toLocaleString()} kcal`;
+          caloriesHtml = `${log.calories_intake.toLocaleString()}`;
+        }
+      }
+
+      // 推定消費カロリー計算
+      const estimatedBurn = DataManager.calculateEstimatedBurn(log.weight, log.steps, settings);
+      let burnHtml = '-';
+      if (estimatedBurn) {
+        burnHtml = `${estimatedBurn.toLocaleString()}`;
+        // 収支（摂取 - 消費）
+        if (log.calories_intake) {
+          const balance = log.calories_intake - estimatedBurn;
+          const balanceClass = balance < 0 ? 'positive' : (balance > 300 ? 'negative' : 'warning');
+          burnHtml += ` <span class="calorie-balance ${balanceClass}">(${balance > 0 ? '+' : ''}${balance})</span>`;
         }
       }
 
       // 歩数表示
       let stepsHtml = '-';
       if (log.steps !== null && log.steps !== undefined) {
-        stepsHtml = `${log.steps.toLocaleString()} 歩`;
+        stepsHtml = `${log.steps.toLocaleString()}`;
       }
 
       return `
@@ -649,6 +662,7 @@ const App = {
           <td>${log.waist ? `${log.waist} cm` : '-'}</td>
           <td>${stepsHtml}</td>
           <td>${caloriesHtml}</td>
+          <td>${burnHtml}</td>
           <td>${pfcHtml}</td>
           <td class="notes-cell">${log.notes || '-'}</td>
         </tr>

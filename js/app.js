@@ -212,8 +212,9 @@ const App = {
       descEl.textContent = plan.description || '';
     }
 
-    // 目標値
-    document.getElementById('targetCalories').textContent = `${goals.calories?.toLocaleString() || 2600} kcal`;
+    // 目標値（現在の日付に応じた目標）
+    const todayTarget = DataManager.getCalorieTargetForDate(new Date().toISOString().split('T')[0], settings);
+    document.getElementById('targetCalories').textContent = `${todayTarget.toLocaleString()} kcal`;
     document.getElementById('targetProtein').textContent = `${goals.protein || 195}g`;
     document.getElementById('targetFat').textContent = `${goals.fat || 58}g`;
     document.getElementById('targetCarbs').textContent = `${goals.carbs || 325}g`;
@@ -605,7 +606,7 @@ const App = {
     const goals = settings.goals || {};
 
     if (!logs || logs.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="8" class="empty-state"><p>データがありません</p></td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" class="empty-state"><p>データがありません</p></td></tr>';
       return;
     }
 
@@ -626,14 +627,10 @@ const App = {
         }
       }
 
-      // 摂取カロリー表示（食事詳細がある場合はクリック可能）
+      // 摂取カロリー表示（常にクリック可能）
       let caloriesHtml = '-';
       if (log.calories_intake) {
-        if (hasMeals) {
-          caloriesHtml = `<span class="calorie-clickable" data-date="${log.date}">${log.calories_intake.toLocaleString()}</span>`;
-        } else {
-          caloriesHtml = `${log.calories_intake.toLocaleString()}`;
-        }
+        caloriesHtml = `<span class="calorie-clickable" data-date="${log.date}" data-notes="${encodeURIComponent(log.notes || '')}">${log.calories_intake.toLocaleString()}</span>`;
       }
 
       // 推定消費カロリー計算
@@ -664,7 +661,6 @@ const App = {
           <td>${caloriesHtml}</td>
           <td>${burnHtml}</td>
           <td>${pfcHtml}</td>
-          <td class="notes-cell">${log.notes || '-'}</td>
         </tr>
       `;
     }).join('');
@@ -673,7 +669,8 @@ const App = {
     tbody.querySelectorAll('.calorie-clickable').forEach(el => {
       el.addEventListener('click', () => {
         const date = el.dataset.date;
-        this.showMealModal(date);
+        const notes = decodeURIComponent(el.dataset.notes || '');
+        this.showMealModal(date, notes);
       });
     });
   },
@@ -681,9 +678,9 @@ const App = {
   /**
    * 食事詳細モーダルを表示
    */
-  showMealModal(date) {
+  showMealModal(date, notes = '') {
     const meals = DataManager.getMealsForDate(date);
-    if (!meals) return;
+    const log = this.chartData.recentLogs.find(l => l.date === date);
 
     const modal = document.getElementById('mealModal');
     const modalDate = document.getElementById('modalDate');
@@ -694,46 +691,63 @@ const App = {
 
     // 合計を計算
     let totalCal = 0, totalP = 0, totalF = 0, totalC = 0;
-    const mealTypes = { breakfast: '朝食', lunch: '昼食', dinner: '夕食', snack: '間食' };
 
-    Object.keys(meals).forEach(type => {
-      meals[type].forEach(item => {
-        totalCal += item.calories || 0;
-        totalP += item.protein || 0;
-        totalF += item.fat || 0;
-        totalC += item.carbs || 0;
+    if (meals) {
+      const mealTypes = { breakfast: '朝食', lunch: '昼食', dinner: '夕食', snack: '間食' };
+
+      Object.keys(meals).forEach(type => {
+        meals[type].forEach(item => {
+          totalCal += item.calories || 0;
+          totalP += item.protein || 0;
+          totalF += item.fat || 0;
+          totalC += item.carbs || 0;
+        });
       });
-    });
 
-    document.getElementById('modalTotalCalories').textContent = `${Math.round(totalCal).toLocaleString()} kcal`;
-    document.getElementById('modalTotalProtein').textContent = `${Math.round(totalP)}g`;
-    document.getElementById('modalTotalFat').textContent = `${Math.round(totalF)}g`;
-    document.getElementById('modalTotalCarbs').textContent = `${Math.round(totalC)}g`;
-
-    // 食事詳細を表示
-    let detailsHtml = '';
-    Object.keys(mealTypes).forEach(type => {
-      if (meals[type] && meals[type].length > 0) {
-        detailsHtml += `
-          <div class="meal-section">
-            <h3>${mealTypes[type]}</h3>
-            ${meals[type].map(item => `
-              <div class="meal-item">
-                <span class="meal-item-name">${item.name}</span>
-                <div class="meal-item-nutrition">
-                  <span>${item.calories}kcal</span>
-                  <span>P${item.protein}g</span>
-                  <span>F${item.fat}g</span>
-                  <span>C${item.carbs}g</span>
+      // 食事詳細を表示
+      let detailsHtml = '';
+      Object.keys(mealTypes).forEach(type => {
+        if (meals[type] && meals[type].length > 0) {
+          detailsHtml += `
+            <div class="meal-section">
+              <h3>${mealTypes[type]}</h3>
+              ${meals[type].map(item => `
+                <div class="meal-item">
+                  <span class="meal-item-name">${item.name}</span>
+                  <div class="meal-item-nutrition">
+                    <span>${item.calories}kcal</span>
+                    <span>P${item.protein}g</span>
+                    <span>F${item.fat}g</span>
+                    <span>C${item.carbs}g</span>
+                  </div>
                 </div>
-              </div>
-            `).join('')}
-          </div>
-        `;
+              `).join('')}
+            </div>
+          `;
+        }
+      });
+      mealDetails.innerHTML = detailsHtml;
+    } else {
+      // mealsがない場合はログからデータを取得
+      if (log) {
+        totalCal = log.calories_intake || 0;
+        totalP = log.protein || 0;
+        totalF = log.fat || 0;
+        totalC = log.carbs || 0;
       }
-    });
+      // メモがあれば表示
+      const noteText = notes || (log && log.notes) || '';
+      if (noteText) {
+        mealDetails.innerHTML = `<div class="meal-notes"><p>${noteText}</p></div>`;
+      } else {
+        mealDetails.innerHTML = '<p class="empty-state">食事詳細データがありません</p>';
+      }
+    }
 
-    mealDetails.innerHTML = detailsHtml || '<p class="empty-state">食事データがありません</p>';
+    document.getElementById('modalTotalCalories').textContent = totalCal ? `${Math.round(totalCal).toLocaleString()} kcal` : '--';
+    document.getElementById('modalTotalProtein').textContent = totalP ? `${Math.round(totalP)}g` : '--';
+    document.getElementById('modalTotalFat').textContent = totalF ? `${Math.round(totalF)}g` : '--';
+    document.getElementById('modalTotalCarbs').textContent = totalC ? `${Math.round(totalC)}g` : '--';
 
     // モーダルを表示
     modal.classList.remove('hidden');

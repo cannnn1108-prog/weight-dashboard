@@ -263,13 +263,29 @@ const DataManager = {
       age: 30,      // 年齢（BMR計算用）
       gender: 'male', // 性別（BMR計算用）
       goals: {
-        calories: 2600,
+        calories: 2700,  // 1/20以降の目標
+        calories_before_0120: 2600,  // 1/20以前の目標
         protein: 195,
         fat: 58,
         carbs: 325,
         pfc_ratio: '3:2:5'
       }
     };
+  },
+
+  /**
+   * 日付に応じたカロリー目標を取得
+   */
+  getCalorieTargetForDate(dateStr, settings) {
+    const date = new Date(dateStr);
+    const changeDate = new Date('2026-01-20');
+    const goals = settings.goals || {};
+
+    if (date >= changeDate) {
+      return goals.calories || 2700;
+    } else {
+      return goals.calories_before_0120 || 2600;
+    }
   },
 
   /**
@@ -543,11 +559,11 @@ const DataManager = {
         targetLine: Array(sortedDaily.length).fill(settings.target_weight)
       },
 
-      // カロリーグラフ用
+      // カロリーグラフ用（日付に応じた目標線）
       calories: {
         labels: sortedDaily.map(d => this.formatDate(d.date)),
         intake: sortedDaily.map(d => d.calories_intake || null),
-        targetLine: Array(sortedDaily.length).fill(goals.calories)
+        targetLine: sortedDaily.map(d => this.getCalorieTargetForDate(d.date, settings))
       },
 
       // 腹囲推移用

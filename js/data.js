@@ -109,9 +109,24 @@ const DataManager = {
       return row.c.map((cell, idx) => {
         if (!cell) return '';
         if (cell.v === null || cell.v === undefined) return '';
-        // 日付列（最初の列）はフォーマット済みの値を優先
-        if (idx === 0 && cell.f) {
-          return cell.f;
+
+        // 日付列（最初の列）の処理
+        if (idx === 0) {
+          // フォーマット済みの値があればそれを使用
+          if (cell.f) {
+            return cell.f;
+          }
+          // Date(year,month,day) 形式を変換
+          const val = cell.v;
+          if (typeof val === 'string' && val.startsWith('Date(')) {
+            const match = val.match(/Date\((\d+),(\d+),(\d+)\)/);
+            if (match) {
+              const year = match[1];
+              const month = String(Number(match[2]) + 1).padStart(2, '0');
+              const day = String(match[3]).padStart(2, '0');
+              return `${year}/${month}/${day}`;
+            }
+          }
         }
         return cell.v;
       });

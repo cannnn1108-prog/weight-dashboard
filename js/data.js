@@ -511,8 +511,11 @@ const DataManager = {
       stepsData: stepsData,
       yesterdayCalories: this.getYesterdayCalories(sortedDaily, goals),
 
-      // テーブル用（新しい順）
-      recentLogs: [...sortedDaily].reverse().slice(0, 14),
+      // テーブル用（新しい順、データがある行のみ）
+      recentLogs: [...sortedDaily]
+        .filter(d => d.weight !== null || d.calories_intake !== null || d.waist !== null || d.steps !== null)
+        .reverse()
+        .slice(0, 14),
 
       // 食事データ
       meals: data.meals || {},

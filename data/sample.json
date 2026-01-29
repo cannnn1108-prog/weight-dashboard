@@ -1,0 +1,459 @@
+{
+  "settings": {
+    "target_weight": 90,
+    "target_steps": 10000,
+    "start_weight": 119.2,
+    "start_date": "2026-01-08",
+    "basal_metabolism": 2200,
+    "height": 184,
+    "target_body_fat": 20,
+    "goals": {
+      "calories": 2700,
+      "protein": 200,
+      "fat": 60,
+      "carbs": 340,
+      "pfc_ratio": "3:2:5"
+    },
+    "pfc_targets_by_calories": [
+      { "calories": 3400, "protein": 220, "fat": 75, "carbs": 490 },
+      { "calories": 3200, "protein": 220, "fat": 65, "carbs": 460 },
+      { "calories": 3000, "protein": 220, "fat": 65, "carbs": 400 },
+      { "calories": 2800, "protein": 200, "fat": 65, "carbs": 380 },
+      { "calories": 2700, "protein": 200, "fat": 60, "carbs": 360 },
+      { "calories": 2600, "protein": 195, "fat": 58, "carbs": 325 }
+    ]
+  },
+  "daily_log": [
+    {
+      "date": "2026-01-08",
+      "weight": 119.2,
+      "waist": null,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "carbs": null,
+      "fat": null,
+      "notes": "記録開始日"
+    },
+    {
+      "date": "2026-01-09",
+      "weight": 120.6,
+      "waist": null,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "carbs": null,
+      "fat": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-10",
+      "weight": 120.8,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2093,
+      "protein": 94,
+      "fat": 84,
+      "carbs": 304,
+      "notes": "P少なめだった"
+    },
+    {
+      "date": "2026-01-11",
+      "weight": 121.4,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2820,
+      "protein": 120,
+      "fat": 176,
+      "carbs": 401,
+      "notes": "ラーメンとパン系の食事で脂質多く、プロテイン不足"
+    },
+    {
+      "date": "2026-01-12",
+      "weight": 121.4,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2951,
+      "protein": 134.4,
+      "fat": 73.3,
+      "carbs": 421.5,
+      "notes": "P不足・C過多"
+    },
+    {
+      "date": "2026-01-13",
+      "weight": 121.6,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2495,
+      "protein": 196.9,
+      "fat": 54.7,
+      "carbs": 293.0,
+      "notes": "ほぼ理想的なバランス"
+    },
+    {
+      "date": "2026-01-14",
+      "weight": 120.2,
+      "waist": 121,
+      "steps": null,
+      "calories_intake": 2585,
+      "protein": 201.8,
+      "fat": 61.8,
+      "carbs": 292.0,
+      "notes": "ほぼ理想的なバランス"
+    },
+    {
+      "date": "2026-01-15",
+      "weight": 120.4,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": 2745,
+      "protein": 209.1,
+      "fat": 65.4,
+      "carbs": 319.3,
+      "notes": "ほぼ理想的なバランス"
+    },
+    {
+      "date": "2026-01-16",
+      "weight": 120.8,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": 2588,
+      "protein": 194,
+      "fat": 58,
+      "carbs": 324,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-17",
+      "weight": 121.6,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": 2974,
+      "protein": 161.4,
+      "fat": 104.4,
+      "carbs": 344.4,
+      "notes": "F過多・P不足"
+    },
+    {
+      "date": "2026-01-18",
+      "weight": 123.1,
+      "waist": 119,
+      "steps": null,
+      "calories_intake": 2974,
+      "protein": 161,
+      "fat": 104,
+      "carbs": 344,
+      "notes": "珍しく昨日排便が無かった。外食で脂質が多くなった。"
+    },
+    {
+      "date": "2026-01-19",
+      "weight": 122.6,
+      "waist": 119,
+      "steps": null,
+      "calories_intake": 2270,
+      "protein": 153.1,
+      "fat": 54.1,
+      "carbs": 298.6,
+      "notes": "夕食前までのデータ"
+    },
+    {
+      "date": "2026-01-20",
+      "weight": 122.0,
+      "waist": 119,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-21",
+      "weight": 121.0,
+      "waist": 122,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-22",
+      "weight": 120.4,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-23",
+      "weight": 119.6,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-24",
+      "weight": 119.4,
+      "waist": 120,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-25",
+      "weight": 120.8,
+      "waist": null,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-26",
+      "weight": 120.4,
+      "waist": 119,
+      "steps": null,
+      "calories_intake": null,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-27",
+      "weight": 121.4,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2917,
+      "protein": null,
+      "fat": null,
+      "carbs": null,
+      "notes": ""
+    },
+    {
+      "date": "2026-01-28",
+      "weight": null,
+      "waist": null,
+      "steps": null,
+      "calories_intake": 2971,
+      "protein": 199.1,
+      "fat": 73.7,
+      "carbs": 366.0,
+      "notes": "カロリー超過"
+    }
+  ],
+  "meals": {
+    "2026-01-12": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "筋肉のそぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "マイプロテイン クレアチン 3錠", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 },
+        { "name": "マイプロテイン マルチビタミン 1錠", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 },
+        { "name": "イヌリン 小さじ2杯", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "レバニラ炒め 1人前", "calories": 480, "protein": 18.0, "fat": 32.0, "carbs": 28.0 },
+        { "name": "白米 大盛り（350g）", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
+        { "name": "白米 中盛り（250g）", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "餃子 1皿（6個）", "calories": 330, "protein": 12.0, "fat": 18.0, "carbs": 27.0 }
+      ],
+      "dinner": [
+        { "name": "野菜炒め 1人前", "calories": 120, "protein": 3.0, "fat": 8.0, "carbs": 10.0 },
+        { "name": "飲みプロテイン 1.5杯分", "calories": 165, "protein": 37.5, "fat": 2.3, "carbs": 3.0 },
+        { "name": "白米 100g", "calories": 168, "protein": 2.5, "fat": 0.3, "carbs": 37.0 }
+      ]
+    },
+    "2026-01-13": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "飲みプロテイン 1杯", "calories": 110, "protein": 25.0, "fat": 1.5, "carbs": 2.0 },
+        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 }
+      ],
+      "dinner": [
+        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
+        { "name": "鶏つくねハンバーグ 200g", "calories": 300, "protein": 36.0, "fat": 14.0, "carbs": 6.0 },
+        { "name": "鶏そぼろ（調理済み）100g", "calories": 130, "protein": 20.0, "fat": 5.0, "carbs": 1.0 },
+        { "name": "飲みプロテイン 1.5杯", "calories": 165, "protein": 37.5, "fat": 2.3, "carbs": 3.0 }
+      ]
+    },
+    "2026-01-14": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "飲みプロテイン 2杯", "calories": 220, "protein": 50.0, "fat": 3.0, "carbs": 4.0 },
+        { "name": "サプリ類（クレアチン、マルチビタミン、ビタミンB、マグネシウム、イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏つくねハンバーグ 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 },
+        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 }
+      ],
+      "dinner": [
+        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
+        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "目玉焼き 1個", "calories": 90, "protein": 6.5, "fat": 6.5, "carbs": 0.5 }
+      ]
+    },
+    "2026-01-15": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "鶏つくねハンバーグ 200g", "calories": 300, "protein": 36.0, "fat": 14.0, "carbs": 6.0 }
+      ],
+      "dinner": [
+        { "name": "飲みプロテイン 2杯", "calories": 220, "protein": 50.0, "fat": 3.0, "carbs": 4.0 },
+        { "name": "白米 100g", "calories": 168, "protein": 2.5, "fat": 0.3, "carbs": 37.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "豚肉入り野菜炒め 50g", "calories": 60, "protein": 1.5, "fat": 4.0, "carbs": 5.0 },
+        { "name": "スティックパン 1本", "calories": 70, "protein": 2.0, "fat": 2.5, "carbs": 10.0 },
+        { "name": "餅 1.5個（75g）", "calories": 177, "protein": 3.0, "fat": 0.4, "carbs": 39.8 },
+        { "name": "あんこ 15g", "calories": 36, "protein": 0.8, "fat": 0.0, "carbs": 8.5 }
+      ]
+    },
+    "2026-01-17": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "大根おろし 50g", "calories": 9, "protein": 0.2, "fat": 0.0, "carbs": 2.2 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "旨辛チキン 3本（サイゼリヤ）", "calories": 390, "protein": 27.0, "fat": 27.0, "carbs": 12.0 },
+        { "name": "ソーセージピザ 1/4", "calories": 135, "protein": 6.0, "fat": 7.5, "carbs": 12.0 },
+        { "name": "ミートスパゲッティ 二口（50g分）", "calories": 75, "protein": 3.0, "fat": 2.5, "carbs": 10.5 },
+        { "name": "シナモンフォカッチャ 1個", "calories": 275, "protein": 5.5, "fat": 10.0, "carbs": 39.0 },
+        { "name": "コーヒーゼリー 1個", "calories": 40, "protein": 0.5, "fat": 0.0, "carbs": 9.5 }
+      ],
+      "dinner": [
+        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
+        { "name": "納豆 2パック（100g）", "calories": 200, "protein": 16.6, "fat": 10.0, "carbs": 12.2 },
+        { "name": "大根おろし 80g", "calories": 14, "protein": 0.3, "fat": 0.0, "carbs": 3.5 },
+        { "name": "スティックパン バター味 2本（100g）", "calories": 280, "protein": 6.0, "fat": 10.0, "carbs": 40.0 },
+        { "name": "ザバス プロテインパック（20g）", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "チャーハン 100g", "calories": 180, "protein": 4.0, "fat": 6.0, "carbs": 26.0 },
+        { "name": "中華スープ（自作）100g", "calories": 20, "protein": 1.5, "fat": 0.5, "carbs": 2.5 }
+      ]
+    },
+    "2026-01-19": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "ザバス プロテインパック（20g）", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
+        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "鮭弁当（スーパー）", "calories": 650, "protein": 25.0, "fat": 18.0, "carbs": 95.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "オイコス（プロテイン10g）1個", "calories": 90, "protein": 10.0, "fat": 0.0, "carbs": 12.5 },
+        { "name": "納豆 1パック（50g）", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 }
+      ],
+      "snack": [
+        { "name": "串団子（あんこ味）2本", "calories": 220, "protein": 3.0, "fat": 0.6, "carbs": 50.0 },
+        { "name": "ザバス プロテインパック（20g）1本", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
+        { "name": "カットパイン（10切れ）1パック", "calories": 120, "protein": 1.0, "fat": 0.2, "carbs": 29.0 }
+      ]
+    },
+    "2026-01-28": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "脂質の低いツナオムレツ 3つ（180g）", "calories": 270, "protein": 24.0, "fat": 15.0, "carbs": 9.0 }
+      ],
+      "snack": [
+        { "name": "ローソン 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
+        { "name": "ザバス プロテインパック バナナ味（15g）2本", "calories": 140, "protein": 30.0, "fat": 0.0, "carbs": 10.0 },
+        { "name": "カニカマバー 1本", "calories": 70, "protein": 7.0, "fat": 0.5, "carbs": 9.0 },
+        { "name": "ローソン 卵蒸しパン 1個", "calories": 280, "protein": 6.0, "fat": 12.0, "carbs": 38.0 }
+      ],
+      "dinner": [
+        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
+        { "name": "鶏ひき肉 250g", "calories": 325, "protein": 50.0, "fat": 12.5, "carbs": 2.5 }
+      ]
+    }
+  },
+  "weekly_measurements": [
+    {
+      "date": "2026-01-14",
+      "waist": 121
+    },
+    {
+      "date": "2026-01-15",
+      "waist": 120
+    },
+    {
+      "date": "2026-01-18",
+      "waist": 119
+    },
+    {
+      "date": "2026-01-26",
+      "waist": 119
+    }
+  ],
+  "plan": {
+    "current_phase": "減量準備期",
+    "description": "脂肪対筋力アップを目指したトレーニングをしながら、摂取カロリーを本来消費できるカロリーに近づけていく期間",
+    "guidelines": [
+      "摂取カロリーは1週間あたり150〜200kcal増やす",
+      "体重の変化は1日単位ではなく、1週間の平均体重で判断する",
+      "体重が0.3kg以上増えた週が2週続いたら、100kcalだけ摂取カロリーを減らす",
+      "PFCはたんぱく質は1日220g目安（体重×1.8g）",
+      "脂質は少なくとも体重×0.5gを切らないように",
+      "炭水化物は総摂取カロリーの50%を切らないように",
+      "ビタミンやミネラルの確にも注意（足りなければサプリの活用も検討）"
+    ],
+    "target_date": "2027年4月以降",
+    "competition_note": "サマスタの場合、4月から大会が始まる傾向のため"
+  },
+  "goal_history": [
+    {
+      "date": "2026-01-08",
+      "title": "減量準備期スタート",
+      "note": "トレーナーと相談して計画開始",
+      "calories": 2600,
+      "protein": 195,
+      "fat": 58,
+      "carbs": 325,
+      "current": false
+    },
+    {
+      "date": "2026-01-27",
+      "title": "目標カロリー引き上げ",
+      "note": "先週の経過を見て、カロリーを100kcal増やす指示",
+      "calories": 2700,
+      "protein": 200,
+      "fat": 60,
+      "carbs": 340,
+      "current": true
+    }
+  ]
+}

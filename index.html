@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>減量管理ダッシュボード</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ja.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>減量管理ダッシュボード</h1>
+      <div class="header-controls">
+        <select id="dataSource">
+          <option value="sheets" selected>Google Sheets</option>
+          <option value="local">ローカルデータ</option>
+        </select>
+        <button id="themeToggle" class="btn-icon" aria-label="テーマ切替">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Google Sheets設定パネル（公開URLで取得するため非表示） -->
+    <div id="sheetsConfig" class="config-panel hidden" style="display:none;">
+    </div>
+
+    <!-- 計画目標カード -->
+    <section class="card plan-card">
+      <div class="plan-header">
+        <h2>現在のフェーズ: <span id="currentPhase">減量準備期</span></h2>
+        <span class="plan-target" id="planTarget">目標: 2027年4月以降</span>
+      </div>
+      <p class="plan-description" id="planDescription">脂肪対筋力アップを目指したトレーニングをしながら、摂取カロリーを本来消費できるカロリーに近づけていく期間</p>
+      <div class="plan-targets">
+        <div class="target-item">
+          <span class="target-label">目標カロリー</span>
+          <span class="target-value" id="targetCalories">2,600 kcal</span>
+        </div>
+        <div class="target-item">
+          <span class="target-label">P（タンパク質）</span>
+          <span class="target-value" id="targetProtein">195g</span>
+        </div>
+        <div class="target-item">
+          <span class="target-label">F（脂質）</span>
+          <span class="target-value" id="targetFat">58g</span>
+        </div>
+        <div class="target-item">
+          <span class="target-label">C（炭水化物）</span>
+          <span class="target-value" id="targetCarbs">325g</span>
+        </div>
+      </div>
+      <details class="plan-guidelines">
+        <summary>ガイドライン</summary>
+        <ul id="guidelinesList">
+          <li>摂取カロリーは1週間あたり150〜200kcal増やす</li>
+          <li>体重の変化は1日単位ではなく、1週間の平均体重で判断する</li>
+          <li>体重が0.3kg以上増えた週が2週続いたら、100kcalだけ摂取カロリーを減らす</li>
+        </ul>
+      </details>
+      <details class="plan-history">
+        <summary>目標変更履歴</summary>
+        <div class="history-timeline" id="historyTimeline">
+          <!-- JavaScriptで動的に生成 -->
+        </div>
+      </details>
+    </section>
+
+    <!-- サマリーカード -->
+    <section class="summary-cards">
+      <div class="card summary-card">
+        <div class="card-icon">⚖️</div>
+        <div class="card-content">
+          <span class="card-label">現在の体重</span>
+          <span class="card-value" id="currentWeight">--</span>
+          <span class="card-change" id="weightChange">--</span>
+        </div>
+      </div>
+      <div class="card summary-card">
+        <div class="card-icon">🎯</div>
+        <div class="card-content">
+          <span class="card-label">目標まで</span>
+          <span class="card-value" id="weightToGoal">--</span>
+          <span class="card-sub" id="targetWeight">目標: --kg</span>
+        </div>
+      </div>
+      <div class="card summary-card">
+        <div class="card-icon">🔥</div>
+        <div class="card-content">
+          <span class="card-label">今週平均カロリー</span>
+          <span class="card-value" id="avgCalories">--</span>
+          <span class="card-sub">kcal/日</span>
+        </div>
+      </div>
+      <div class="card summary-card">
+        <div class="card-icon">🍽️</div>
+        <div class="card-content">
+          <span class="card-label">前日の摂取カロリー</span>
+          <span class="card-value" id="yesterdayCalories">--</span>
+          <span class="card-change" id="yesterdayCaloriesDiff">--</span>
+        </div>
+      </div>
+      <div class="card summary-card">
+        <div class="card-icon">📏</div>
+        <div class="card-content">
+          <span class="card-label">腹囲</span>
+          <span class="card-value" id="currentWaist">--</span>
+          <span class="card-change" id="waistChange">--</span>
+        </div>
+      </div>
+      <div class="card summary-card">
+        <div class="card-icon">👟</div>
+        <div class="card-content">
+          <span class="card-label">今日の歩数</span>
+          <span class="card-value" id="currentSteps">--</span>
+          <span class="card-sub" id="stepsTarget">目標: 10,000歩</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- グラフセクション -->
+    <section class="charts-grid">
+      <!-- 体重推移グラフ -->
+      <div class="card chart-card large">
+        <h2>体重推移</h2>
+        <div class="chart-container">
+          <canvas id="weightChart"></canvas>
+        </div>
+      </div>
+
+      <!-- カロリー推移グラフ -->
+      <div class="card chart-card">
+        <h2>カロリー推移</h2>
+        <div class="chart-container">
+          <canvas id="calorieChart"></canvas>
+        </div>
+      </div>
+
+      <!-- PFCバランス -->
+      <div class="card chart-card">
+        <h2>PFCバランス（週平均）</h2>
+        <div class="chart-container">
+          <canvas id="pfcChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 腹囲推移グラフ -->
+      <div class="card chart-card">
+        <h2>腹囲推移</h2>
+        <div class="chart-container">
+          <canvas id="waistChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 歩数推移グラフ -->
+      <div class="card chart-card">
+        <h2>歩数推移</h2>
+        <div class="chart-container">
+          <canvas id="stepsChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 日別考察セクション -->
+    <section class="card daily-insights">
+      <h2>今日の考察・明日への改善点</h2>
+      <div id="dailyInsightsContent">
+        <!-- JavaScriptで動的に生成 -->
+      </div>
+    </section>
+
+    <!-- 最近の記録テーブル -->
+    <section class="card recent-logs">
+      <h2>最近の記録</h2>
+      <p class="table-hint">カロリー欄の<span class="hint-link">青い数字</span>をクリックすると、その日の食事詳細が見れます</p>
+      <div class="table-wrapper">
+        <table id="recentLogsTable">
+          <thead>
+            <tr>
+              <th>日付</th>
+              <th>体重</th>
+              <th>腹囲</th>
+              <th>歩数</th>
+              <th>カロリー</th>
+              <th>PFC</th>
+              <th>メモ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>減量管理ダッシュボード v1.0</p>
+    </footer>
+  </div>
+
+  <!-- 食事詳細モーダル -->
+  <div id="mealModal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalDate">--</h2>
+        <button class="modal-close" aria-label="閉じる">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="meal-summary">
+          <div class="meal-summary-item">
+            <span class="meal-summary-label">合計カロリー</span>
+            <span class="meal-summary-value" id="modalTotalCalories">--</span>
+          </div>
+          <div class="meal-summary-item">
+            <span class="meal-summary-label">P</span>
+            <span class="meal-summary-value" id="modalTotalProtein">--</span>
+          </div>
+          <div class="meal-summary-item">
+            <span class="meal-summary-label">F</span>
+            <span class="meal-summary-value" id="modalTotalFat">--</span>
+          </div>
+          <div class="meal-summary-item">
+            <span class="meal-summary-label">C</span>
+            <span class="meal-summary-value" id="modalTotalCarbs">--</span>
+          </div>
+        </div>
+        <div id="mealDetails"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

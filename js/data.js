@@ -52,9 +52,13 @@ const DataManager = {
         settings = this.getDefaultSettings();
       }
 
+      const parsedDailyLog = this.parseInputSheet(dailyLog);
+      console.log('Parsed daily log:', parsedDailyLog);
+      console.log('Sample entries:', parsedDailyLog.slice(0, 5));
+
       const data = {
         settings: settings,
-        daily_log: this.parseInputSheet(dailyLog),
+        daily_log: parsedDailyLog,
         weekly_measurements: [],
         meals: {}
       };
@@ -522,15 +526,23 @@ const DataManager = {
       recentLogs: (() => {
         const today = new Date();
         today.setHours(23, 59, 59, 999);  // 今日の終わりまで含める
-        return [...sortedDaily]
+        console.log('Today:', today.toISOString());
+        console.log('sortedDaily sample:', sortedDaily.slice(0, 5));
+
+        const filtered = [...sortedDaily]
           .filter(d => {
             const entryDate = new Date(d.date);
+            const hasData = d.weight !== null || d.calories_intake !== null || d.waist !== null || d.steps !== null;
+            const isBeforeToday = entryDate <= today;
+            console.log(`Date: ${d.date}, entryDate: ${entryDate.toISOString()}, hasData: ${hasData}, isBeforeToday: ${isBeforeToday}, weight: ${d.weight}, calories: ${d.calories_intake}`);
             // 今日以前 かつ データがある行のみ
-            return entryDate <= today &&
-              (d.weight !== null || d.calories_intake !== null || d.waist !== null || d.steps !== null);
-          })
-          .reverse()
-          .slice(0, 14);
+            return isBeforeToday && hasData;
+          });
+
+        console.log('Filtered logs:', filtered.length);
+        const result = filtered.reverse().slice(0, 14);
+        console.log('Final recentLogs:', result);
+        return result;
       })(),
 
       // 食事データ

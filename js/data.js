@@ -130,8 +130,22 @@ const DataManager = {
 
       // 日付を2026年形式に変換
       let dateStr = row[0];
-      if (typeof dateStr === 'string' && dateStr.match(/^\d{1,2}\/\d{1,2}$/)) {
-        dateStr = `2026-${dateStr.replace('/', '-').padStart(5, '0')}`;
+
+      // Google Vizの Date(year,month,day) 形式をパース
+      if (typeof dateStr === 'string' && dateStr.startsWith('Date(')) {
+        const match = dateStr.match(/Date\((\d+),(\d+),(\d+)\)/);
+        if (match) {
+          const year = match[1];
+          const month = String(Number(match[2]) + 1).padStart(2, '0');
+          const day = String(match[3]).padStart(2, '0');
+          dateStr = `${year}-${month}-${day}`;
+        }
+      } else if (typeof dateStr === 'string' && dateStr.match(/^\d{1,2}\/\d{1,2}$/)) {
+        // "1/8" 形式
+        const parts = dateStr.split('/');
+        const month = parts[0].padStart(2, '0');
+        const day = parts[1].padStart(2, '0');
+        dateStr = `2026-${month}-${day}`;
       } else if (dateStr instanceof Date) {
         dateStr = dateStr.toISOString().split('T')[0];
       }

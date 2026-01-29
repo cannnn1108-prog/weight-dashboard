@@ -56,7 +56,8 @@ const DataManager = {
         settings: settings,
         daily_log: this.parseInputSheet(dailyLog),
         weekly_measurements: [],
-        meals: {}
+        meals: {},
+        goal_history: this.getGoalHistory()
       };
 
       this.cachedData = data;
@@ -271,6 +272,34 @@ const DataManager = {
         pfc_ratio: '3:2:5'
       }
     };
+  },
+
+  /**
+   * 目標変更履歴を取得
+   */
+  getGoalHistory() {
+    return [
+      {
+        date: '2026-01-08',
+        title: '減量準備期開始',
+        note: 'トレーナー指導のもと減量開始。脂肪対筋力アップを目指しながら、摂取カロリーを本来消費できるカロリーに近づけていく期間',
+        calories: 2600,
+        protein: 195,
+        fat: 58,
+        carbs: 325,
+        current: false
+      },
+      {
+        date: '2026-01-20',
+        title: 'カロリー目標変更',
+        note: 'トレーナー指示により摂取カロリーを+100kcal',
+        calories: 2700,
+        protein: 195,
+        fat: 58,
+        carbs: 325,
+        current: true
+      }
+    ];
   },
 
   /**

@@ -271,6 +271,29 @@ const ChartManager = {
       this.charts.pfc.destroy();
     }
 
+    // PFCデータがない場合はメッセージを表示
+    if (!pfc || (pfc.protein === 0 && pfc.fat === 0 && pfc.carbs === 0)) {
+      const parent = ctx.parentElement;
+      if (parent) {
+        const noDataMsg = parent.querySelector('.no-data-message');
+        if (!noDataMsg) {
+          const msg = document.createElement('div');
+          msg.className = 'no-data-message';
+          msg.style.cssText = 'display: flex; align-items: center; justify-content: center; height: 100%; color: #888; font-size: 14px;';
+          msg.textContent = 'PFCデータがありません';
+          parent.appendChild(msg);
+        }
+      }
+      return;
+    }
+
+    // 既存のメッセージを削除
+    const parent = ctx.parentElement;
+    if (parent) {
+      const noDataMsg = parent.querySelector('.no-data-message');
+      if (noDataMsg) noDataMsg.remove();
+    }
+
     this.charts.pfc = new Chart(ctx, {
       type: 'doughnut',
       data: {

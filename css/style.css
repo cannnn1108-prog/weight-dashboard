@@ -1016,3 +1016,63 @@ footer {
 .meal-section:first-child h3 {
   margin-top: 0;
 }
+
+/* Meal calories display */
+.meal-calories {
+  font-weight: 500;
+  color: var(--accent-primary);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.meal-calories.exercise {
+  color: var(--success);
+}
+
+/* Meal ratio section */
+.meal-ratio-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 0.5rem;
+}
+
+.meal-ratio-bar {
+  display: flex;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.meal-ratio-segment {
+  transition: width 0.3s ease;
+}
+
+.meal-ratio-segment:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.meal-ratio-segment:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.meal-ratio-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.meal-ratio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.meal-ratio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

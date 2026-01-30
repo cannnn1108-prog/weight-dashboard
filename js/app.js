@@ -760,11 +760,11 @@ const App = {
   formatMealNotes(noteText) {
     // 「/」や「朝食:」「昼食:」「夕食:」「間食:」「筋トレ:」で区切られた形式をパース
     const mealTypes = {
-      '朝食': { icon: '🌅', items: [] },
-      '昼食': { icon: '☀️', items: [] },
-      '間食': { icon: '🍪', items: [] },
-      '夕食': { icon: '🌙', items: [] },
-      '筋トレ': { icon: '💪', items: [] }
+      '朝食': { icon: '🌅', items: [], calories: 0 },
+      '昼食': { icon: '☀️', items: [], calories: 0 },
+      '間食': { icon: '🍪', items: [], calories: 0 },
+      '夕食': { icon: '🌙', items: [], calories: 0 },
+      '筋トレ': { icon: '💪', items: [], calories: 0, isExercise: true }
     };
 
     // 「/」で分割して各食事を取得
@@ -780,8 +780,18 @@ const App = {
         if (match) {
           hasStructuredData = true;
           const content = match[1].trim();
-          // カンマで分割して個別のアイテムに
-          const items = content.split(',').map(item => item.trim()).filter(item => item);
+
+          // カロリーを抽出（最後の括弧内の数値kcal）
+          const calorieMatch = content.match(/\((\d+)kcal[^)]*\)\s*$/);
+          if (calorieMatch) {
+            mealTypes[mealType].calories = parseInt(calorieMatch[1], 10);
+          }
+
+          // カンマで分割して個別のアイテムに（カロリー表記は除去）
+          const items = content.split(',').map(item => {
+            // 各アイテムからカロリー表記を除去
+            return item.trim().replace(/\(\d+kcal[^)]*\)\s*$/, '').trim();
+          }).filter(item => item);
           mealTypes[mealType].items.push(...items);
           break;
         }
@@ -790,12 +800,48 @@ const App = {
 
     // 構造化されたデータがある場合は整形して表示
     if (hasStructuredData) {
+      // 食事のみの合計カロリー（筋トレを除く）
+      let totalMealCalories = 0;
+      const mealCaloriesData = [];
+
+      for (const [mealType, data] of Object.entries(mealTypes)) {
+        if (data.items.length > 0 && !data.isExercise && data.calories > 0) {
+          totalMealCalories += data.calories;
+          mealCaloriesData.push({ type: mealType, calories: data.calories, icon: data.icon });
+        }
+      }
+
       let html = '';
+
+      // 割合の表示（食事のみ）
+      if (mealCaloriesData.length > 0 && totalMealCalories > 0) {
+        html += '<div class="meal-ratio-section">';
+        html += '<div class="meal-ratio-bar">';
+        const colors = { '朝食': '#4ade80', '昼食': '#60a5fa', '間食': '#fbbf24', '夕食': '#f87171' };
+        mealCaloriesData.forEach(item => {
+          const percent = Math.round((item.calories / totalMealCalories) * 100);
+          html += `<div class="meal-ratio-segment" style="width: ${percent}%; background-color: ${colors[item.type] || '#94a3b8'};" title="${item.type}: ${item.calories}kcal (${percent}%)"></div>`;
+        });
+        html += '</div>';
+        html += '<div class="meal-ratio-legend">';
+        mealCaloriesData.forEach(item => {
+          const percent = Math.round((item.calories / totalMealCalories) * 100);
+          const colors = { '朝食': '#4ade80', '昼食': '#60a5fa', '間食': '#fbbf24', '夕食': '#f87171' };
+          html += `<span class="meal-ratio-item"><span class="meal-ratio-dot" style="background-color: ${colors[item.type] || '#94a3b8'};"></span>${item.type} ${percent}%</span>`;
+        });
+        html += '</div>';
+        html += '</div>';
+      }
+
+      // 各食事セクション
       for (const [mealType, data] of Object.entries(mealTypes)) {
         if (data.items.length > 0) {
+          const calorieDisplay = data.calories > 0
+            ? (data.isExercise ? ` <span class="meal-calories exercise">-${data.calories}kcal</span>` : ` <span class="meal-calories">${data.calories}kcal</span>`)
+            : '';
           html += `
             <div class="meal-section">
-              <h3>${data.icon} ${mealType}</h3>
+              <h3>${data.icon} ${mealType}${calorieDisplay}</h3>
               <ul class="meal-items-list">
                 ${data.items.map(item => `<li>${item}</li>`).join('')}
               </ul>

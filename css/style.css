@@ -986,3 +986,33 @@ footer {
 .card-change.warning {
   color: var(--warning);
 }
+
+/* Meal items list for formatted notes */
+.meal-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.meal-items-list li {
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem 0;
+  background-color: var(--bg-primary);
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.meal-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 1rem 0 0.5rem 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.meal-section:first-child h3 {
+  margin-top: 0;
+}

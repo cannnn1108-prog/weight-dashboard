@@ -735,10 +735,10 @@ const App = {
         totalF = log.fat || 0;
         totalC = log.carbs || 0;
       }
-      // メモがあれば表示
+      // メモがあれば表示（整形して表示）
       const noteText = notes || (log && log.notes) || '';
       if (noteText) {
-        mealDetails.innerHTML = `<div class="meal-notes"><p>${noteText}</p></div>`;
+        mealDetails.innerHTML = this.formatMealNotes(noteText);
       } else {
         mealDetails.innerHTML = '<p class="empty-state">食事詳細データがありません</p>';
       }
@@ -752,6 +752,62 @@ const App = {
     // モーダルを表示
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+  },
+
+  /**
+   * 食事メモを整形して表示用HTMLを生成
+   */
+  formatMealNotes(noteText) {
+    // 「/」や「朝食:」「昼食:」「夕食:」「間食:」「筋トレ:」で区切られた形式をパース
+    const mealTypes = {
+      '朝食': { icon: '🌅', items: [] },
+      '昼食': { icon: '☀️', items: [] },
+      '間食': { icon: '🍪', items: [] },
+      '夕食': { icon: '🌙', items: [] },
+      '筋トレ': { icon: '💪', items: [] }
+    };
+
+    // 「/」で分割して各食事を取得
+    const parts = noteText.split('/').map(p => p.trim()).filter(p => p);
+
+    let hasStructuredData = false;
+
+    parts.forEach(part => {
+      // 「朝食:」「昼食:」などのパターンをチェック
+      for (const mealType of Object.keys(mealTypes)) {
+        const pattern = new RegExp(`^${mealType}[:：]?\\s*(.+)`, 'i');
+        const match = part.match(pattern);
+        if (match) {
+          hasStructuredData = true;
+          const content = match[1].trim();
+          // カンマで分割して個別のアイテムに
+          const items = content.split(',').map(item => item.trim()).filter(item => item);
+          mealTypes[mealType].items.push(...items);
+          break;
+        }
+      }
+    });
+
+    // 構造化されたデータがある場合は整形して表示
+    if (hasStructuredData) {
+      let html = '';
+      for (const [mealType, data] of Object.entries(mealTypes)) {
+        if (data.items.length > 0) {
+          html += `
+            <div class="meal-section">
+              <h3>${data.icon} ${mealType}</h3>
+              <ul class="meal-items-list">
+                ${data.items.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }
+      }
+      return html;
+    }
+
+    // 構造化されていない場合はそのまま表示
+    return `<div class="meal-notes"><p>${noteText}</p></div>`;
   },
 
   /**

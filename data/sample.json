@@ -399,6 +399,33 @@
         { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
         { "name": "鶏ひき肉 250g", "calories": 325, "protein": 50.0, "fat": 12.5, "carbs": 2.5 }
       ]
+    },
+    "2026-01-29": {
+      "breakfast": [
+        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 },
+        { "name": "鮭おにぎり", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
+        { "name": "石窯パン", "calories": 235, "protein": 7.0, "fat": 3.5, "carbs": 45.0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏むねカレー 200g", "calories": 320, "protein": 35.0, "fat": 8.0, "carbs": 28.0 },
+        { "name": "納豆", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 }
+      ],
+      "snack": [
+        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 },
+        { "name": "チーズカステラ", "calories": 280, "protein": 6.0, "fat": 12.0, "carbs": 38.0 },
+        { "name": "軟骨つくね", "calories": 135, "protein": 12.0, "fat": 7.0, "carbs": 5.0 }
+      ],
+      "dinner": [
+        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
+        { "name": "豚バラ白菜ミルフィーユ 200g", "calories": 350, "protein": 18.0, "fat": 25.0, "carbs": 10.0 },
+        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 }
+      ],
+      "exercise": [
+        { "name": "ラットプルダウン", "calories": -40, "protein": 0, "fat": 0, "carbs": 0 },
+        { "name": "ワンハンドロー", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 },
+        { "name": "ベントオーバーロウ", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 }
+      ]
     }
   },
   "weekly_measurements": [

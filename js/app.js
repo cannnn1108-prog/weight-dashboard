@@ -693,35 +693,75 @@ const App = {
     let totalCal = 0, totalP = 0, totalF = 0, totalC = 0;
 
     if (meals) {
-      const mealTypes = { breakfast: '朝食', lunch: '昼食', dinner: '夕食', snack: '間食' };
+      const mealTypes = {
+        breakfast: { name: '朝食', icon: '🌅' },
+        lunch: { name: '昼食', icon: '☀️' },
+        snack: { name: '間食', icon: '🍪' },
+        dinner: { name: '夕食', icon: '🌙' },
+        exercise: { name: '筋トレ', icon: '💪', isExercise: true }
+      };
 
-      Object.keys(meals).forEach(type => {
-        meals[type].forEach(item => {
-          totalCal += item.calories || 0;
-          totalP += item.protein || 0;
-          totalF += item.fat || 0;
-          totalC += item.carbs || 0;
-        });
+      // 各食事タイプのカロリー集計（割合表示用）
+      const mealCaloriesData = [];
+      let totalMealCalories = 0;
+
+      Object.keys(mealTypes).forEach(type => {
+        if (meals[type] && meals[type].length > 0) {
+          let typeCal = 0;
+          meals[type].forEach(item => {
+            const cal = item.calories || 0;
+            if (!mealTypes[type].isExercise) {
+              totalCal += cal;
+              typeCal += cal;
+            }
+            totalP += item.protein || 0;
+            totalF += item.fat || 0;
+            totalC += item.carbs || 0;
+          });
+          if (!mealTypes[type].isExercise && typeCal > 0) {
+            totalMealCalories += typeCal;
+            mealCaloriesData.push({ type: mealTypes[type].name, calories: typeCal, icon: mealTypes[type].icon });
+          }
+        }
       });
 
       // 食事詳細を表示
       let detailsHtml = '';
+
+      // 割合バー
+      if (mealCaloriesData.length > 0 && totalMealCalories > 0) {
+        const colors = { '朝食': '#4ade80', '昼食': '#60a5fa', '間食': '#fbbf24', '夕食': '#f87171' };
+        detailsHtml += '<div class="meal-ratio-section">';
+        detailsHtml += '<div class="meal-ratio-bar">';
+        mealCaloriesData.forEach(item => {
+          const percent = Math.round((item.calories / totalMealCalories) * 100);
+          detailsHtml += `<div class="meal-ratio-segment" style="width: ${percent}%; background-color: ${colors[item.type] || '#94a3b8'};" title="${item.type}: ${item.calories}kcal (${percent}%)"></div>`;
+        });
+        detailsHtml += '</div>';
+        detailsHtml += '<div class="meal-ratio-legend">';
+        mealCaloriesData.forEach(item => {
+          const percent = Math.round((item.calories / totalMealCalories) * 100);
+          detailsHtml += `<span class="meal-ratio-item"><span class="meal-ratio-dot" style="background-color: ${colors[item.type] || '#94a3b8'};"></span>${item.type} ${percent}%</span>`;
+        });
+        detailsHtml += '</div>';
+        detailsHtml += '</div>';
+      }
+
+      // 各食事セクション
       Object.keys(mealTypes).forEach(type => {
         if (meals[type] && meals[type].length > 0) {
+          const typeInfo = mealTypes[type];
+          const typeCal = meals[type].reduce((sum, item) => sum + Math.abs(item.calories || 0), 0);
+          const calorieDisplay = typeInfo.isExercise
+            ? `<span class="meal-calories exercise">-${typeCal}kcal</span>`
+            : `<span class="meal-calories">${typeCal}kcal</span>`;
+
           detailsHtml += `
             <div class="meal-section">
-              <h3>${mealTypes[type]}</h3>
-              ${meals[type].map(item => `
-                <div class="meal-item">
-                  <span class="meal-item-name">${item.name}</span>
-                  <div class="meal-item-nutrition">
-                    <span>${item.calories}kcal</span>
-                    <span>P${item.protein}g</span>
-                    <span>F${item.fat}g</span>
-                    <span>C${item.carbs}g</span>
-                  </div>
-                </div>
-              `).join('')}
+              <h3>${typeInfo.icon} ${typeInfo.name} ${calorieDisplay}</h3>
+              <ul class="meal-items-list">
+                ${meals[type].map(item => `<li>${item.name}</li>`).join('')}
+              </ul>
             </div>
           `;
         }

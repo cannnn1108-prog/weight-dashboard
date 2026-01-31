@@ -426,6 +426,31 @@
         { "name": "ワンハンドロー", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 },
         { "name": "ベントオーバーロウ", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 }
       ]
+    },
+    "2026-01-30": {
+      "breakfast": [
+        { "name": "ファミマ 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
+        { "name": "ファミマ たくあんおにぎり 1個", "calories": 170, "protein": 3.5, "fat": 1.0, "carbs": 36.0 },
+        { "name": "カニカマバー 1個", "calories": 70, "protein": 7.0, "fat": 0.5, "carbs": 9.0 },
+        { "name": "ザバス プロテインパック（30g）", "calories": 105, "protein": 30.0, "fat": 0.0, "carbs": 7.5 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏胸肉つくね 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 }
+      ],
+      "snack": [
+        { "name": "軟骨つくね青じそ 80g", "calories": 128, "protein": 13.9, "fat": 6.2, "carbs": 4.5 },
+        { "name": "菓子バー（食物繊維入り）", "calories": 112, "protein": 5.3, "fat": 3.0, "carbs": 22.3 },
+        { "name": "ザバス プロテインパック 430ml（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 },
+        { "name": "もち麦パン 1個", "calories": 113, "protein": 3.7, "fat": 6.6, "carbs": 13.5 },
+        { "name": "ローソン 焼き鮭ハラミおにぎり 1個", "calories": 200, "protein": 6.0, "fat": 4.0, "carbs": 35.0 }
+      ],
+      "dinner": [
+        { "name": "白米 350g", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
+        { "name": "アジフライ 2枚", "calories": 320, "protein": 20.0, "fat": 20.0, "carbs": 14.0 },
+        { "name": "豚肩ブロック 100g", "calories": 200, "protein": 18.0, "fat": 14.0, "carbs": 0.0 }
+      ]
     }
   },
   "weekly_measurements": [

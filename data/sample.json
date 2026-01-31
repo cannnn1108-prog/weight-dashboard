@@ -505,6 +505,16 @@
       "protein": 200,
       "fat": 60,
       "carbs": 340,
+      "current": false
+    },
+    {
+      "date": "2026-01-31",
+      "title": "目標カロリー3000kcalへ引き上げ",
+      "note": "体重落ち着いている。脚トレ日は脂質そのまま、炭水化物増やす形で3000kcal前後摂取OK",
+      "calories": 3000,
+      "protein": 203,
+      "fat": 60,
+      "carbs": 413,
       "current": true
     }
   ]

@@ -52,12 +52,26 @@ const DataManager = {
         settings = this.getDefaultSettings();
       }
 
+      // ローカルJSONから食事データと目標履歴を取得
+      let meals = {};
+      let goalHistory = this.getGoalHistory();
+      try {
+        const localResponse = await fetch(this.config.localDataPath);
+        if (localResponse.ok) {
+          const localData = await localResponse.json();
+          meals = localData.meals || {};
+          goalHistory = localData.goal_history || goalHistory;
+        }
+      } catch (e) {
+        console.log('ローカル食事データの読み込みに失敗しました:', e);
+      }
+
       const data = {
         settings: settings,
         daily_log: this.parseInputSheet(dailyLog),
         weekly_measurements: [],
-        meals: {},
-        goal_history: this.getGoalHistory()
+        meals: meals,
+        goal_history: goalHistory
       };
 
       this.cachedData = data;

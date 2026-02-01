@@ -612,18 +612,33 @@ const App = {
 
     tbody.innerHTML = logs.map(log => {
       const hasMeals = meals && meals[log.date];
-      const eval_ = DataManager.evaluatePFC(log, goals);
+      const dayMeals = hasMeals ? meals[log.date] : null;
 
-      // PFC表示
+      // PFC表示（ローカルJSONの食事データから計算）
       let pfcHtml = '-';
-      if (log.protein && log.fat && log.carbs) {
-        pfcHtml = `<span class="pfc-display">
-          <span class="p">P${Math.round(log.protein)}</span> /
-          <span class="f">F${Math.round(log.fat)}</span> /
-          <span class="c">C${Math.round(log.carbs)}</span>
-        </span>`;
-        if (eval_) {
-          pfcHtml += `<span class="eval-badge ${eval_.status === 'good' ? 'good' : 'warning'}">${eval_.text}</span>`;
+      if (dayMeals) {
+        let totalP = 0, totalF = 0, totalC = 0;
+        const mealTypes = ['breakfast', 'lunch', 'snack', 'dinner'];
+        mealTypes.forEach(type => {
+          if (dayMeals[type]) {
+            dayMeals[type].forEach(item => {
+              totalP += item.protein || 0;
+              totalF += item.fat || 0;
+              totalC += item.carbs || 0;
+            });
+          }
+        });
+        if (totalP > 0 || totalF > 0 || totalC > 0) {
+          pfcHtml = `<span class="pfc-display">
+            <span class="p">P${Math.round(totalP)}</span> /
+            <span class="f">F${Math.round(totalF)}</span> /
+            <span class="c">C${Math.round(totalC)}</span>
+          </span>`;
+          // PFC評価
+          const eval_ = DataManager.evaluatePFC({ protein: totalP, fat: totalF, carbs: totalC }, goals);
+          if (eval_) {
+            pfcHtml += `<span class="eval-badge ${eval_.status === 'good' ? 'good' : 'warning'}">${eval_.text}</span>`;
+          }
         }
       }
 

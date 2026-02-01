@@ -181,8 +181,8 @@ const App = {
     // グラフを描画
     ChartManager.renderAllCharts(this.chartData);
 
-    // 日別考察を更新
-    this.updateDailyInsights(this.chartData.recentLogs, settings);
+    // 日別考察を更新（mealsを渡してPFC計算に使用）
+    this.updateDailyInsights(this.chartData.recentLogs, settings, this.chartData.meals);
 
     // テーブルを更新
     this.updateRecentLogsTable(this.chartData.recentLogs, settings, this.chartData.meals);
@@ -378,9 +378,9 @@ const App = {
   },
 
   /**
-   * 日別考察・改善点を更新（昨日のデータをもとに今日の改善点を表示）
+   * 日別考察・改善点を更新（昨日のデータと今日の体重・腹囲をもとに改善点を表示）
    */
-  updateDailyInsights(logs, settings) {
+  updateDailyInsights(logs, settings, meals) {
     const container = document.getElementById('dailyInsightsContent');
     if (!container || !logs || logs.length === 0) {
       if (container) {
@@ -391,14 +391,17 @@ const App = {
 
     const goals = settings.goals || {};
 
-    // 昨日の日付を取得
+    // 今日と昨日の日付を取得
     const today = dayjs().format('YYYY-MM-DD');
     const yesterday = dayjs().subtract(1, 'day').format('YYYY-MM-DD');
 
-    // 昨日のログを探す（logsは新しい順）
+    // 今日のログを探す（体重・腹囲用）
+    const todayLog = logs.find(log => log.date === today);
+
+    // 昨日のログを探す（カロリー・歩数用）
     let yesterdayLog = logs.find(log => log.date === yesterday);
 
-    // 昨日のログがない場合は最新のログを使用（今日以外）
+    // 昨日のログがない場合は今日以外の最新ログを使用
     if (!yesterdayLog) {
       yesterdayLog = logs.find(log => log.date !== today) || logs[0];
     }
@@ -408,11 +411,31 @@ const App = {
       return;
     }
 
-    // 考察を生成
-    const insights = this.generateInsights(yesterdayLog, logs, goals, settings);
+    // 昨日の食事データからPFCを計算
+    const yesterdayMeals = meals ? meals[yesterdayLog.date] : null;
+    let yesterdayPfc = null;
+    if (yesterdayMeals) {
+      let totalP = 0, totalF = 0, totalC = 0;
+      const mealTypes = ['breakfast', 'lunch', 'snack', 'dinner'];
+      mealTypes.forEach(type => {
+        if (yesterdayMeals[type]) {
+          yesterdayMeals[type].forEach(item => {
+            totalP += item.protein || 0;
+            totalF += item.fat || 0;
+            totalC += item.carbs || 0;
+          });
+        }
+      });
+      if (totalP > 0 || totalF > 0 || totalC > 0) {
+        yesterdayPfc = { protein: totalP, fat: totalF, carbs: totalC };
+      }
+    }
+
+    // 考察を生成（昨日のカロリー・歩数・PFCと今日の体重・腹囲を使用）
+    const insights = this.generateInsights(yesterdayLog, todayLog, logs, goals, settings, yesterdayPfc);
 
     container.innerHTML = `
-      <div class="insights-date">${this.formatDateFull(yesterdayLog.date)} の振り返り</div>
+      <div class="insights-date">${this.formatDateFull(yesterdayLog.date)} の振り返り → 今日の改善点</div>
       <div class="insights-grid">
         ${insights.summary ? `
           <div class="insight-card ${insights.summary.status}">
@@ -427,8 +450,17 @@ const App = {
           <div class="insight-card ${insights.calories.status}">
             <div class="insight-icon">🔥</div>
             <div class="insight-content">
-              <div class="insight-title">カロリー</div>
+              <div class="insight-title">昨日のカロリー</div>
               <div class="insight-value">${insights.calories.text}</div>
+            </div>
+          </div>
+        ` : ''}
+        ${insights.steps ? `
+          <div class="insight-card ${insights.steps.status}">
+            <div class="insight-icon">👟</div>
+            <div class="insight-content">
+              <div class="insight-title">昨日の歩数</div>
+              <div class="insight-value">${insights.steps.text}</div>
             </div>
           </div>
         ` : ''}
@@ -436,7 +468,7 @@ const App = {
           <div class="insight-card ${insights.pfc.status}">
             <div class="insight-icon">🥗</div>
             <div class="insight-content">
-              <div class="insight-title">PFCバランス</div>
+              <div class="insight-title">昨日のPFC</div>
               <div class="insight-value">${insights.pfc.text}</div>
             </div>
           </div>
@@ -447,6 +479,15 @@ const App = {
             <div class="insight-content">
               <div class="insight-title">体重</div>
               <div class="insight-value">${insights.weight.text}</div>
+            </div>
+          </div>
+        ` : ''}
+        ${insights.waist ? `
+          <div class="insight-card ${insights.waist.status}">
+            <div class="insight-icon">📏</div>
+            <div class="insight-content">
+              <div class="insight-title">腹囲</div>
+              <div class="insight-value">${insights.waist.text}</div>
             </div>
           </div>
         ` : ''}
@@ -471,111 +512,195 @@ const App = {
   },
 
   /**
-   * 考察を生成
+   * 考察を生成（昨日のデータと今日の体重・腹囲を使用）
+   * @param {Object} yesterdayLog - 昨日のログ（カロリー・歩数）
+   * @param {Object} todayLog - 今日のログ（体重・腹囲）
+   * @param {Array} allLogs - 全てのログ
+   * @param {Object} goals - 目標値
+   * @param {Object} settings - 設定
+   * @param {Object} yesterdayPfc - 昨日のPFC（ローカルJSONから計算）
    */
-  generateInsights(log, allLogs, goals, settings) {
+  generateInsights(yesterdayLog, todayLog, allLogs, goals, settings, yesterdayPfc) {
     const insights = {
       summary: null,
       calories: null,
+      steps: null,
       pfc: null,
       weight: null,
+      waist: null,
       improvements: [],
       positives: []
     };
 
-    // カロリー評価
-    if (log.calories_intake) {
-      const diff = log.calories_intake - goals.calories;
+    // 昨日のカロリー評価
+    if (yesterdayLog.calories_intake) {
+      const targetCalories = goals.calories || 2700;
+      const diff = yesterdayLog.calories_intake - targetCalories;
       if (diff > 200) {
         insights.calories = {
           status: 'negative',
-          text: `${log.calories_intake.toLocaleString()} kcal（+${diff} kcal 過剰）`
+          text: `${yesterdayLog.calories_intake.toLocaleString()} kcal（目標+${diff} kcal）`
         };
-        insights.improvements.push('摂取カロリーを目標に近づける（特に間食や脂質の多い食事を控える）');
+        insights.improvements.push('今日は摂取カロリーを目標に近づける（間食や脂質を控える）');
       } else if (diff > 0) {
         insights.calories = {
           status: 'warning',
-          text: `${log.calories_intake.toLocaleString()} kcal（+${diff} kcal やや過剰）`
+          text: `${yesterdayLog.calories_intake.toLocaleString()} kcal（目標+${diff} kcal）`
         };
-        insights.improvements.push('少しだけカロリー超過、明日は意識してみましょう');
       } else if (diff >= -200) {
         insights.calories = {
           status: 'positive',
-          text: `${log.calories_intake.toLocaleString()} kcal（目標達成！）`
+          text: `${yesterdayLog.calories_intake.toLocaleString()} kcal（目標達成）`
         };
-        insights.positives.push('カロリー管理が適切にできています');
+        insights.positives.push('昨日のカロリー管理が適切でした');
       } else {
         insights.calories = {
           status: 'warning',
-          text: `${log.calories_intake.toLocaleString()} kcal（${diff} kcal 不足）`
+          text: `${yesterdayLog.calories_intake.toLocaleString()} kcal（目標${diff} kcal）`
         };
-        insights.improvements.push('カロリーが不足気味です。もう少し食べても大丈夫です');
+        insights.improvements.push('カロリーが不足気味。今日はしっかり食べましょう');
       }
     }
 
-    // PFC評価
-    if (log.protein && log.fat && log.carbs) {
-      const pDiff = log.protein - goals.protein;
-      const fDiff = log.fat - goals.fat;
-      const cDiff = log.carbs - goals.carbs;
+    // 昨日の歩数評価
+    const targetSteps = settings.target_steps || 10000;
+    if (yesterdayLog.steps !== null && yesterdayLog.steps !== undefined) {
+      const stepsRatio = Math.round((yesterdayLog.steps / targetSteps) * 100);
+      if (yesterdayLog.steps >= targetSteps) {
+        insights.steps = {
+          status: 'positive',
+          text: `${yesterdayLog.steps.toLocaleString()} 歩（目標達成 ${stepsRatio}%）`
+        };
+        insights.positives.push('昨日の歩数目標を達成しました');
+      } else if (stepsRatio >= 70) {
+        insights.steps = {
+          status: 'warning',
+          text: `${yesterdayLog.steps.toLocaleString()} 歩（目標の${stepsRatio}%）`
+        };
+        insights.improvements.push('今日はもう少し歩いて活動量を増やしましょう');
+      } else {
+        insights.steps = {
+          status: 'negative',
+          text: `${yesterdayLog.steps.toLocaleString()} 歩（目標の${stepsRatio}%）`
+        };
+        insights.improvements.push('活動量が少なめ。今日は意識して歩きましょう');
+      }
+    }
+
+    // 昨日のPFC評価（ローカルJSONから取得したデータ）
+    if (yesterdayPfc) {
+      const pDiff = yesterdayPfc.protein - (goals.protein || 200);
+      const fDiff = yesterdayPfc.fat - (goals.fat || 60);
+      const cDiff = yesterdayPfc.carbs - (goals.carbs || 340);
 
       const issues = [];
       if (pDiff < -20) issues.push('P不足');
       if (fDiff > 20) issues.push('F過多');
       if (cDiff > 50) issues.push('C過多');
 
+      // PFC割合を計算
+      const proteinCal = yesterdayPfc.protein * 4;
+      const fatCal = yesterdayPfc.fat * 9;
+      const carbsCal = yesterdayPfc.carbs * 4;
+      const totalCal = proteinCal + fatCal + carbsCal;
+      const pRatio = Math.round((proteinCal / totalCal) * 100);
+      const fRatio = Math.round((fatCal / totalCal) * 100);
+      const cRatio = Math.round((carbsCal / totalCal) * 100);
+
       if (issues.length === 0 && pDiff >= -10 && fDiff <= 10) {
         insights.pfc = {
           status: 'positive',
-          text: '理想的なバランス'
+          text: `P${pRatio}% F${fRatio}% C${cRatio}%（良好）`
         };
-        insights.positives.push('PFCバランスが良好です');
+        insights.positives.push('PFCバランスが良好でした');
       } else if (issues.length > 0) {
         insights.pfc = {
           status: 'warning',
-          text: issues.join('・')
+          text: `P${pRatio}% F${fRatio}% C${cRatio}%（${issues.join('・')}）`
         };
         if (pDiff < -20) {
-          insights.improvements.push(`タンパク質が${Math.abs(Math.round(pDiff))}g不足。プロテインや鶏肉を追加しましょう`);
+          insights.improvements.push(`タンパク質を${Math.abs(Math.round(pDiff))}g増やす（プロテインや鶏肉）`);
         }
         if (fDiff > 20) {
-          insights.improvements.push(`脂質が${Math.round(fDiff)}g過多。揚げ物や油を控えましょう`);
-        }
-        if (cDiff > 50) {
-          insights.improvements.push(`炭水化物が${Math.round(cDiff)}g過多。ご飯の量を調整しましょう`);
+          insights.improvements.push(`脂質を${Math.round(fDiff)}g減らす（揚げ物を控える）`);
         }
       } else {
         insights.pfc = {
           status: 'neutral',
-          text: 'おおむね良好'
+          text: `P${pRatio}% F${fRatio}% C${cRatio}%`
         };
       }
     }
 
-    // 体重評価（週間平均との比較）
-    if (log.weight) {
-      const last7 = allLogs.slice(0, 7).filter(l => l.weight);
-      if (last7.length > 1) {
+    // 今日の体重評価（週平均との比較）
+    const weightLog = todayLog || yesterdayLog;
+    if (weightLog && weightLog.weight) {
+      const last7 = allLogs.filter(l => l.weight && l.date !== weightLog.date).slice(0, 7);
+      if (last7.length > 0) {
         const avg = last7.reduce((sum, l) => sum + l.weight, 0) / last7.length;
-        const diff = log.weight - avg;
+        const diff = weightLog.weight - avg;
+        const label = todayLog ? '今朝' : '直近';
 
-        if (Math.abs(diff) < 0.5) {
+        if (Math.abs(diff) < 0.3) {
           insights.weight = {
             status: 'positive',
-            text: `${log.weight} kg（安定）`
+            text: `${label} ${weightLog.weight} kg（週平均と同等）`
           };
           insights.positives.push('体重が安定しています');
-        } else if (diff > 0) {
+        } else if (diff > 0.5) {
           insights.weight = {
             status: 'warning',
-            text: `${log.weight} kg（週平均より +${diff.toFixed(1)} kg）`
+            text: `${label} ${weightLog.weight} kg（週平均+${diff.toFixed(1)} kg）`
+          };
+          insights.improvements.push('体重が少し増加傾向。今日のカロリーと活動量を意識しましょう');
+        } else if (diff > 0) {
+          insights.weight = {
+            status: 'neutral',
+            text: `${label} ${weightLog.weight} kg（週平均+${diff.toFixed(1)} kg）`
           };
         } else {
           insights.weight = {
             status: 'positive',
-            text: `${log.weight} kg（週平均より ${diff.toFixed(1)} kg）`
+            text: `${label} ${weightLog.weight} kg（週平均${diff.toFixed(1)} kg）`
           };
         }
+      } else {
+        const label = todayLog ? '今朝' : '直近';
+        insights.weight = {
+          status: 'neutral',
+          text: `${label} ${weightLog.weight} kg`
+        };
+      }
+    }
+
+    // 今日の腹囲評価
+    if (todayLog && todayLog.waist) {
+      // 先週の腹囲と比較
+      const lastWaist = allLogs.find(l => l.waist && l.date !== todayLog.date);
+      if (lastWaist) {
+        const diff = todayLog.waist - lastWaist.waist;
+        if (Math.abs(diff) < 0.5) {
+          insights.waist = {
+            status: 'neutral',
+            text: `今朝 ${todayLog.waist} cm（維持）`
+          };
+        } else if (diff < 0) {
+          insights.waist = {
+            status: 'positive',
+            text: `今朝 ${todayLog.waist} cm（${diff.toFixed(1)} cm）`
+          };
+          insights.positives.push('腹囲が減少しています');
+        } else {
+          insights.waist = {
+            status: 'warning',
+            text: `今朝 ${todayLog.waist} cm（+${diff.toFixed(1)} cm）`
+          };
+        }
+      } else {
+        insights.waist = {
+          status: 'neutral',
+          text: `今朝 ${todayLog.waist} cm`
+        };
       }
     }
 
@@ -587,19 +712,19 @@ const App = {
       insights.summary = {
         status: 'positive',
         icon: '🎉',
-        text: '素晴らしい一日でした！この調子で続けましょう'
+        text: '昨日は素晴らしい一日でした！今日もこの調子で'
       };
     } else if (hasPositives && hasImprovements) {
       insights.summary = {
         status: 'neutral',
         icon: '💪',
-        text: '良い点もありますが、改善点も意識しましょう'
+        text: '良い点を維持しつつ、改善点も意識しましょう'
       };
     } else if (hasImprovements) {
       insights.summary = {
         status: 'warning',
         icon: '📝',
-        text: '改善点を明日に活かしましょう'
+        text: '昨日の反省を今日に活かしましょう'
       };
     } else {
       insights.summary = {

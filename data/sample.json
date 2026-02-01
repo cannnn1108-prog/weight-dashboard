@@ -451,6 +451,24 @@
         { "name": "アジフライ 2枚", "calories": 320, "protein": 20.0, "fat": 20.0, "carbs": 14.0 },
         { "name": "豚肩ブロック 100g", "calories": 200, "protein": 18.0, "fat": 14.0, "carbs": 0.0 }
       ]
+    },
+    "2026-01-31": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "ほうれん草のおひたし 60g", "calories": 15, "protein": 1.5, "fat": 0.2, "carbs": 2.0 },
+        { "name": "鮭の切り身 200g", "calories": 260, "protein": 44.0, "fat": 8.0, "carbs": 0.2 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "キャベツの千切り 50g", "calories": 12, "protein": 0.7, "fat": 0.1, "carbs": 2.6 }
+      ],
+      "dinner": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏ひき肉カレー 300g", "calories": 480, "protein": 60.0, "fat": 18.0, "carbs": 18.0 },
+        { "name": "白身魚のフライ 1切れ", "calories": 150, "protein": 10.0, "fat": 8.0, "carbs": 10.0 }
+      ]
     }
   },
   "weekly_measurements": [
@@ -509,12 +527,12 @@
     },
     {
       "date": "2026-01-31",
-      "title": "目標カロリー3000kcalへ引き上げ",
-      "note": "体重落ち着いている。脚トレ日は脂質そのまま、炭水化物増やす形で3000kcal前後摂取OK",
-      "calories": 3000,
-      "protein": 203,
+      "title": "土日は2700kcal維持",
+      "note": "土日で普段の2700kcalぐらいで体重落ち着いていれば、月曜から2900kcal前後まで上げてOK。引き続き歩数など活動量意識",
+      "calories": 2700,
+      "protein": 200,
       "fat": 60,
-      "carbs": 413,
+      "carbs": 340,
       "current": true
     }
   ]

@@ -629,10 +629,20 @@ const App = {
           }
         });
         if (totalP > 0 || totalF > 0 || totalC > 0) {
+          // PFC割合を計算
+          const proteinCal = totalP * 4;
+          const fatCal = totalF * 9;
+          const carbsCal = totalC * 4;
+          const totalPfcCal = proteinCal + fatCal + carbsCal;
+
+          const pRatio = Math.round((proteinCal / totalPfcCal) * 100);
+          const fRatio = Math.round((fatCal / totalPfcCal) * 100);
+          const cRatio = Math.round((carbsCal / totalPfcCal) * 100);
+
           pfcHtml = `<span class="pfc-display">
-            <span class="p">P${Math.round(totalP)}</span> /
-            <span class="f">F${Math.round(totalF)}</span> /
-            <span class="c">C${Math.round(totalC)}</span>
+            <span class="p">P${pRatio}%</span> /
+            <span class="f">F${fRatio}%</span> /
+            <span class="c">C${cRatio}%</span>
           </span>`;
           // PFC評価
           const eval_ = DataManager.evaluatePFC({ protein: totalP, fat: totalF, carbs: totalC }, goals);
@@ -803,6 +813,30 @@ const App = {
     document.getElementById('modalTotalProtein').textContent = totalP ? `${Math.round(totalP)}g` : '--';
     document.getElementById('modalTotalFat').textContent = totalF ? `${Math.round(totalF)}g` : '--';
     document.getElementById('modalTotalCarbs').textContent = totalC ? `${Math.round(totalC)}g` : '--';
+
+    // PFC割合を計算して表示
+    const pfcRatioEl = document.getElementById('modalPfcRatio');
+    if (pfcRatioEl && (totalP > 0 || totalF > 0 || totalC > 0)) {
+      const proteinCal = totalP * 4;
+      const fatCal = totalF * 9;
+      const carbsCal = totalC * 4;
+      const totalPfcCal = proteinCal + fatCal + carbsCal;
+
+      const pRatio = Math.round((proteinCal / totalPfcCal) * 100);
+      const fRatio = Math.round((fatCal / totalPfcCal) * 100);
+      const cRatio = Math.round((carbsCal / totalPfcCal) * 100);
+
+      pfcRatioEl.innerHTML = `
+        <span class="pfc-ratio-label">PFC割合:</span>
+        <span class="pfc-ratio-values">
+          <span class="p">P ${pRatio}%</span> /
+          <span class="f">F ${fRatio}%</span> /
+          <span class="c">C ${cRatio}%</span>
+        </span>
+      `;
+    } else if (pfcRatioEl) {
+      pfcRatioEl.innerHTML = '';
+    }
 
     // モーダルを表示
     modal.classList.remove('hidden');

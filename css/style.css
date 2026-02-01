@@ -632,6 +632,29 @@ footer {
   color: var(--text-primary);
 }
 
+/* PFC ratio display in modal */
+.pfc-ratio-display {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.pfc-ratio-label {
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.pfc-ratio-values {
+  font-weight: 600;
+}
+
+.pfc-ratio-values .p { color: var(--accent-primary); }
+.pfc-ratio-values .f { color: var(--warning); }
+.pfc-ratio-values .c { color: var(--success); }
+
 .meal-section {
   margin-bottom: 1.25rem;
 }

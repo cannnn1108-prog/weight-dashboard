@@ -198,45 +198,18 @@ const DataManager = {
         return isNaN(num) ? null : num;
       };
 
-      // PFC列をパース（例: "P150 F60 C200" or "150/60/200"）
-      const parsePFC = (val) => {
-        if (!val || val === '') return { protein: null, fat: null, carbs: null };
-
-        // "P150 F60 C200" 形式
-        const pfcMatch = String(val).match(/P\s*(\d+)\s*F\s*(\d+)\s*C\s*(\d+)/i);
-        if (pfcMatch) {
-          return {
-            protein: Number(pfcMatch[1]),
-            fat: Number(pfcMatch[2]),
-            carbs: Number(pfcMatch[3])
-          };
-        }
-
-        // "150/60/200" 形式
-        const slashMatch = String(val).match(/(\d+)\s*\/\s*(\d+)\s*\/\s*(\d+)/);
-        if (slashMatch) {
-          return {
-            protein: Number(slashMatch[1]),
-            fat: Number(slashMatch[2]),
-            carbs: Number(slashMatch[3])
-          };
-        }
-
-        return { protein: null, fat: null, carbs: null };
-      };
-
-      const pfc = parsePFC(row[4]);
-
+      // スプレッドシートの列構造（PFC列削除後）:
+      // A=日付, B=体重, C=腹囲, D=歩数, E=カロリー, F=メモ
       const entry = {
         date: dateStr,
         weight: parseNum(row[1]),
         waist: parseNum(row[2]),
         steps: parseNum(row[3]),
-        calories_intake: parseNum(row[5]),  // カロリーは列5に移動
-        protein: pfc.protein,
-        fat: pfc.fat,
-        carbs: pfc.carbs,
-        notes: row[6] || ''  // メモは列6に移動
+        calories_intake: parseNum(row[4]),  // カロリーは列4（E列）
+        protein: null,  // PFCはローカルJSONから取得
+        fat: null,
+        carbs: null,
+        notes: row[5] || ''  // メモは列5（F列）
       };
 
       data.push(entry);

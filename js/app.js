@@ -378,7 +378,7 @@ const App = {
   },
 
   /**
-   * 日別考察・改善点を更新
+   * 日別考察・改善点を更新（昨日のデータをもとに今日の改善点を表示）
    */
   updateDailyInsights(logs, settings) {
     const container = document.getElementById('dailyInsightsContent');
@@ -390,13 +390,29 @@ const App = {
     }
 
     const goals = settings.goals || {};
-    const latestLog = logs[0]; // 最新のログ（新しい順）
+
+    // 昨日の日付を取得
+    const today = dayjs().format('YYYY-MM-DD');
+    const yesterday = dayjs().subtract(1, 'day').format('YYYY-MM-DD');
+
+    // 昨日のログを探す（logsは新しい順）
+    let yesterdayLog = logs.find(log => log.date === yesterday);
+
+    // 昨日のログがない場合は最新のログを使用（今日以外）
+    if (!yesterdayLog) {
+      yesterdayLog = logs.find(log => log.date !== today) || logs[0];
+    }
+
+    if (!yesterdayLog) {
+      container.innerHTML = '<p class="empty-state">データがありません</p>';
+      return;
+    }
 
     // 考察を生成
-    const insights = this.generateInsights(latestLog, logs, goals, settings);
+    const insights = this.generateInsights(yesterdayLog, logs, goals, settings);
 
     container.innerHTML = `
-      <div class="insights-date">${this.formatDateFull(latestLog.date)} の振り返り</div>
+      <div class="insights-date">${this.formatDateFull(yesterdayLog.date)} の振り返り</div>
       <div class="insights-grid">
         ${insights.summary ? `
           <div class="insight-card ${insights.summary.status}">
@@ -437,7 +453,7 @@ const App = {
       </div>
       ${insights.improvements.length > 0 ? `
         <div class="improvements-section">
-          <h3>明日への改善点</h3>
+          <h3>今日の改善点</h3>
           <ul class="improvements-list">
             ${insights.improvements.map(imp => `<li>${imp}</li>`).join('')}
           </ul>

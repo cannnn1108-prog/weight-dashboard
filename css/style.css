@@ -1099,3 +1099,92 @@ footer {
   height: 10px;
   border-radius: 50%;
 }
+
+/* Data Warnings Section */
+.data-warnings {
+  margin-bottom: 1.5rem;
+}
+
+.data-warnings.hidden {
+  display: none;
+}
+
+.warnings-container {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(239, 68, 68, 0.1) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+.warnings-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.warning-icon {
+  font-size: 1.25rem;
+}
+
+.warning-title {
+  font-weight: 600;
+  color: var(--warning);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.warnings-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.warnings-close:hover {
+  color: var(--text-primary);
+}
+
+.warnings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.warnings-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+}
+
+.warnings-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.warnings-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0.25rem;
+  color: var(--warning);
+  font-weight: bold;
+}
+
+.warning-date {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.warning-missing {
+  color: var(--danger);
+  font-weight: 500;
+}

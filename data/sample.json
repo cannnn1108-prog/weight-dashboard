@@ -8,10 +8,10 @@
     "height": 184,
     "target_body_fat": 20,
     "goals": {
-      "calories": 2700,
-      "protein": 200,
-      "fat": 60,
-      "carbs": 340,
+      "calories": 2900,
+      "protein": 210,
+      "fat": 65,
+      "carbs": 365,
       "pfc_ratio": "3:2:5"
     },
     "pfc_targets_by_calories": [
@@ -549,6 +549,16 @@
       "protein": 200,
       "fat": 60,
       "carbs": 340,
+      "current": false
+    },
+    {
+      "date": "2026-02-02",
+      "title": "目標カロリー2900kcalに引き上げ",
+      "note": "土日の体重が安定していたため、本日より2900kcalに引き上げ。活動量を維持しながら経過観察",
+      "calories": 2900,
+      "protein": 210,
+      "fat": 65,
+      "carbs": 365,
       "current": true
     }
   ]

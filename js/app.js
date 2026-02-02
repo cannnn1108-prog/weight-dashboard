@@ -186,6 +186,9 @@ const App = {
 
     // テーブルを更新
     this.updateRecentLogsTable(this.chartData.recentLogs, settings, this.chartData.meals);
+
+    // データ不足警告をチェック
+    this.checkDataCompleteness(this.chartData.recentLogs, this.chartData.meals);
   },
 
   /**
@@ -1152,6 +1155,110 @@ const App = {
     if (existingError) {
       existingError.remove();
     }
+  },
+
+  /**
+   * データの入力漏れをチェックして警告を表示
+   * @param {Array} logs - スプレッドシートからのログデータ
+   * @param {Object} meals - sample.jsonからの食事データ
+   */
+  checkDataCompleteness(logs, meals) {
+    const warnings = [];
+    const today = dayjs();
+
+    // 直近7日間をチェック（今日を含む）
+    for (let i = 0; i < 7; i++) {
+      const checkDate = today.subtract(i, 'day');
+      const dateStr = checkDate.format('YYYY-MM-DD');
+      const displayDate = checkDate.format('M/D (ddd)');
+
+      // スプレッドシートのログを探す
+      const log = logs.find(l => l.date === dateStr);
+      const hasMeals = meals && meals[dateStr];
+
+      const missingFields = [];
+
+      if (!log) {
+        // 今日のデータはまだ入力していなくても警告しない（朝のため）
+        if (i > 0) {
+          warnings.push({
+            date: displayDate,
+            dateStr: dateStr,
+            type: 'no_data',
+            message: `スプレッドシートにデータがありません`
+          });
+        }
+        continue;
+      }
+
+      // 各項目のチェック（今日は体重・腹囲のみ、昨日以前は全項目）
+      if (i === 0) {
+        // 今日は朝のデータのみチェック
+        if (!log.weight) missingFields.push('体重');
+        if (!log.waist) missingFields.push('腹囲');
+      } else {
+        // 昨日以前は全項目チェック
+        if (!log.weight) missingFields.push('体重');
+        if (!log.waist) missingFields.push('腹囲');
+        if (!log.calories_intake) missingFields.push('カロリー');
+        if (log.steps === null || log.steps === undefined) missingFields.push('歩数');
+
+        // 食事データのチェック（カロリーがあるのに食事詳細がない場合）
+        if (log.calories_intake && !hasMeals) {
+          warnings.push({
+            date: displayDate,
+            dateStr: dateStr,
+            type: 'missing_meals',
+            message: `食事詳細（sample.json）が未登録`
+          });
+        }
+      }
+
+      if (missingFields.length > 0) {
+        warnings.push({
+          date: displayDate,
+          dateStr: dateStr,
+          type: 'missing_fields',
+          message: `<span class="warning-missing">${missingFields.join('・')}</span>が未入力`
+        });
+      }
+    }
+
+    // 警告を表示
+    this.displayWarnings(warnings);
+  },
+
+  /**
+   * 警告を画面に表示
+   * @param {Array} warnings - 警告の配列
+   */
+  displayWarnings(warnings) {
+    const warningsSection = document.getElementById('dataWarnings');
+    const warningsList = document.getElementById('warningsList');
+
+    if (!warningsSection || !warningsList) return;
+
+    // 警告がない場合は非表示
+    if (warnings.length === 0) {
+      warningsSection.classList.add('hidden');
+      return;
+    }
+
+    // 警告リストを生成
+    warningsList.innerHTML = warnings.map(w =>
+      `<li><span class="warning-date">${w.date}</span>: ${w.message}</li>`
+    ).join('');
+
+    // 閉じるボタンのイベント
+    const closeBtn = warningsSection.querySelector('.warnings-close');
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        warningsSection.classList.add('hidden');
+      };
+    }
+
+    // 警告セクションを表示
+    warningsSection.classList.remove('hidden');
   }
 };
 

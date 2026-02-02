@@ -3,6 +3,8 @@
  * Google Sheets（公開URL）からデータを取得
  */
 
+console.log('=== data.js loaded (v20260202f) ===');
+
 const DataManager = {
   // 設定
   config: {
@@ -54,9 +56,10 @@ const DataManager = {
         settings = this.getDefaultSettings();
       }
 
-      // ローカルJSONから食事データと目標履歴を取得
+      // ローカルJSONから食事データ、目標履歴、設定を取得
       let meals = {};
       let goalHistory = this.getGoalHistory();
+      let localSettings = null;
       try {
         // キャッシュバスティング用のタイムスタンプを追加
         const cacheBuster = `?v=${Date.now()}`;
@@ -65,13 +68,23 @@ const DataManager = {
           const localData = await localResponse.json();
           meals = localData.meals || {};
           goalHistory = localData.goal_history || goalHistory;
+          // ローカルJSONのsettingsを優先（目標カロリーなどの最新設定）
+          if (localData.settings) {
+            localSettings = localData.settings;
+            console.log('ローカルJSONのsettingsを読み込みました:', localSettings.goals);
+          }
         }
       } catch (e) {
         console.log('ローカル食事データの読み込みに失敗しました:', e);
       }
 
+      // デバッグ: 最終的に使用するsettingsを表示
+      const finalSettings = localSettings || settings;
+      console.log('最終settings:', finalSettings.goals);
+
       const data = {
-        settings: settings,
+        // ローカルJSONのsettingsがあればそちらを優先
+        settings: finalSettings,
         daily_log: this.parseInputSheet(dailyLog),
         weekly_measurements: [],
         meals: meals,

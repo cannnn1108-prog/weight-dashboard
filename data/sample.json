@@ -469,6 +469,22 @@
         { "name": "鶏ひき肉カレー 300g", "calories": 480, "protein": 60.0, "fat": 18.0, "carbs": 18.0 },
         { "name": "白身魚のフライ 1切れ", "calories": 150, "protein": 10.0, "fat": 8.0, "carbs": 10.0 }
       ]
+    },
+    "2026-02-01": {
+      "breakfast": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏むね肉ひき肉カレー 300g", "calories": 480, "protein": 60.0, "fat": 18.0, "carbs": 18.0 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "クラシックチョコレートサンデー（アウトバック）", "calories": 650, "protein": 8.0, "fat": 35.0, "carbs": 78.0 },
+        { "name": "ブレッド 1個（アウトバック）", "calories": 180, "protein": 5.0, "fat": 6.0, "carbs": 26.0 }
+      ],
+      "dinner": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "牛肉とニンニクの芽の炒め物 150g", "calories": 280, "protein": 18.0, "fat": 20.0, "carbs": 6.0 },
+        { "name": "ザバス プロテインパック（30g）", "calories": 105, "protein": 30.0, "fat": 0.0, "carbs": 7.5 }
+      ]
     }
   },
   "weekly_measurements": [

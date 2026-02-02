@@ -442,48 +442,57 @@ const DataManager = {
       ? validWeight.reduce((sum, d) => sum + d.weight, 0) / validWeight.length
       : 0;
 
-    // PFCバランス計算（ローカルJSONの食事データから）
+    // PFCバランス計算（ローカルJSONの食事データから、ない日は目標値で補完）
     let pfc = { protein: 0, carbs: 0, fat: 0 };
+    let totalProtein = 0;
+    let totalFat = 0;
+    let totalCarbs = 0;
 
-    if (meals) {
-      let totalProtein = 0;
-      let totalFat = 0;
-      let totalCarbs = 0;
-      let daysWithData = 0;
+    // 直近7日間の食事データからPFCを集計（ない日は目標値で補完）
+    last7Days.forEach(day => {
+      const dayMeals = meals ? meals[day.date] : null;
+      let dayProtein = 0;
+      let dayFat = 0;
+      let dayCarbs = 0;
+      let dayHasData = false;
 
-      // 直近7日間の食事データからPFCを集計
-      last7Days.forEach(day => {
-        const dayMeals = meals[day.date];
-        if (dayMeals) {
-          let dayHasData = false;
-          const mealTypes = ['breakfast', 'lunch', 'snack', 'dinner'];
-          mealTypes.forEach(type => {
-            if (dayMeals[type]) {
-              dayMeals[type].forEach(item => {
-                totalProtein += item.protein || 0;
-                totalFat += item.fat || 0;
-                totalCarbs += item.carbs || 0;
-                dayHasData = true;
-              });
-            }
-          });
-          if (dayHasData) daysWithData++;
-        }
-      });
-
-      if (daysWithData > 0) {
-        const proteinCal = totalProtein * 4;
-        const carbsCal = totalCarbs * 4;
-        const fatCal = totalFat * 9;
-        const totalCal = proteinCal + carbsCal + fatCal;
-
-        pfc = {
-          protein: totalCal > 0 ? Math.round((proteinCal / totalCal) * 100) : 0,
-          carbs: totalCal > 0 ? Math.round((carbsCal / totalCal) * 100) : 0,
-          fat: totalCal > 0 ? Math.round((fatCal / totalCal) * 100) : 0
-        };
+      if (dayMeals) {
+        const mealTypes = ['breakfast', 'lunch', 'snack', 'dinner'];
+        mealTypes.forEach(type => {
+          if (dayMeals[type]) {
+            dayMeals[type].forEach(item => {
+              dayProtein += item.protein || 0;
+              dayFat += item.fat || 0;
+              dayCarbs += item.carbs || 0;
+              dayHasData = true;
+            });
+          }
+        });
       }
-    }
+
+      // 食事データがない日は目標値で補完
+      if (!dayHasData) {
+        dayProtein = goals.protein || 210;
+        dayFat = goals.fat || 65;
+        dayCarbs = goals.carbs || 365;
+      }
+
+      totalProtein += dayProtein;
+      totalFat += dayFat;
+      totalCarbs += dayCarbs;
+    });
+
+    // PFC比率を計算
+    const proteinCal = totalProtein * 4;
+    const carbsCal = totalCarbs * 4;
+    const fatCal = totalFat * 9;
+    const totalCal = proteinCal + carbsCal + fatCal;
+
+    pfc = {
+      protein: totalCal > 0 ? Math.round((proteinCal / totalCal) * 100) : 0,
+      carbs: totalCal > 0 ? Math.round((carbsCal / totalCal) * 100) : 0,
+      fat: totalCal > 0 ? Math.round((fatCal / totalCal) * 100) : 0
+    };
 
     return {
       avgCalories,

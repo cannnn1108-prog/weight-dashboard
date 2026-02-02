@@ -1166,8 +1166,8 @@ const App = {
     const warnings = [];
     const today = dayjs();
 
-    // 直近7日間をチェック（今日を含む）
-    for (let i = 0; i < 7; i++) {
+    // 直近3日間をチェック（今日を含む）
+    for (let i = 0; i < 3; i++) {
       const checkDate = today.subtract(i, 'day');
       const dateStr = checkDate.format('YYYY-MM-DD');
       const displayDate = checkDate.format('M/D (ddd)');

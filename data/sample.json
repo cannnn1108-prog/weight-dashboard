@@ -485,6 +485,28 @@
         { "name": "牛肉とニンニクの芽の炒め物 150g", "calories": 280, "protein": 18.0, "fat": 20.0, "carbs": 6.0 },
         { "name": "ザバス プロテインパック（30g）", "calories": 105, "protein": 30.0, "fat": 0.0, "carbs": 7.5 }
       ]
+    },
+    "2026-02-02": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
+        { "name": "鶏つくねハンバーグ 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 }
+      ],
+      "snack": [
+        { "name": "ファミマ 鶏五目おにぎり 1個", "calories": 185, "protein": 5.0, "fat": 2.5, "carbs": 36.0 },
+        { "name": "ファミマ ブラックペッパーサラダチキン（19.9g）", "calories": 100, "protein": 19.9, "fat": 1.5, "carbs": 2.0 },
+        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
+      ],
+      "dinner": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鮭 100g", "calories": 130, "protein": 22.0, "fat": 4.0, "carbs": 0.1 },
+        { "name": "揚げ出し豆腐 150g", "calories": 173, "protein": 8.3, "fat": 10.5, "carbs": 12.0 }
+      ]
     }
   },
   "weekly_measurements": [

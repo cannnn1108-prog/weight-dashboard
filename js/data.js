@@ -18,7 +18,9 @@ const DataManager = {
    */
   async loadLocalData() {
     try {
-      const response = await fetch(this.config.localDataPath);
+      // キャッシュバスティング用のタイムスタンプを追加
+      const cacheBuster = `?v=${Date.now()}`;
+      const response = await fetch(this.config.localDataPath + cacheBuster);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -56,7 +58,9 @@ const DataManager = {
       let meals = {};
       let goalHistory = this.getGoalHistory();
       try {
-        const localResponse = await fetch(this.config.localDataPath);
+        // キャッシュバスティング用のタイムスタンプを追加
+        const cacheBuster = `?v=${Date.now()}`;
+        const localResponse = await fetch(this.config.localDataPath + cacheBuster);
         if (localResponse.ok) {
           const localData = await localResponse.json();
           meals = localData.meals || {};

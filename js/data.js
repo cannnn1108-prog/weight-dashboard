@@ -426,16 +426,23 @@ const DataManager = {
   },
 
   /**
-   * 週間の統計を計算（PFCはローカルJSONの食事データから計算）
+   * 週間の統計を計算（PFCはローカルJSONの食事データから計算、ない日は目標値で補完）
    */
   calculateWeeklyStats(data, settings, meals) {
     const last7Days = data.slice(-7);
-    const goals = settings.goals || { calories: 2600, protein: 195, fat: 58, carbs: 325 };
+    const goals = settings.goals || { calories: 2900, protein: 210, fat: 65, carbs: 365 };
 
-    const validCalories = last7Days.filter(d => d.calories_intake !== null && d.calories_intake > 0);
-    const avgCalories = validCalories.length > 0
-      ? Math.round(validCalories.reduce((sum, d) => sum + d.calories_intake, 0) / validCalories.length)
-      : 0;
+    // 平均カロリー（データがない日は目標値で補完）
+    let totalCalories = 0;
+    last7Days.forEach(day => {
+      if (day.calories_intake !== null && day.calories_intake > 0) {
+        totalCalories += day.calories_intake;
+      } else {
+        // データがない日は目標値で補完
+        totalCalories += goals.calories || 2900;
+      }
+    });
+    const avgCalories = last7Days.length > 0 ? Math.round(totalCalories / last7Days.length) : 0;
 
     const validWeight = last7Days.filter(d => d.weight !== null && d.weight > 0);
     const avgWeight = validWeight.length > 0

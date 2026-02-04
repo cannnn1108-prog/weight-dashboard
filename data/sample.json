@@ -8,11 +8,11 @@
     "height": 184,
     "target_body_fat": 20,
     "goals": {
-      "calories": 3000,
-      "protein": 225,
-      "fat": 67,
+      "calories": 2900,
+      "protein": 218,
+      "fat": 65,
       "fat_note": "上限",
-      "carbs": 375,
+      "carbs": 363,
       "carbs_note": "下限",
       "pfc_ratio": "3:2:5"
     },
@@ -617,18 +617,6 @@
       "fat": 65,
       "fat_note": "上限",
       "carbs": 363,
-      "carbs_note": "下限",
-      "current": false
-    },
-    {
-      "date": "2026-02-04",
-      "title": "目標カロリー3000kcalに引き上げ（テスト）",
-      "note": "トレーナー指示により3000kcalに引き上げ。PFCも比率に合わせて調整",
-      "calories": 3000,
-      "protein": 225,
-      "fat": 67,
-      "fat_note": "上限",
-      "carbs": 375,
       "carbs_note": "下限",
       "current": true
     }

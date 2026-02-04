@@ -532,6 +532,25 @@
         { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
         { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
       ]
+    },
+    "2026-02-04": {
+      "breakfast": [
+        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
+        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
+        { "name": "イカのお寿司 8巻", "calories": 480, "protein": 24.0, "fat": 2.4, "carbs": 88.0 },
+        { "name": "マグロのネギトロ 200g", "calories": 260, "protein": 26.0, "fat": 16.0, "carbs": 2.0 },
+        { "name": "サーモンの刺身 8切れ", "calories": 200, "protein": 20.0, "fat": 12.0, "carbs": 0.2 },
+        { "name": "白身魚のフライ 30g × 3個", "calories": 270, "protein": 18.0, "fat": 18.0, "carbs": 18.0 }
+      ],
+      "dinner": [
+        { "name": "ローソン 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
+        { "name": "ローソン 砂肝炒め", "calories": 80, "protein": 12.0, "fat": 3.0, "carbs": 1.0 },
+        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
+      ]
     }
   },
   "weekly_measurements": [

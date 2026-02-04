@@ -549,7 +549,8 @@
       "dinner": [
         { "name": "ローソン 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
         { "name": "ローソン 砂肝炒め", "calories": 80, "protein": 12.0, "fat": 3.0, "carbs": 1.0 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
+        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 },
+        { "name": "ローソン ふんわりたまご蒸しケーキ", "calories": 441, "protein": 6.7, "fat": 22.1, "carbs": 54.0 }
       ]
     }
   },

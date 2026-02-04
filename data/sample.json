@@ -9,9 +9,11 @@
     "target_body_fat": 20,
     "goals": {
       "calories": 2900,
-      "protein": 210,
+      "protein": 218,
       "fat": 65,
-      "carbs": 365,
+      "fat_note": "上限",
+      "carbs": 363,
+      "carbs_note": "下限",
       "pfc_ratio": "3:2:5"
     },
     "pfc_targets_by_calories": [
@@ -604,6 +606,18 @@
       "protein": 210,
       "fat": 65,
       "carbs": 365,
+      "current": false
+    },
+    {
+      "date": "2026-02-03",
+      "title": "PFCバランス調整指示",
+      "note": "F(脂質)は上限65g、C(炭水化物)は下限363gに調整。脂質は多少不足してもOK、炭水化物50%を下回らないように",
+      "calories": 2900,
+      "protein": 218,
+      "fat": 65,
+      "fat_note": "上限",
+      "carbs": 363,
+      "carbs_note": "下限",
       "current": true
     }
   ]

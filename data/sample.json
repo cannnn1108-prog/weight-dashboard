@@ -572,6 +572,29 @@
         { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
         { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 }
       ]
+    },
+    "2026-02-06": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "白身魚の煮付け 60g × 3切れ", "calories": 216, "protein": 39.6, "fat": 1.8, "carbs": 9.0 },
+        { "name": "かぼちゃコロッケ 50g", "calories": 110, "protein": 2.5, "fat": 5.0, "carbs": 13.5 }
+      ],
+      "snack": [
+        { "name": "白米 150g（塩おにぎり）", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
+        { "name": "ローソン ふんわり卵蒸しケーキ 1個", "calories": 200, "protein": 4.5, "fat": 7.0, "carbs": 30.0 },
+        { "name": "SAVAS プロテイン 15g", "calories": 60, "protein": 11.3, "fat": 0.5, "carbs": 6.0 },
+        { "name": "SAVAS ミルクプロテイン 紙パック 1本", "calories": 100, "protein": 15.0, "fat": 0, "carbs": 10.0 },
+        { "name": "有機栽培の干し芋スティック 1袋", "calories": 165, "protein": 1.5, "fat": 0.3, "carbs": 39.0 }
+      ],
+      "dinner": [
+        { "name": "白米 120g", "calories": 202, "protein": 3.0, "fat": 0.4, "carbs": 44.4 },
+        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 }
+      ]
     }
   },
   "weekly_measurements": [

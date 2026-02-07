@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>迷走神経と脊髄損傷 ― 快感の新しい経路</title>
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent: #e94560;
+      --accent2: #0f3460;
+      --light: #f8f9fa;
+      --gold: #f0a500;
+      --nerve: #00d2ff;
+      --nerve-glow: rgba(0, 210, 255, 0.3);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background: var(--primary);
+      color: #eee;
+      line-height: 1.8;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      background: linear-gradient(170deg, #0f0c29, #302b63, #24243e);
+      position: relative; overflow: hidden;
+      padding: 2rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 60%, var(--nerve-glow) 0%, transparent 60%);
+    }
+    .hero-badge {
+      background: var(--accent);
+      color: #fff;
+      padding: .4rem 1.4rem;
+      border-radius: 50px;
+      font-size: .85rem;
+      letter-spacing: .08em;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .hero h1 span { color: var(--nerve); }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 640px;
+      opacity: .85;
+      position: relative;
+    }
+    .scroll-cta {
+      margin-top: 3rem;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+    .scroll-cta a {
+      color: var(--nerve);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 5rem 1.5rem; max-width: 960px; margin: 0 auto; }
+    .section-label {
+      color: var(--nerve);
+      font-size: .8rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: .5rem;
+    }
+    section h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+    section h2 span { color: var(--accent); }
+
+    /* ===== DIAGRAM: NERVE PATHWAY ===== */
+    .diagram-wrap {
+      background: linear-gradient(135deg, #16213e, #1a1a2e);
+      border-radius: 20px;
+      padding: 3rem 1.5rem;
+      margin: 2rem auto;
+      max-width: 960px;
+    }
+    .diagram-wrap h2 { text-align: center; }
+    .pathway-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .pathway-svg { width: 100%; max-width: 800px; }
+
+    /* ===== COMPARISON CARDS ===== */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } }
+    .compare-card {
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .compare-card.normal {
+      background: linear-gradient(135deg, #0f3460, #16213e);
+      border: 1px solid rgba(0,210,255,.2);
+    }
+    .compare-card.vagus {
+      background: linear-gradient(135deg, #53142d, #1a1a2e);
+      border: 1px solid rgba(233,69,96,.3);
+    }
+    .compare-card h3 { font-size: 1.1rem; margin-bottom: 1rem; }
+    .compare-card .icon { font-size: 2.5rem; margin-bottom: .8rem; }
+
+    /* ===== KEY FINDINGS ===== */
+    .findings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .finding-card {
+      background: linear-gradient(135deg, #16213e, #1a1a2e);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform .2s;
+    }
+    .finding-card:hover { transform: translateY(-4px); }
+    .finding-card .num {
+      font-size: 2.5rem; font-weight: 800;
+      color: var(--nerve);
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .finding-card h3 { font-size: 1rem; margin-bottom: .5rem; }
+    .finding-card p { font-size: .9rem; opacity: .75; }
+
+    /* ===== BRAIN MAP ===== */
+    .brain-section {
+      background: linear-gradient(135deg, #0a0a1a, #16213e);
+      border-radius: 20px;
+      padding: 3rem 1.5rem;
+      margin: 2rem auto;
+      max-width: 960px;
+    }
+    .brain-section h2 { text-align: center; }
+    .brain-svg-wrap { display: flex; justify-content: center; margin-top: 2rem; }
+
+    /* ===== TIMELINE ===== */
+    .timeline { position: relative; margin-top: 2rem; padding-left: 2rem; }
+    .timeline::before {
+      content: ""; position: absolute; left: 6px; top: 0; bottom: 0;
+      width: 2px; background: var(--nerve);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 2rem; padding-left: 1.5rem;
+    }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -2rem; top: .5rem;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--nerve); border: 3px solid var(--primary);
+    }
+    .timeline-item .year {
+      color: var(--gold); font-weight: 700; font-size: .9rem;
+    }
+    .timeline-item h3 { font-size: 1rem; margin: .3rem 0; }
+    .timeline-item p { font-size: .9rem; opacity: .75; }
+
+    /* ===== QUOTE ===== */
+    .quote-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .quote-section blockquote {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-style: italic;
+      line-height: 1.6;
+      opacity: .9;
+      border-left: 4px solid var(--accent);
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+    .quote-section cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: .9rem;
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    /* ===== SUMMARY ===== */
+    .summary-box {
+      background: linear-gradient(135deg, #e94560, #c23152);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 3rem auto;
+    }
+    .summary-box h2 { color: #fff; margin-bottom: 1rem; }
+    .summary-box p { color: rgba(255,255,255,.9); font-size: 1.05rem; }
+
+    /* ===== REFERENCES ===== */
+    .references {
+      max-width: 960px; margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .references h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .references ol { padding-left: 1.2rem; }
+    .references li {
+      font-size: .85rem; opacity: .7; margin-bottom: .5rem; line-height: 1.5;
+    }
+    .references a { color: var(--nerve); text-decoration: none; }
+    .references a:hover { text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center; padding: 2rem;
+      font-size: .8rem; opacity: .4;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-badge">NEUROSCIENCE LECTURE</div>
+  <h1>下半身麻痺でも<br><span>快感</span>を感じる理由</h1>
+  <p>迷走神経 ― 脊髄を迂回して脳に直結する<br>「もう一つの経路」が覆した医学の常識</p>
+  <div class="scroll-cta">
+    <a href="#pathway">▼ スクロールして学ぶ</a>
+  </div>
+</section>
+
+<!-- ===== 問題提起 ===== -->
+<section>
+  <div class="section-label">Question</div>
+  <h2>脊髄が損傷されたら、<br>下半身の<span>感覚は失われる</span>？</h2>
+  <p>従来の医学では、脊髄損傷＝下半身の感覚喪失と考えられていました。<br>医師は患者に「性的な快感を得ることは二度とできない」と伝えていました。</p>
+  <p style="margin-top:1rem;"><strong style="color:var(--nerve);">しかし、研究が覆しました。</strong></p>
+
+  <div class="compare-grid">
+    <div class="compare-card normal">
+      <div class="icon">🔵</div>
+      <h3>従来の理解</h3>
+      <p>性器 → <strong>脊髄</strong> → 脳<br><br>脊髄損傷 = 経路が遮断<br>→ 感覚なし</p>
+    </div>
+    <div class="compare-card vagus">
+      <div class="icon">🔴</div>
+      <h3>新たな発見</h3>
+      <p>子宮頸部 → <strong>迷走神経</strong> → 脳<br><br>脊髄を通らない別経路<br>→ <strong>感覚あり・快感あり</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 迷走神経の経路図 ===== -->
+<div class="diagram-wrap" id="pathway">
+  <div class="section-label" style="text-align:center;">Diagram</div>
+  <h2>迷走神経の経路 ― <span style="color:var(--nerve);">脊髄を完全に迂回</span></h2>
+  <div class="pathway-container">
+    <svg class="pathway-svg" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background body silhouette -->
+      <defs>
+        <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2a2a4a"/>
+          <stop offset="100%" stop-color="#1a1a2e"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow2">
+          <feGaussianBlur stdDeviation="5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Body outline -->
+      <ellipse cx="400" cy="80" rx="50" ry="55" fill="url(#bodyGrad)" stroke="#444" stroke-width="1.5"/>
+      <rect x="360" y="130" width="80" height="30" rx="5" fill="url(#bodyGrad)" stroke="#444" stroke-width="1.5"/>
+      <ellipse cx="400" cy="240" rx="90" ry="100" fill="url(#bodyGrad)" stroke="#444" stroke-width="1.5"/>
+      <rect x="365" y="335" width="30" height="170" rx="10" fill="url(#bodyGrad)" stroke="#444" stroke-width="1.5"/>
+      <rect x="405" y="335" width="30" height="170" rx="10" fill="url(#bodyGrad)" stroke="#444" stroke-width="1.5"/>
+
+      <!-- Spine (gray - blocked) -->
+      <line x1="400" y1="95" x2="400" y2="340" stroke="#555" stroke-width="6" stroke-dasharray="8,4"/>
+      <text x="420" y="220" fill="#888" font-size="11" font-family="sans-serif">脊髄</text>
+
+      <!-- Injury mark -->
+      <line x1="370" y1="200" x2="430" y2="200" stroke="#e94560" stroke-width="3"/>
+      <line x1="375" y1="193" x2="425" y2="207" stroke="#e94560" stroke-width="2"/>
+      <line x1="375" y1="207" x2="425" y2="193" stroke="#e94560" stroke-width="2"/>
+      <text x="440" y="205" fill="#e94560" font-size="12" font-weight="bold" font-family="sans-serif">✕ 損傷部位</text>
+
+      <!-- Brain -->
+      <ellipse cx="400" cy="60" rx="35" ry="30" fill="#2a2a5a" stroke="#00d2ff" stroke-width="2" filter="url(#glow)"/>
+      <text x="400" y="65" fill="#00d2ff" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">脳</text>
+
+      <!-- NTS label -->
+      <circle cx="400" cy="100" r="8" fill="#f0a500" filter="url(#glow)"/>
+      <text x="340" y="105" fill="#f0a500" font-size="10" font-family="sans-serif">孤束核(NTS)</text>
+
+      <!-- ===== VAGUS NERVE PATH (cyan, bypasses spine) ===== -->
+      <path d="M 400,330
+               C 320,320 280,290 270,250
+               C 260,210 260,180 265,150
+               C 270,120 300,100 350,95
+               L 392,100"
+            fill="none" stroke="#00d2ff" stroke-width="4" filter="url(#glow2)"
+            stroke-linecap="round"/>
+
+      <!-- Vagus nerve arrow -->
+      <polygon points="389,96 395,103 385,103" fill="#00d2ff"/>
+
+      <!-- Vagus label -->
+      <text x="210" y="170" fill="#00d2ff" font-size="14" font-weight="bold" font-family="sans-serif">迷走神経</text>
+      <text x="210" y="186" fill="#00d2ff" font-size="11" font-family="sans-serif">(Vagus Nerve)</text>
+      <text x="210" y="202" fill="rgba(0,210,255,0.6)" font-size="10" font-family="sans-serif">※脊髄を通らない</text>
+
+      <!-- Uterus/Cervix area -->
+      <ellipse cx="400" cy="320" rx="25" ry="18" fill="rgba(233,69,96,0.2)" stroke="#e94560" stroke-width="1.5"/>
+      <text x="400" y="324" fill="#e94560" font-size="10" text-anchor="middle" font-family="sans-serif">子宮頸部</text>
+
+      <!-- Organs along vagus -->
+      <circle cx="280" cy="145" r="10" fill="rgba(0,210,255,0.1)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+      <text x="280" y="149" fill="rgba(0,210,255,0.6)" font-size="8" text-anchor="middle" font-family="sans-serif">肺</text>
+
+      <circle cx="268" cy="230" r="10" fill="rgba(0,210,255,0.1)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+      <text x="268" y="234" fill="rgba(0,210,255,0.6)" font-size="8" text-anchor="middle" font-family="sans-serif">腸</text>
+
+      <circle cx="272" cy="190" r="10" fill="rgba(0,210,255,0.1)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+      <text x="272" y="194" fill="rgba(0,210,255,0.6)" font-size="8" text-anchor="middle" font-family="sans-serif">心臓</text>
+
+      <!-- ===== RIGHT SIDE: Normal pathway (blocked) ===== -->
+      <path d="M 400,330 L 400,210" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="500" y="280" fill="#888" font-size="11" font-family="sans-serif">通常の神経経路</text>
+      <text x="500" y="296" fill="#888" font-size="11" font-family="sans-serif">(骨盤・陰部・下腹神経)</text>
+      <text x="500" y="312" fill="#e94560" font-size="11" font-family="sans-serif">→ 脊髄損傷で遮断 ✕</text>
+
+      <!-- Legend -->
+      <rect x="550" y="50" width="220" height="100" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+      <text x="570" y="75" fill="#ccc" font-size="12" font-weight="bold" font-family="sans-serif">凡例</text>
+      <line x1="570" y1="95" x2="610" y2="95" stroke="#00d2ff" stroke-width="3"/>
+      <text x="620" y="99" fill="#ccc" font-size="11" font-family="sans-serif">迷走神経（迂回路）</text>
+      <line x1="570" y1="118" x2="610" y2="118" stroke="#888" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="620" y="122" fill="#ccc" font-size="11" font-family="sans-serif">通常経路（遮断）</text>
+      <line x1="570" y1="138" x2="610" y2="138" stroke="#e94560" stroke-width="2"/>
+      <text x="620" y="142" fill="#ccc" font-size="11" font-family="sans-serif">損傷部位</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ===== Key Numbers ===== -->
+<section>
+  <div class="section-label">Evidence</div>
+  <h2>研究が示した<span>数字</span></h2>
+  <div class="findings">
+    <div class="finding-card">
+      <div class="num">4</div>
+      <h3>神経経路</h3>
+      <p>膣・子宮頸部・クリトリス・子宮から脳への4つの独立した感覚経路が発見された</p>
+    </div>
+    <div class="finding-card">
+      <div class="num">5</div>
+      <h3>被験者</h3>
+      <p>fMRI研究に参加した脊髄損傷女性（T10以上の完全損傷4名＋不完全損傷1名）</p>
+    </div>
+    <div class="finding-card">
+      <div class="num">3/5</div>
+      <h3>オーガズム達成</h3>
+      <p>子宮頸部自己刺激により、5名中3名がオーガズムを経験した</p>
+    </div>
+    <div class="finding-card">
+      <div class="num">100%</div>
+      <h3>NTS活性化</h3>
+      <p>全被験者で延髄の孤束核（NTS）の活性化をfMRIで確認</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brain Activation Map ===== -->
+<div class="brain-section">
+  <div class="section-label" style="text-align:center;">Brain Activation</div>
+  <h2>オーガズム時に活性化する<span style="color:var(--accent);">脳領域</span></h2>
+  <div class="brain-svg-wrap">
+    <svg viewBox="0 0 600 400" width="100%" style="max-width:600px;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="act1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e94560" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#e94560" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="act2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#f0a500" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#f0a500" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="act3" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#00d2ff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Brain shape (side view) -->
+      <path d="M 300,60 C 420,50 500,100 510,170 C 520,240 480,300 420,330
+               C 370,350 320,360 280,350 C 220,340 170,310 140,270
+               C 110,230 100,180 120,130 C 145,75 220,55 300,60 Z"
+            fill="#1e1e3a" stroke="#444" stroke-width="2"/>
+
+      <!-- Cerebellum -->
+      <ellipse cx="170" cy="290" rx="50" ry="40" fill="#1a1a30" stroke="#444" stroke-width="1.5"/>
+
+      <!-- Brain stem -->
+      <path d="M 160,320 C 150,350 155,380 160,390" fill="none" stroke="#444" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- Activation zones -->
+      <!-- Hypothalamus (PVN) -->
+      <circle cx="280" cy="230" r="30" fill="url(#act1)"/>
+      <circle cx="280" cy="230" r="6" fill="#e94560"/>
+      <line x1="280" y1="230" x2="200" y2="195" stroke="#e94560" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="118" y="192" fill="#e94560" font-size="11" font-weight="bold" font-family="sans-serif">視床下部</text>
+      <text x="102" y="205" fill="#e94560" font-size="9" font-family="sans-serif">(室傍核 PVN)</text>
+
+      <!-- Anterior Cingulate -->
+      <circle cx="330" cy="120" r="35" fill="url(#act2)"/>
+      <circle cx="330" cy="120" r="6" fill="#f0a500"/>
+      <line x1="330" y1="120" x2="410" y2="90" stroke="#f0a500" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="415" y="88" fill="#f0a500" font-size="11" font-weight="bold" font-family="sans-serif">前帯状皮質</text>
+
+      <!-- Insular Cortex -->
+      <circle cx="400" cy="190" r="30" fill="url(#act1)"/>
+      <circle cx="400" cy="190" r="6" fill="#e94560"/>
+      <line x1="400" y1="190" x2="470" y2="170" stroke="#e94560" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="475" y="168" fill="#e94560" font-size="11" font-weight="bold" font-family="sans-serif">島皮質</text>
+
+      <!-- Amygdala -->
+      <circle cx="310" cy="260" r="25" fill="url(#act3)"/>
+      <circle cx="310" cy="260" r="5" fill="#00d2ff"/>
+      <line x1="310" y1="260" x2="380" y2="290" stroke="#00d2ff" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="385" y="293" fill="#00d2ff" font-size="11" font-weight="bold" font-family="sans-serif">扁桃体</text>
+
+      <!-- Frontal Cortex -->
+      <circle cx="440" cy="140" r="28" fill="url(#act2)"/>
+      <circle cx="440" cy="140" r="5" fill="#f0a500"/>
+      <line x1="440" y1="140" x2="510" y2="120" stroke="#f0a500" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="515" y="118" fill="#f0a500" font-size="11" font-weight="bold" font-family="sans-serif">前頭皮質</text>
+
+      <!-- Cerebellum activation -->
+      <circle cx="170" cy="290" r="25" fill="url(#act3)"/>
+      <circle cx="170" cy="290" r="5" fill="#00d2ff"/>
+      <text x="65" y="296" fill="#00d2ff" font-size="11" font-weight="bold" font-family="sans-serif">小脳</text>
+
+      <!-- NTS in brainstem -->
+      <circle cx="160" cy="360" r="12" fill="url(#act1)"/>
+      <circle cx="160" cy="360" r="4" fill="#e94560"/>
+      <line x1="160" y1="360" x2="90" y2="360" stroke="#e94560" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="20" y="356" fill="#e94560" font-size="10" font-weight="bold" font-family="sans-serif">孤束核</text>
+      <text x="25" y="370" fill="#e94560" font-size="9" font-family="sans-serif">(NTS)</text>
+
+      <!-- Note -->
+      <text x="300" y="395" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle" font-family="sans-serif">※ fMRI により確認された活性化領域（Komisaruk et al., 2004）</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ===== TIMELINE ===== -->
+<section>
+  <div class="section-label">History</div>
+  <h2>発見の<span>経緯</span></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">1980年代</div>
+      <h3>ラットでの発見</h3>
+      <p>Komisaruk博士がラットの実験で、3つの既知の神経経路（骨盤・陰部・下腹神経）をすべて切断しても、膣刺激への反応が消えないことを発見</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1990年代</div>
+      <h3>迷走神経の特定</h3>
+      <p>第4の経路として迷走神経を特定。脊髄を通らず、内臓を通って脳幹に直結する経路であることを解明</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2002</div>
+      <h3>PETによる初の脳画像</h3>
+      <p>脊髄損傷女性のPETスキャンで、子宮頸部刺激時に脳の活性化を初めて画像的に確認</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2004</div>
+      <h3>fMRI研究（ランドマーク論文）</h3>
+      <p>完全脊髄損傷女性5名のfMRI研究。3名がオーガズムを達成し、孤束核（NTS）の活性化を実証。Brain Research誌に掲載</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2006〜</div>
+      <h3>研究の発展</h3>
+      <p>非生殖器刺激（首、胸、膝）でもオーガズム関連領域が活性化することを発見。『The Science of Orgasm』出版</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTE ===== -->
+<section class="quote-section">
+  <blockquote>
+    「医師たちは彼女たちに、性生活は終わったと告げていた。しかし実際には、彼女たちは快感を感じていた。自分がおかしいのかと悩んでいた女性もいた」
+  </blockquote>
+  <cite>― Barry Komisaruk 博士, ラトガーズ大学</cite>
+</section>
+
+<!-- ===== SUMMARY ===== -->
+<div class="summary-box">
+  <h2>まとめ：Key Takeaway</h2>
+  <p>
+    迷走神経（Vagus Nerve）は脊髄を完全に迂回して<br>
+    子宮頸部から脳へ直接信号を伝達する。<br><br>
+    この経路の発見により、完全な脊髄損傷を持つ女性でも<br>
+    <strong>オーガズムを含む性的快感が可能</strong>であることが<br>
+    fMRIで科学的に実証された。
+  </p>
+</div>
+
+<!-- ===== REFERENCES ===== -->
+<div class="references">
+  <h2>参考文献 / References</h2>
+  <ol>
+    <li>Komisaruk BR, Whipple B, Crawford A, et al. <em>Brain activation during vaginocervical self-stimulation and orgasm in women with complete spinal cord injury: fMRI evidence of mediation by the vagus nerves.</em> Brain Res. 2004;1024(1-2):77-88. <a href="https://pubmed.ncbi.nlm.nih.gov/15451368/" target="_blank">PubMed</a></li>
+    <li>Whipple B, Komisaruk BR. <em>Brain (PET) responses to vaginal-cervical self-stimulation in women with complete spinal cord injury: preliminary findings.</em> J Sex Marital Ther. 2002;28(1):79-86. <a href="https://pubmed.ncbi.nlm.nih.gov/11928182/" target="_blank">PubMed</a></li>
+    <li>Komisaruk BR, Whipple B, Beyer C. <em>The Science of Orgasm.</em> Johns Hopkins University Press, 2006.</li>
+    <li>Komisaruk BR, Wise N, Frangos E, et al. <em>Women's clitoris, vagina, and cervix mapped on the sensory cortex: fMRI evidence.</em> J Sex Med. 2011;8(10):2822-2830.</li>
+    <li>Rutgers University. <em>The Story of O.</em> <a href="https://www.rutgers.edu/news/story-o" target="_blank">rutgers.edu</a></li>
+  </ol>
+</div>
+
+<footer>
+  Vagus Nerve Lecture Materials &mdash; Created for educational purposes &mdash; 2026
+</footer>
+
+</body>
+</html>

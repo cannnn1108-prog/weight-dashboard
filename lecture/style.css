@@ -322,3 +322,91 @@ strong { color: #fff; }
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
 .center { text-align: center; }
+
+/* ===== TOOLTIP (医学用語ホバー説明) ===== */
+.tip {
+  position: relative;
+  color: var(--nerve);
+  cursor: help;
+  border-bottom: 1px dotted rgba(0,210,255,.5);
+  white-space: nowrap;
+}
+.tip .tip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10,10,30,.97);
+  color: #ddd;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  font-size: .82rem;
+  width: max-content;
+  max-width: 300px;
+  z-index: 200;
+  transition: opacity .25s;
+  border: 1px solid rgba(0,210,255,.35);
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: normal;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+  white-space: normal;
+  text-align: left;
+}
+.tip .tip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0,210,255,.35);
+}
+.tip:hover .tip-text,
+.tip:active .tip-text,
+.tip:focus .tip-text {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .tip .tip-text {
+    left: 0;
+    transform: none;
+    max-width: 250px;
+    font-size: .78rem;
+  }
+  .tip .tip-text::after { left: 20px; transform: none; }
+}
+
+/* ===== NEW RESEARCH CARD ===== */
+.research-card {
+  background: linear-gradient(135deg, rgba(0,210,255,.06), rgba(0,210,255,.02));
+  border: 1px solid rgba(0,210,255,.2);
+  border-radius: 16px;
+  padding: 1.8rem;
+}
+.research-card h4 { color: var(--nerve); margin-bottom: .5rem; }
+.research-card .journal { font-size: .78rem; color: var(--gold); margin-bottom: .5rem; }
+.research-card p { font-size: .88rem; opacity: .8; }
+
+/* ===== TIPS REFERENCE BOX ===== */
+.tips-ref {
+  background: rgba(240,165,0,.06);
+  border: 1px solid rgba(240,165,0,.25);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: .88rem;
+}
+.tips-ref::before {
+  content: "📖 TIPS本編参照";
+  display: block;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: .8rem;
+  margin-bottom: .3rem;
+  letter-spacing: .05em;
+}

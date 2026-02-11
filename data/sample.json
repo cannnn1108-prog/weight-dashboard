@@ -616,6 +616,24 @@
         { "name": "目玉焼き 2個", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
         { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
       ]
+    },
+    "2026-02-10": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "卵焼き（卵2個分）", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
+        { "name": "納豆 1パック（50g）", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 },
+        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏むねひき肉 400g", "calories": 468, "protein": 79.2, "fat": 16.4, "carbs": 0 }
+      ],
+      "dinner": [
+        { "name": "白米 410g", "calories": 689, "protein": 10.3, "fat": 1.2, "carbs": 151.7 },
+        { "name": "鮭切り身 180g", "calories": 234, "protein": 40.3, "fat": 7.6, "carbs": 0.2 },
+        { "name": "目玉焼き 1個", "calories": 109, "protein": 6.3, "fat": 8.6, "carbs": 0.5 }
+      ]
     }
   },
   "weekly_measurements": [

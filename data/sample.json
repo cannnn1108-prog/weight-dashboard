@@ -691,6 +691,28 @@
         { "name": "白米 140g", "calories": 235, "protein": 3.5, "fat": 0.4, "carbs": 51.8 },
         { "name": "鶏むねひき肉 444g", "calories": 520, "protein": 87.9, "fat": 18.2, "carbs": 0 }
       ]
+    },
+    "2026-02-14": {
+      "breakfast": [
+        { "name": "バナナ 2本（200g）", "calories": 172, "protein": 2.2, "fat": 0.4, "carbs": 45.0 },
+        { "name": "ヨーグルト（脂質0）50g", "calories": 32, "protein": 3.5, "fat": 0, "carbs": 5.0 },
+        { "name": "蜂蜜 10g", "calories": 29, "protein": 0, "fat": 0, "carbs": 8.1 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "鶏むねひき肉 300g", "calories": 351, "protein": 59.4, "fat": 12.3, "carbs": 0 },
+        { "name": "富士そば かけそば 大盛り", "calories": 520, "protein": 22.0, "fat": 4.0, "carbs": 98.0 }
+      ],
+      "snack": [
+        { "name": "やわらか干し芋 55g", "calories": 139, "protein": 1.8, "fat": 0.1, "carbs": 31.0 }
+      ],
+      "dinner": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏むねひき肉 350g", "calories": 410, "protein": 69.3, "fat": 14.4, "carbs": 0 },
+        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
+        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+      ]
     }
   },
   "weekly_measurements": [

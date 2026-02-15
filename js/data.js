@@ -215,18 +215,18 @@ const DataManager = {
         return isNaN(num) ? null : num;
       };
 
-      // スプレッドシートの列構造（PFC列削除後）:
-      // A=日付, B=体重, C=腹囲, D=歩数, E=カロリー, F=メモ
+      // スプレッドシートの列構造:
+      // A=日付, B=体重, C=腹囲, D=空, E=歩数, F=カロリー, G=メモ
       const entry = {
         date: dateStr,
         weight: parseNum(row[1]),
         waist: parseNum(row[2]),
-        steps: parseNum(row[3]),
-        calories_intake: parseNum(row[4]),  // カロリーは列4（E列）
+        steps: parseNum(row[4]),           // 歩数は列4（E列）
+        calories_intake: parseNum(row[5]), // カロリーは列5（F列）
         protein: null,  // PFCはローカルJSONから取得
         fat: null,
         carbs: null,
-        notes: row[5] || ''  // メモは列5（F列）
+        notes: row[6] || ''  // メモは列6（G列）
       };
 
       data.push(entry);

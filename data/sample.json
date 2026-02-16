@@ -8,11 +8,12 @@
     "height": 184,
     "target_body_fat": 20,
     "goals": {
-      "calories": 2900,
-      "protein": 218,
-      "fat": 65,
+      "calories": 3150,
+      "calories_note": "3100〜3200kcal",
+      "protein": 236,
+      "fat": 70,
       "fat_note": "上限",
-      "carbs": 363,
+      "carbs": 394,
       "carbs_note": "下限",
       "pfc_ratio": "3:2:5"
     },
@@ -732,6 +733,30 @@
         { "name": "サーモン 2皿（シャリハーフ）", "calories": 210, "protein": 32.0, "fat": 12.0, "carbs": 28.0 },
         { "name": "たまご（厚焼き玉子）1皿（シャリハーフ）", "calories": 152, "protein": 8.0, "fat": 8.0, "carbs": 14.0 }
       ]
+    },
+    "2026-02-16": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
+        { "name": "ファミマ 鶏ささみ（たまり醤油味）1個", "calories": 95, "protein": 18.9, "fat": 0.5, "carbs": 4.0 },
+        { "name": "ファミマ 焼きそば 1個", "calories": 520, "protein": 15.0, "fat": 18.0, "carbs": 75.0 },
+        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+      ],
+      "snack": [
+        { "name": "バナナ 1本（100g）", "calories": 86, "protein": 1.1, "fat": 0.2, "carbs": 22.5 },
+        { "name": "蜂蜜 5g", "calories": 15, "protein": 0, "fat": 0, "carbs": 4.1 },
+        { "name": "ヨーグルト（脂質0）50g", "calories": 32, "protein": 3.5, "fat": 0, "carbs": 5.0 }
+      ],
+      "dinner": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
+        { "name": "目玉焼き 2個", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
+        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+      ]
     }
   },
   "weekly_measurements": [
@@ -817,6 +842,19 @@
       "fat": 65,
       "fat_note": "上限",
       "carbs": 363,
+      "carbs_note": "下限",
+      "current": false
+    },
+    {
+      "date": "2026-02-16",
+      "title": "目標カロリー3100〜3200kcalに引き上げ",
+      "note": "トレーナー指示により摂取カロリー目標を3100〜3200kcalに変更。PFCも比率に合わせて調整",
+      "calories": 3150,
+      "calories_note": "3100〜3200kcal",
+      "protein": 236,
+      "fat": 70,
+      "fat_note": "上限",
+      "carbs": 394,
       "carbs_note": "下限",
       "current": true
     }

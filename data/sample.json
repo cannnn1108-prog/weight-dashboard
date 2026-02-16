@@ -713,6 +713,25 @@
         { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
         { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
       ]
+    },
+    "2026-02-15": {
+      "breakfast": [
+        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
+        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
+        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 },
+        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+      ],
+      "lunch": [
+        { "name": "まぐろ（赤身）4皿 8貫", "calories": 560, "protein": 96.0, "fat": 8.0, "carbs": 112.0 },
+        { "name": "いか 4皿 8貫", "calories": 480, "protein": 48.0, "fat": 4.0, "carbs": 112.0 },
+        { "name": "えんがわ 1皿 2貫", "calories": 140, "protein": 12.0, "fat": 6.0, "carbs": 28.0 },
+        { "name": "つぶ貝 2皿 4貫", "calories": 240, "protein": 24.0, "fat": 2.0, "carbs": 56.0 },
+        { "name": "たまご（厚焼き玉子）1皿 2貫", "calories": 154, "protein": 7.0, "fat": 6.0, "carbs": 21.0 }
+      ],
+      "dinner": [
+        { "name": "サーモン 2皿（シャリハーフ）", "calories": 210, "protein": 32.0, "fat": 12.0, "carbs": 28.0 },
+        { "name": "たまご（厚焼き玉子）1皿（シャリハーフ）", "calories": 152, "protein": 8.0, "fat": 8.0, "carbs": 14.0 }
+      ]
     }
   },
   "weekly_measurements": [

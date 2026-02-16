@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第4章：神経科学との接続 | 潮吹きの科学 講義2</title>
+  <link rel="stylesheet" href="../lecture/style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <span class="brand">GORI-SHIKI</span>
+  <a href="index.html">TOP</a>
+  <a href="ch0-intro.html">導入</a>
+  <a href="ch1-anatomy.html">第1章</a>
+  <a href="ch2-evidence.html">第2章</a>
+  <a href="ch3-data.html">第3章</a>
+  <a href="ch4-neuro.html" class="active">第4章</a>
+  <a href="ch5-mindset.html">第5章</a>
+  <a href="ch6-summary.html">まとめ</a>
+</nav>
+
+<div class="ch-header">
+  <div class="time-badge">33:00 - 42:00</div>
+  <h2>第4章：<span>神経科学</span>との接続 ― なぜ潮吹きは起こるのか</h2>
+</div>
+
+<!-- 4つの神経経路（復習） -->
+<section>
+  <div class="section-label">REVIEW</div>
+  <h3>4つの神経経路 ― <span>講義1の復習</span></h3>
+  <p>講義1で学んだ4つの神経経路。これが潮吹きのメカニズムにも直結します。</p>
+
+  <div class="diagram-wrap">
+    <h3>女性の性器→脳 <span class="text-nerve">4つの神経経路</span>と潮吹きの関係</h3>
+    <svg viewBox="0 0 750 480" style="max-width:750px;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+
+      <!-- Brain -->
+      <ellipse cx="375" cy="50" rx="60" ry="35" fill="#1e1e3a" stroke="#00d2ff" stroke-width="2" filter="url(#glow)"/>
+      <text x="375" y="45" fill="#00d2ff" font-size="12" text-anchor="middle" font-weight="bold" font-family="sans-serif">脳</text>
+      <text x="375" y="60" fill="rgba(0,210,255,.6)" font-size="8" text-anchor="middle" font-family="sans-serif">快感認識・反射制御</text>
+
+      <!-- NTS -->
+      <circle cx="375" cy="105" r="12" fill="#f0a500" filter="url(#glow)"/>
+      <text x="445" y="100" fill="#f0a500" font-size="10" font-weight="bold" font-family="sans-serif">孤束核(NTS)</text>
+      <text x="445" y="115" fill="rgba(240,165,0,.5)" font-size="8" font-family="sans-serif">迷走神経の中継点</text>
+
+      <!-- Spinal cord -->
+      <line x1="375" y1="90" x2="375" y2="330" stroke="#555" stroke-width="5" stroke-dasharray="8,4"/>
+      <text x="395" y="200" fill="#666" font-size="9" font-family="sans-serif">脊髄</text>
+
+      <!-- Nerve 1: Pudendal - connects to clitoris/external -->
+      <rect x="40" y="310" width="130" height="60" rx="8" fill="rgba(0,210,255,.08)" stroke="rgba(0,210,255,.3)"/>
+      <text x="105" y="335" fill="#00d2ff" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">陰部神経</text>
+      <text x="105" y="350" fill="rgba(0,210,255,.5)" font-size="8" text-anchor="middle" font-family="sans-serif">クリトリス・外陰部</text>
+      <text x="105" y="362" fill="rgba(0,210,255,.4)" font-size="7" text-anchor="middle" font-family="sans-serif">S2-S4 脊髄経由</text>
+      <path d="M 170,340 L 350,250" fill="none" stroke="rgba(0,210,255,.3)" stroke-width="1.5"/>
+
+      <!-- Nerve 2: Pelvic - connects to vagina/cervix -->
+      <rect x="200" y="380" width="130" height="60" rx="8" fill="rgba(0,210,255,.08)" stroke="rgba(0,210,255,.3)"/>
+      <text x="265" y="405" fill="#00d2ff" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">骨盤神経</text>
+      <text x="265" y="420" fill="rgba(0,210,255,.5)" font-size="8" text-anchor="middle" font-family="sans-serif">膣・子宮頸部</text>
+      <text x="265" y="432" fill="rgba(0,210,255,.4)" font-size="7" text-anchor="middle" font-family="sans-serif">S2-S4 脊髄経由</text>
+      <path d="M 330,400 L 365,280" fill="none" stroke="rgba(0,210,255,.3)" stroke-width="1.5"/>
+
+      <!-- Nerve 3: Hypogastric -->
+      <rect x="420" y="380" width="130" height="60" rx="8" fill="rgba(0,210,255,.08)" stroke="rgba(0,210,255,.3)"/>
+      <text x="485" y="405" fill="#00d2ff" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">下腹神経</text>
+      <text x="485" y="420" fill="rgba(0,210,255,.5)" font-size="8" text-anchor="middle" font-family="sans-serif">子宮・膀胱</text>
+      <text x="485" y="432" fill="rgba(0,210,255,.4)" font-size="7" text-anchor="middle" font-family="sans-serif">T10-L2 脊髄経由</text>
+      <path d="M 420,400 L 385,280" fill="none" stroke="rgba(0,210,255,.3)" stroke-width="1.5"/>
+
+      <!-- Nerve 4: Vagus (bypass!) -->
+      <rect x="580" y="310" width="150" height="60" rx="8" fill="rgba(233,69,96,.1)" stroke="#e94560" stroke-width="2"/>
+      <text x="655" y="335" fill="#e94560" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">迷走神経</text>
+      <text x="655" y="350" fill="rgba(233,69,96,.5)" font-size="8" text-anchor="middle" font-family="sans-serif">子宮頸部→脳幹直結</text>
+      <text x="655" y="362" fill="rgba(233,69,96,.6)" font-size="7" text-anchor="middle" font-family="sans-serif">脊髄を完全バイパス</text>
+      <path d="M 580,330 C 520,280 460,180 430,130 L 387,105" fill="none" stroke="#e94560" stroke-width="3" filter="url(#glow)" stroke-dasharray="none"/>
+
+      <!-- CUV complex highlight -->
+      <rect x="230" y="445" width="290" height="30" rx="8" fill="rgba(240,165,0,.1)" stroke="rgba(240,165,0,.3)"/>
+      <text x="375" y="465" fill="#f0a500" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">CUV複合体エリア → 複数の神経が同時に発火</text>
+
+      <!-- Bladder connection -->
+      <rect x="40" y="190" width="120" height="50" rx="8" fill="rgba(240,165,0,.08)" stroke="rgba(240,165,0,.3)"/>
+      <text x="100" y="210" fill="#f0a500" font-size="10" text-anchor="middle" font-weight="bold" font-family="sans-serif">膀胱</text>
+      <text x="100" y="225" fill="rgba(240,165,0,.5)" font-size="8" text-anchor="middle" font-family="sans-serif">潮吹き液の出所</text>
+      <path d="M 160,215 L 350,230" fill="none" stroke="rgba(240,165,0,.3)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="220" y="210" fill="rgba(240,165,0,.4)" font-size="7" font-family="sans-serif">下腹神経支配</text>
+    </svg>
+  </div>
+</section>
+
+<!-- 潮吹きの反射メカニズム -->
+<section>
+  <div class="section-label">MECHANISM</div>
+  <h3>潮吹きの<span>反射メカニズム</span></h3>
+  <p>潮吹きがオーガズムと独立して起こりうる理由は、<strong>反射経路の違い</strong>にあります。</p>
+
+  <div class="compare-grid">
+    <div class="compare-card blue">
+      <h4>オーガズムの経路</h4>
+      <p><strong>複数の神経 → 脳の報酬系 → 意識的な快感</strong><br><br>
+      CUV複合体の刺激 → 骨盤・陰部・迷走神経 → <span class="tip" tabindex="0">NTS<span class="tip-text">孤束核。脳幹にある中継基地。迷走神経からの信号を受け取り、視床下部に転送。オキシトシンやドーパミンの放出を促す。</span></span>/視床下部 → ドーパミン・オキシトシン大量放出 → <strong>意識的な快感体験</strong></p>
+    </div>
+    <div class="compare-card red">
+      <h4>潮吹きの経路</h4>
+      <p><strong>膀胱周辺の刺激 → 脊髄反射 → 不随意的な排出</strong><br><br>
+      CUV複合体の刺激 → 膀胱頸部・尿道括約筋の弛緩 → 骨盤底筋の収縮 → <strong>膀胱内容物の不随意的排出</strong><br><br>
+      → 脳の快感中枢を経由しない場合がある</p>
+    </div>
+  </div>
+
+  <div class="callout" style="max-width:960px;">
+    <h3>だから「快感なし」の潮吹きがある</h3>
+    <p>オーガズムは<strong>脳の報酬系を経由する意識的体験</strong>。潮吹きは<strong>脊髄反射レベルで起こりうる不随意反応</strong>。<br>
+    二つの回路が同時に発火すれば「快感を伴う潮吹き」になり、<br>
+    潮吹き回路だけが発火すれば「快感のない潮吹き＝構造上出てしまうだけ」になる。<br><br>
+    <strong>これが「快感の人もいれば不快な人もいる」の神経科学的な説明です。</strong></p>
+  </div>
+</section>
+
+<!-- CUV複合体と複数神経の同時発火 -->
+<section>
+  <h3>CUV複合体の刺激 ＝ <span>複数の神経が同時発火</span></h3>
+  <p>膣前壁エリア（旧Gスポット領域）を刺激すると、CUV複合体を構成する複数の構造が同時に刺激されます。</p>
+
+  <div class="step-list">
+    <div class="step-item">
+      <h4>クリトリス内部（脚部）の刺激</h4>
+      <p>クリトリスの大部分は体内にある。膣前壁を通じて内部のクリトリス脚部が圧迫される → <strong>陰部神経が発火</strong></p>
+    </div>
+    <div class="step-item">
+      <h4>尿道・スキーン腺の刺激</h4>
+      <p>膣前壁の直上に尿道とスキーン腺がある。圧迫により充血・分泌が促進 → <strong>骨盤神経が発火＋Female Ejaculation</strong></p>
+    </div>
+    <div class="step-item">
+      <h4>膀胱頸部への波及</h4>
+      <p>強い刺激が膀胱頸部に波及 → 尿道括約筋の弛緩 → <strong>下腹神経の反射＋Squirting</strong></p>
+    </div>
+    <div class="step-item">
+      <h4>子宮頸部（ポルチオ）への伝達</h4>
+      <p>深い刺激が子宮頸部に到達 → <strong>迷走神経が発火 → NTSを介して脳に直接</strong></p>
+    </div>
+  </div>
+
+  <div class="callout" style="max-width:960px;">
+    <h3>講義1との接続</h3>
+    <p>講義1で学んだ<strong>迷走神経のバイパス経路</strong>は、潮吹きよりもむしろ<strong>オーガズムの質</strong>に関与。<br>
+    潮吹き自体は主に脊髄反射（骨盤・下腹神経）で起こるが、<br>
+    迷走神経が同時に発火すると<strong>快感を伴った深い体験</strong>になる。<br><br>
+    つまり、ゴリ式の体外ポルチオアプローチで<strong>迷走神経を先に活性化</strong>しておくことで、<br>
+    潮吹きが起きた場合もそれが<strong>快感を伴う体験</strong>になりやすい。</p>
+  </div>
+</section>
+
+<!-- 膀胱の急速充填の謎 -->
+<section>
+  <h3>未解明の謎：<span>膀胱の急速充填</span></h3>
+  <p>性的興奮中に、排尿直後の空の膀胱が急速に再充填される現象のメカニズムは<strong>2024年時点でもまだ完全には解明されていません</strong>。</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>仮説1：腎臓の血流増加</h4>
+      <p>性的興奮時の血圧上昇 → 腎血流増加 → 尿生成の加速。ただし通常このスピードでは尿は作れない。</p>
+    </div>
+    <div class="card">
+      <h4>仮説2：血漿の浸出</h4>
+      <p>骨盤内の血管充血 → 血漿成分が膀胱壁を通じて浸出。通常の尿より薄い理由を説明できる可能性。</p>
+    </div>
+    <div class="card">
+      <h4>仮説3：自律神経の関与</h4>
+      <p>迷走神経・交感神経の複雑な相互作用が膀胱の充填を促進している可能性。研究が進行中。</p>
+    </div>
+  </div>
+
+  <div class="research-card" style="max-width:960px;">
+    <h4>科学のフロンティア</h4>
+    <p>「なぜ起こるのか」の最終的な答えはまだ出ていません。しかし「何が起こっているか」は超音波と色素実験で明らかになっています。<strong>科学は完璧な答えを持っていないが、確実に前進している</strong>。この誠実さこそが、受講生の説得力になります。</p>
+  </div>
+</section>
+
+<div class="ch-nav">
+  <a href="ch3-data.html">← 第3章：データ</a>
+  <a href="ch5-mindset.html">第5章：正しい知識 →</a>
+</div>
+
+<footer>GORI-SHIKI METHOD &mdash; Lecture 2 Chapter 4: Neuroscience &mdash; 2026</footer>
+
+</body>
+</html>

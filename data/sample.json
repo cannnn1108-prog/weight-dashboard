@@ -18,12 +18,42 @@
       "pfc_ratio": "3:2:5"
     },
     "pfc_targets_by_calories": [
-      { "calories": 3400, "protein": 220, "fat": 75, "carbs": 490 },
-      { "calories": 3200, "protein": 220, "fat": 65, "carbs": 460 },
-      { "calories": 3000, "protein": 220, "fat": 65, "carbs": 400 },
-      { "calories": 2800, "protein": 200, "fat": 65, "carbs": 380 },
-      { "calories": 2700, "protein": 200, "fat": 60, "carbs": 360 },
-      { "calories": 2600, "protein": 195, "fat": 58, "carbs": 325 }
+      {
+        "calories": 3400,
+        "protein": 220,
+        "fat": 75,
+        "carbs": 490
+      },
+      {
+        "calories": 3200,
+        "protein": 220,
+        "fat": 65,
+        "carbs": 460
+      },
+      {
+        "calories": 3000,
+        "protein": 220,
+        "fat": 65,
+        "carbs": 400
+      },
+      {
+        "calories": 2800,
+        "protein": 200,
+        "fat": 65,
+        "carbs": 380
+      },
+      {
+        "calories": 2700,
+        "protein": 200,
+        "fat": 60,
+        "carbs": 360
+      },
+      {
+        "calories": 2600,
+        "protein": 195,
+        "fat": 58,
+        "carbs": 325
+      }
     ]
   },
   "daily_log": [
@@ -262,500 +292,2296 @@
   "meals": {
     "2026-01-12": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "筋肉のそぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "マイプロテイン クレアチン 3錠", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 },
-        { "name": "マイプロテイン マルチビタミン 1錠", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 },
-        { "name": "イヌリン 小さじ2杯", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "筋肉のそぼろ（調理済み）200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "マイプロテイン クレアチン 3錠",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        },
+        {
+          "name": "マイプロテイン マルチビタミン 1錠",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        },
+        {
+          "name": "イヌリン 小さじ2杯",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "レバニラ炒め 1人前", "calories": 480, "protein": 18.0, "fat": 32.0, "carbs": 28.0 },
-        { "name": "白米 大盛り（350g）", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
-        { "name": "白米 中盛り（250g）", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "餃子 1皿（6個）", "calories": 330, "protein": 12.0, "fat": 18.0, "carbs": 27.0 }
+        {
+          "name": "レバニラ炒め 1人前",
+          "calories": 480,
+          "protein": 18.0,
+          "fat": 32.0,
+          "carbs": 28.0
+        },
+        {
+          "name": "白米 大盛り（350g）",
+          "calories": 588,
+          "protein": 8.8,
+          "fat": 1.1,
+          "carbs": 129.5
+        },
+        {
+          "name": "白米 中盛り（250g）",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "餃子 1皿（6個）",
+          "calories": 330,
+          "protein": 12.0,
+          "fat": 18.0,
+          "carbs": 27.0
+        }
       ],
       "dinner": [
-        { "name": "野菜炒め 1人前", "calories": 120, "protein": 3.0, "fat": 8.0, "carbs": 10.0 },
-        { "name": "飲みプロテイン 1.5杯分", "calories": 165, "protein": 37.5, "fat": 2.3, "carbs": 3.0 },
-        { "name": "白米 100g", "calories": 168, "protein": 2.5, "fat": 0.3, "carbs": 37.0 }
+        {
+          "name": "野菜炒め 1人前",
+          "calories": 120,
+          "protein": 3.0,
+          "fat": 8.0,
+          "carbs": 10.0
+        },
+        {
+          "name": "飲みプロテイン 1.5杯分",
+          "calories": 165,
+          "protein": 37.5,
+          "fat": 2.3,
+          "carbs": 3.0
+        },
+        {
+          "name": "白米 100g",
+          "calories": 168,
+          "protein": 2.5,
+          "fat": 0.3,
+          "carbs": 37.0
+        }
       ]
     },
     "2026-01-13": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "飲みプロテイン 1杯", "calories": 110, "protein": 25.0, "fat": 1.5, "carbs": 2.0 },
-        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "飲みプロテイン 1杯",
+          "calories": 110,
+          "protein": 25.0,
+          "fat": 1.5,
+          "carbs": 2.0
+        },
+        {
+          "name": "サプリ類",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏そぼろ（調理済み）200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        }
       ],
       "dinner": [
-        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
-        { "name": "鶏つくねハンバーグ 200g", "calories": 300, "protein": 36.0, "fat": 14.0, "carbs": 6.0 },
-        { "name": "鶏そぼろ（調理済み）100g", "calories": 130, "protein": 20.0, "fat": 5.0, "carbs": 1.0 },
-        { "name": "飲みプロテイン 1.5杯", "calories": 165, "protein": 37.5, "fat": 2.3, "carbs": 3.0 }
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "鶏つくねハンバーグ 200g",
+          "calories": 300,
+          "protein": 36.0,
+          "fat": 14.0,
+          "carbs": 6.0
+        },
+        {
+          "name": "鶏そぼろ（調理済み）100g",
+          "calories": 130,
+          "protein": 20.0,
+          "fat": 5.0,
+          "carbs": 1.0
+        },
+        {
+          "name": "飲みプロテイン 1.5杯",
+          "calories": 165,
+          "protein": 37.5,
+          "fat": 2.3,
+          "carbs": 3.0
+        }
       ]
     },
     "2026-01-14": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "飲みプロテイン 2杯", "calories": 220, "protein": 50.0, "fat": 3.0, "carbs": 4.0 },
-        { "name": "サプリ類（クレアチン、マルチビタミン、ビタミンB、マグネシウム、イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "飲みプロテイン 2杯",
+          "calories": 220,
+          "protein": 50.0,
+          "fat": 3.0,
+          "carbs": 4.0
+        },
+        {
+          "name": "サプリ類（クレアチン、マルチビタミン、ビタミンB、マグネシウム、イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏つくねハンバーグ 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 },
-        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏つくねハンバーグ 150g",
+          "calories": 225,
+          "protein": 27.0,
+          "fat": 10.5,
+          "carbs": 4.5
+        },
+        {
+          "name": "鶏そぼろ（調理済み）200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        }
       ],
       "dinner": [
-        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
-        { "name": "鶏そぼろ（調理済み）200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "目玉焼き 1個", "calories": 90, "protein": 6.5, "fat": 6.5, "carbs": 0.5 }
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "鶏そぼろ（調理済み）200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "目玉焼き 1個",
+          "calories": 90,
+          "protein": 6.5,
+          "fat": 6.5,
+          "carbs": 0.5
+        }
       ]
     },
     "2026-01-15": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "鶏つくねハンバーグ 200g", "calories": 300, "protein": 36.0, "fat": 14.0, "carbs": 6.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "鶏つくねハンバーグ 200g",
+          "calories": 300,
+          "protein": 36.0,
+          "fat": 14.0,
+          "carbs": 6.0
+        }
       ],
       "dinner": [
-        { "name": "飲みプロテイン 2杯", "calories": 220, "protein": 50.0, "fat": 3.0, "carbs": 4.0 },
-        { "name": "白米 100g", "calories": 168, "protein": 2.5, "fat": 0.3, "carbs": 37.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "豚肉入り野菜炒め 50g", "calories": 60, "protein": 1.5, "fat": 4.0, "carbs": 5.0 },
-        { "name": "スティックパン 1本", "calories": 70, "protein": 2.0, "fat": 2.5, "carbs": 10.0 },
-        { "name": "餅 1.5個（75g）", "calories": 177, "protein": 3.0, "fat": 0.4, "carbs": 39.8 },
-        { "name": "あんこ 15g", "calories": 36, "protein": 0.8, "fat": 0.0, "carbs": 8.5 }
+        {
+          "name": "飲みプロテイン 2杯",
+          "calories": 220,
+          "protein": 50.0,
+          "fat": 3.0,
+          "carbs": 4.0
+        },
+        {
+          "name": "白米 100g",
+          "calories": 168,
+          "protein": 2.5,
+          "fat": 0.3,
+          "carbs": 37.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "豚肉入り野菜炒め 50g",
+          "calories": 60,
+          "protein": 1.5,
+          "fat": 4.0,
+          "carbs": 5.0
+        },
+        {
+          "name": "スティックパン 1本",
+          "calories": 70,
+          "protein": 2.0,
+          "fat": 2.5,
+          "carbs": 10.0
+        },
+        {
+          "name": "餅 1.5個（75g）",
+          "calories": 177,
+          "protein": 3.0,
+          "fat": 0.4,
+          "carbs": 39.8
+        },
+        {
+          "name": "あんこ 15g",
+          "calories": 36,
+          "protein": 0.8,
+          "fat": 0.0,
+          "carbs": 8.5
+        }
       ]
     },
     "2026-01-17": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "大根おろし 50g", "calories": 9, "protein": 0.2, "fat": 0.0, "carbs": 2.2 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "大根おろし 50g",
+          "calories": 9,
+          "protein": 0.2,
+          "fat": 0.0,
+          "carbs": 2.2
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "旨辛チキン 3本（サイゼリヤ）", "calories": 390, "protein": 27.0, "fat": 27.0, "carbs": 12.0 },
-        { "name": "ソーセージピザ 1/4", "calories": 135, "protein": 6.0, "fat": 7.5, "carbs": 12.0 },
-        { "name": "ミートスパゲッティ 二口（50g分）", "calories": 75, "protein": 3.0, "fat": 2.5, "carbs": 10.5 },
-        { "name": "シナモンフォカッチャ 1個", "calories": 275, "protein": 5.5, "fat": 10.0, "carbs": 39.0 },
-        { "name": "コーヒーゼリー 1個", "calories": 40, "protein": 0.5, "fat": 0.0, "carbs": 9.5 }
+        {
+          "name": "旨辛チキン 3本（サイゼリヤ）",
+          "calories": 390,
+          "protein": 27.0,
+          "fat": 27.0,
+          "carbs": 12.0
+        },
+        {
+          "name": "ソーセージピザ 1/4",
+          "calories": 135,
+          "protein": 6.0,
+          "fat": 7.5,
+          "carbs": 12.0
+        },
+        {
+          "name": "ミートスパゲッティ 二口（50g分）",
+          "calories": 75,
+          "protein": 3.0,
+          "fat": 2.5,
+          "carbs": 10.5
+        },
+        {
+          "name": "シナモンフォカッチャ 1個",
+          "calories": 275,
+          "protein": 5.5,
+          "fat": 10.0,
+          "carbs": 39.0
+        },
+        {
+          "name": "コーヒーゼリー 1個",
+          "calories": 40,
+          "protein": 0.5,
+          "fat": 0.0,
+          "carbs": 9.5
+        }
       ],
       "dinner": [
-        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
-        { "name": "納豆 2パック（100g）", "calories": 200, "protein": 16.6, "fat": 10.0, "carbs": 12.2 },
-        { "name": "大根おろし 80g", "calories": 14, "protein": 0.3, "fat": 0.0, "carbs": 3.5 },
-        { "name": "スティックパン バター味 2本（100g）", "calories": 280, "protein": 6.0, "fat": 10.0, "carbs": 40.0 },
-        { "name": "ザバス プロテインパック（20g）", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "チャーハン 100g", "calories": 180, "protein": 4.0, "fat": 6.0, "carbs": 26.0 },
-        { "name": "中華スープ（自作）100g", "calories": 20, "protein": 1.5, "fat": 0.5, "carbs": 2.5 }
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "納豆 2パック（100g）",
+          "calories": 200,
+          "protein": 16.6,
+          "fat": 10.0,
+          "carbs": 12.2
+        },
+        {
+          "name": "大根おろし 80g",
+          "calories": 14,
+          "protein": 0.3,
+          "fat": 0.0,
+          "carbs": 3.5
+        },
+        {
+          "name": "スティックパン バター味 2本（100g）",
+          "calories": 280,
+          "protein": 6.0,
+          "fat": 10.0,
+          "carbs": 40.0
+        },
+        {
+          "name": "ザバス プロテインパック（20g）",
+          "calories": 70,
+          "protein": 20.0,
+          "fat": 0.0,
+          "carbs": 5.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "チャーハン 100g",
+          "calories": 180,
+          "protein": 4.0,
+          "fat": 6.0,
+          "carbs": 26.0
+        },
+        {
+          "name": "中華スープ（自作）100g",
+          "calories": 20,
+          "protein": 1.5,
+          "fat": 0.5,
+          "carbs": 2.5
+        }
       ]
     },
     "2026-01-19": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "ザバス プロテインパック（20g）", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
-        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "ザバス プロテインパック（20g）",
+          "calories": 70,
+          "protein": 20.0,
+          "fat": 0.0,
+          "carbs": 5.0
+        },
+        {
+          "name": "サプリ類",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "鮭弁当（スーパー）", "calories": 650, "protein": 25.0, "fat": 18.0, "carbs": 95.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "オイコス（プロテイン10g）1個", "calories": 90, "protein": 10.0, "fat": 0.0, "carbs": 12.5 },
-        { "name": "納豆 1パック（50g）", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 }
+        {
+          "name": "鮭弁当（スーパー）",
+          "calories": 650,
+          "protein": 25.0,
+          "fat": 18.0,
+          "carbs": 95.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "オイコス（プロテイン10g）1個",
+          "calories": 90,
+          "protein": 10.0,
+          "fat": 0.0,
+          "carbs": 12.5
+        },
+        {
+          "name": "納豆 1パック（50g）",
+          "calories": 100,
+          "protein": 8.3,
+          "fat": 5.0,
+          "carbs": 6.1
+        }
       ],
       "snack": [
-        { "name": "串団子（あんこ味）2本", "calories": 220, "protein": 3.0, "fat": 0.6, "carbs": 50.0 },
-        { "name": "ザバス プロテインパック（20g）1本", "calories": 70, "protein": 20.0, "fat": 0.0, "carbs": 5.0 },
-        { "name": "カットパイン（10切れ）1パック", "calories": 120, "protein": 1.0, "fat": 0.2, "carbs": 29.0 }
+        {
+          "name": "串団子（あんこ味）2本",
+          "calories": 220,
+          "protein": 3.0,
+          "fat": 0.6,
+          "carbs": 50.0
+        },
+        {
+          "name": "ザバス プロテインパック（20g）1本",
+          "calories": 70,
+          "protein": 20.0,
+          "fat": 0.0,
+          "carbs": 5.0
+        },
+        {
+          "name": "カットパイン（10切れ）1パック",
+          "calories": 120,
+          "protein": 1.0,
+          "fat": 0.2,
+          "carbs": 29.0
+        }
       ]
     },
     "2026-01-28": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "脂質の低いツナオムレツ 3つ（180g）", "calories": 270, "protein": 24.0, "fat": 15.0, "carbs": 9.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "脂質の低いツナオムレツ 3つ（180g）",
+          "calories": 270,
+          "protein": 24.0,
+          "fat": 15.0,
+          "carbs": 9.0
+        }
       ],
       "snack": [
-        { "name": "ローソン 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
-        { "name": "ザバス プロテインパック バナナ味（15g）2本", "calories": 140, "protein": 30.0, "fat": 0.0, "carbs": 10.0 },
-        { "name": "カニカマバー 1本", "calories": 70, "protein": 7.0, "fat": 0.5, "carbs": 9.0 },
-        { "name": "ローソン 卵蒸しパン 1個", "calories": 280, "protein": 6.0, "fat": 12.0, "carbs": 38.0 }
+        {
+          "name": "ローソン 鮭おにぎり 1個",
+          "calories": 180,
+          "protein": 5.0,
+          "fat": 2.0,
+          "carbs": 35.0
+        },
+        {
+          "name": "ザバス プロテインパック バナナ味（15g）2本",
+          "calories": 140,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 10.0
+        },
+        {
+          "name": "カニカマバー 1本",
+          "calories": 70,
+          "protein": 7.0,
+          "fat": 0.5,
+          "carbs": 9.0
+        },
+        {
+          "name": "ローソン 卵蒸しパン 1個",
+          "calories": 280,
+          "protein": 6.0,
+          "fat": 12.0,
+          "carbs": 38.0
+        }
       ],
       "dinner": [
-        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "鶏ひき肉 250g", "calories": 325, "protein": 50.0, "fat": 12.5, "carbs": 2.5 }
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "鶏ひき肉 250g",
+          "calories": 325,
+          "protein": 50.0,
+          "fat": 12.5,
+          "carbs": 2.5
+        }
       ]
     },
     "2026-01-29": {
       "breakfast": [
-        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 },
-        { "name": "鮭おにぎり", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
-        { "name": "石窯パン", "calories": 235, "protein": 7.0, "fat": 3.5, "carbs": 45.0 }
+        {
+          "name": "プロテイン 30g",
+          "calories": 120,
+          "protein": 24.0,
+          "fat": 1.5,
+          "carbs": 3.0
+        },
+        {
+          "name": "鮭おにぎり",
+          "calories": 180,
+          "protein": 5.0,
+          "fat": 2.0,
+          "carbs": 35.0
+        },
+        {
+          "name": "石窯パン",
+          "calories": 235,
+          "protein": 7.0,
+          "fat": 3.5,
+          "carbs": 45.0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏むねカレー 200g", "calories": 320, "protein": 35.0, "fat": 8.0, "carbs": 28.0 },
-        { "name": "納豆", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏むねカレー 200g",
+          "calories": 320,
+          "protein": 35.0,
+          "fat": 8.0,
+          "carbs": 28.0
+        },
+        {
+          "name": "納豆",
+          "calories": 100,
+          "protein": 8.3,
+          "fat": 5.0,
+          "carbs": 6.1
+        }
       ],
       "snack": [
-        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 },
-        { "name": "チーズカステラ", "calories": 280, "protein": 6.0, "fat": 12.0, "carbs": 38.0 },
-        { "name": "軟骨つくね", "calories": 135, "protein": 12.0, "fat": 7.0, "carbs": 5.0 }
+        {
+          "name": "プロテイン 30g",
+          "calories": 120,
+          "protein": 24.0,
+          "fat": 1.5,
+          "carbs": 3.0
+        },
+        {
+          "name": "チーズカステラ",
+          "calories": 280,
+          "protein": 6.0,
+          "fat": 12.0,
+          "carbs": 38.0
+        },
+        {
+          "name": "軟骨つくね",
+          "calories": 135,
+          "protein": 12.0,
+          "fat": 7.0,
+          "carbs": 5.0
+        }
       ],
       "dinner": [
-        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "豚バラ白菜ミルフィーユ 200g", "calories": 350, "protein": 18.0, "fat": 25.0, "carbs": 10.0 },
-        { "name": "プロテイン 30g", "calories": 120, "protein": 24.0, "fat": 1.5, "carbs": 3.0 }
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "豚バラ白菜ミルフィーユ 200g",
+          "calories": 350,
+          "protein": 18.0,
+          "fat": 25.0,
+          "carbs": 10.0
+        },
+        {
+          "name": "プロテイン 30g",
+          "calories": 120,
+          "protein": 24.0,
+          "fat": 1.5,
+          "carbs": 3.0
+        }
       ],
       "exercise": [
-        { "name": "ラットプルダウン", "calories": -40, "protein": 0, "fat": 0, "carbs": 0 },
-        { "name": "ワンハンドロー", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 },
-        { "name": "ベントオーバーロウ", "calories": -35, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "ラットプルダウン",
+          "calories": -40,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        },
+        {
+          "name": "ワンハンドロー",
+          "calories": -35,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        },
+        {
+          "name": "ベントオーバーロウ",
+          "calories": -35,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ]
     },
     "2026-01-30": {
       "breakfast": [
-        { "name": "ファミマ 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
-        { "name": "ファミマ たくあんおにぎり 1個", "calories": 170, "protein": 3.5, "fat": 1.0, "carbs": 36.0 },
-        { "name": "カニカマバー 1個", "calories": 70, "protein": 7.0, "fat": 0.5, "carbs": 9.0 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 105, "protein": 30.0, "fat": 0.0, "carbs": 7.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "ファミマ 鮭おにぎり 1個",
+          "calories": 180,
+          "protein": 5.0,
+          "fat": 2.0,
+          "carbs": 35.0
+        },
+        {
+          "name": "ファミマ たくあんおにぎり 1個",
+          "calories": 170,
+          "protein": 3.5,
+          "fat": 1.0,
+          "carbs": 36.0
+        },
+        {
+          "name": "カニカマバー 1個",
+          "calories": 70,
+          "protein": 7.0,
+          "fat": 0.5,
+          "carbs": 9.0
+        },
+        {
+          "name": "ザバス プロテインパック（30g）",
+          "calories": 105,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 7.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏胸肉つくね 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏胸肉つくね 150g",
+          "calories": 225,
+          "protein": 27.0,
+          "fat": 10.5,
+          "carbs": 4.5
+        }
       ],
       "snack": [
-        { "name": "軟骨つくね青じそ 80g", "calories": 128, "protein": 13.9, "fat": 6.2, "carbs": 4.5 },
-        { "name": "菓子バー（食物繊維入り）", "calories": 112, "protein": 5.3, "fat": 3.0, "carbs": 22.3 },
-        { "name": "ザバス プロテインパック 430ml（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 },
-        { "name": "もち麦パン 1個", "calories": 113, "protein": 3.7, "fat": 6.6, "carbs": 13.5 },
-        { "name": "ローソン 焼き鮭ハラミおにぎり 1個", "calories": 200, "protein": 6.0, "fat": 4.0, "carbs": 35.0 }
+        {
+          "name": "軟骨つくね青じそ 80g",
+          "calories": 128,
+          "protein": 13.9,
+          "fat": 6.2,
+          "carbs": 4.5
+        },
+        {
+          "name": "菓子バー（食物繊維入り）",
+          "calories": 112,
+          "protein": 5.3,
+          "fat": 3.0,
+          "carbs": 22.3
+        },
+        {
+          "name": "ザバス プロテインパック 430ml（30g）",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 18.5
+        },
+        {
+          "name": "もち麦パン 1個",
+          "calories": 113,
+          "protein": 3.7,
+          "fat": 6.6,
+          "carbs": 13.5
+        },
+        {
+          "name": "ローソン 焼き鮭ハラミおにぎり 1個",
+          "calories": 200,
+          "protein": 6.0,
+          "fat": 4.0,
+          "carbs": 35.0
+        }
       ],
       "dinner": [
-        { "name": "白米 350g", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
-        { "name": "アジフライ 2枚", "calories": 320, "protein": 20.0, "fat": 20.0, "carbs": 14.0 },
-        { "name": "豚肩ブロック 100g", "calories": 200, "protein": 18.0, "fat": 14.0, "carbs": 0.0 }
+        {
+          "name": "白米 350g",
+          "calories": 588,
+          "protein": 8.8,
+          "fat": 1.1,
+          "carbs": 129.5
+        },
+        {
+          "name": "アジフライ 2枚",
+          "calories": 320,
+          "protein": 20.0,
+          "fat": 20.0,
+          "carbs": 14.0
+        },
+        {
+          "name": "豚肩ブロック 100g",
+          "calories": 200,
+          "protein": 18.0,
+          "fat": 14.0,
+          "carbs": 0.0
+        }
       ]
     },
     "2026-01-31": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "ほうれん草のおひたし 60g", "calories": 15, "protein": 1.5, "fat": 0.2, "carbs": 2.0 },
-        { "name": "鮭の切り身 200g", "calories": 260, "protein": 44.0, "fat": 8.0, "carbs": 0.2 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "ほうれん草のおひたし 60g",
+          "calories": 15,
+          "protein": 1.5,
+          "fat": 0.2,
+          "carbs": 2.0
+        },
+        {
+          "name": "鮭の切り身 200g",
+          "calories": 260,
+          "protein": 44.0,
+          "fat": 8.0,
+          "carbs": 0.2
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "キャベツの千切り 50g", "calories": 12, "protein": 0.7, "fat": 0.1, "carbs": 2.6 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "キャベツの千切り 50g",
+          "calories": 12,
+          "protein": 0.7,
+          "fat": 0.1,
+          "carbs": 2.6
+        }
       ],
       "dinner": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉カレー 300g", "calories": 480, "protein": 60.0, "fat": 18.0, "carbs": 18.0 },
-        { "name": "白身魚のフライ 1切れ", "calories": 150, "protein": 10.0, "fat": 8.0, "carbs": 10.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉カレー 300g",
+          "calories": 480,
+          "protein": 60.0,
+          "fat": 18.0,
+          "carbs": 18.0
+        },
+        {
+          "name": "白身魚のフライ 1切れ",
+          "calories": 150,
+          "protein": 10.0,
+          "fat": 8.0,
+          "carbs": 10.0
+        }
       ]
     },
     "2026-02-01": {
       "breakfast": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏むね肉ひき肉カレー 300g", "calories": 480, "protein": 60.0, "fat": 18.0, "carbs": 18.0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏むね肉ひき肉カレー 300g",
+          "calories": 480,
+          "protein": 60.0,
+          "fat": 18.0,
+          "carbs": 18.0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "クラシックチョコレートサンデー（アウトバック）", "calories": 650, "protein": 8.0, "fat": 35.0, "carbs": 78.0 },
-        { "name": "ブレッド 1個（アウトバック）", "calories": 180, "protein": 5.0, "fat": 6.0, "carbs": 26.0 }
+        {
+          "name": "クラシックチョコレートサンデー（アウトバック）",
+          "calories": 650,
+          "protein": 8.0,
+          "fat": 35.0,
+          "carbs": 78.0
+        },
+        {
+          "name": "ブレッド 1個（アウトバック）",
+          "calories": 180,
+          "protein": 5.0,
+          "fat": 6.0,
+          "carbs": 26.0
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "牛肉とニンニクの芽の炒め物 150g", "calories": 280, "protein": 18.0, "fat": 20.0, "carbs": 6.0 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 105, "protein": 30.0, "fat": 0.0, "carbs": 7.5 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "牛肉とニンニクの芽の炒め物 150g",
+          "calories": 280,
+          "protein": 18.0,
+          "fat": 20.0,
+          "carbs": 6.0
+        },
+        {
+          "name": "ザバス プロテインパック（30g）",
+          "calories": 105,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 7.5
+        }
       ]
     },
     "2026-02-02": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "鶏つくねハンバーグ 150g", "calories": 225, "protein": 27.0, "fat": 10.5, "carbs": 4.5 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "鶏つくねハンバーグ 150g",
+          "calories": 225,
+          "protein": 27.0,
+          "fat": 10.5,
+          "carbs": 4.5
+        }
       ],
       "snack": [
-        { "name": "ファミマ 鶏五目おにぎり 1個", "calories": 185, "protein": 5.0, "fat": 2.5, "carbs": 36.0 },
-        { "name": "ファミマ ブラックペッパーサラダチキン（19.9g）", "calories": 100, "protein": 19.9, "fat": 1.5, "carbs": 2.0 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
+        {
+          "name": "ファミマ 鶏五目おにぎり 1個",
+          "calories": 185,
+          "protein": 5.0,
+          "fat": 2.5,
+          "carbs": 36.0
+        },
+        {
+          "name": "ファミマ ブラックペッパーサラダチキン（19.9g）",
+          "calories": 100,
+          "protein": 19.9,
+          "fat": 1.5,
+          "carbs": 2.0
+        },
+        {
+          "name": "ザバス プロテインパック（30g）",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 18.5
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鮭 100g", "calories": 130, "protein": 22.0, "fat": 4.0, "carbs": 0.1 },
-        { "name": "揚げ出し豆腐 150g", "calories": 173, "protein": 8.3, "fat": 10.5, "carbs": 12.0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鮭 100g",
+          "calories": 130,
+          "protein": 22.0,
+          "fat": 4.0,
+          "carbs": 0.1
+        },
+        {
+          "name": "揚げ出し豆腐 150g",
+          "calories": 173,
+          "protein": 8.3,
+          "fat": 10.5,
+          "carbs": 12.0
+        }
       ]
     },
     "2026-02-03": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏ひき肉 200g", "calories": 260, "protein": 40.0, "fat": 10.0, "carbs": 2.0 },
-        { "name": "鶏つくね 200g", "calories": 300, "protein": 36.0, "fat": 14.0, "carbs": 6.0 },
-        { "name": "納豆 1パック", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏ひき肉 200g",
+          "calories": 260,
+          "protein": 40.0,
+          "fat": 10.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "鶏つくね 200g",
+          "calories": 300,
+          "protein": 36.0,
+          "fat": 14.0,
+          "carbs": 6.0
+        },
+        {
+          "name": "納豆 1パック",
+          "calories": 100,
+          "protein": 8.3,
+          "fat": 5.0,
+          "carbs": 6.1
+        }
       ],
       "snack": [
-        { "name": "菓子パン 2個入り", "calories": 216, "protein": 13.8, "fat": 7.8, "carbs": 27.8 },
-        { "name": "マイプロテイン 40g", "calories": 147, "protein": 32.0, "fat": 2.0, "carbs": 2.7 }
+        {
+          "name": "菓子パン 2個入り",
+          "calories": 216,
+          "protein": 13.8,
+          "fat": 7.8,
+          "carbs": 27.8
+        },
+        {
+          "name": "マイプロテイン 40g",
+          "calories": 147,
+          "protein": 32.0,
+          "fat": 2.0,
+          "carbs": 2.7
+        }
       ],
       "dinner": [
-        { "name": "白米 100g", "calories": 168, "protein": 2.5, "fat": 0.3, "carbs": 37.0 },
-        { "name": "鶏もも肉 50g", "calories": 100, "protein": 8.3, "fat": 7.0, "carbs": 0 },
-        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 }
+        {
+          "name": "白米 100g",
+          "calories": 168,
+          "protein": 2.5,
+          "fat": 0.3,
+          "carbs": 37.0
+        },
+        {
+          "name": "鶏もも肉 50g",
+          "calories": 100,
+          "protein": 8.3,
+          "fat": 7.0,
+          "carbs": 0
+        },
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "ザバス プロテインパック（30g）",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 18.5
+        }
       ]
     },
     "2026-02-04": {
       "breakfast": [
-        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
-        { "name": "目玉焼き 3個", "calories": 270, "protein": 19.5, "fat": 19.5, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 270,
+          "protein": 19.5,
+          "fat": 19.5,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・ビタミンB・マグネシウム・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 200g", "calories": 336, "protein": 5.0, "fat": 0.6, "carbs": 74.0 },
-        { "name": "イカのお寿司 8巻", "calories": 480, "protein": 24.0, "fat": 2.4, "carbs": 88.0 },
-        { "name": "マグロのネギトロ 200g", "calories": 260, "protein": 26.0, "fat": 16.0, "carbs": 2.0 },
-        { "name": "サーモンの刺身 8切れ", "calories": 200, "protein": 20.0, "fat": 12.0, "carbs": 0.2 },
-        { "name": "白身魚のフライ 30g × 3個", "calories": 270, "protein": 18.0, "fat": 18.0, "carbs": 18.0 }
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "イカのお寿司 8巻",
+          "calories": 480,
+          "protein": 24.0,
+          "fat": 2.4,
+          "carbs": 88.0
+        },
+        {
+          "name": "マグロのネギトロ 200g",
+          "calories": 260,
+          "protein": 26.0,
+          "fat": 16.0,
+          "carbs": 2.0
+        },
+        {
+          "name": "サーモンの刺身 8切れ",
+          "calories": 200,
+          "protein": 20.0,
+          "fat": 12.0,
+          "carbs": 0.2
+        },
+        {
+          "name": "白身魚のフライ 30g × 3個",
+          "calories": 270,
+          "protein": 18.0,
+          "fat": 18.0,
+          "carbs": 18.0
+        }
       ],
       "dinner": [
-        { "name": "ローソン 鮭おにぎり 1個", "calories": 180, "protein": 5.0, "fat": 2.0, "carbs": 35.0 },
-        { "name": "ローソン 砂肝炒め", "calories": 80, "protein": 12.0, "fat": 3.0, "carbs": 1.0 },
-        { "name": "ザバス プロテインパック（30g）", "calories": 193, "protein": 30.0, "fat": 0.0, "carbs": 18.5 },
-        { "name": "ローソン ふんわりたまご蒸しケーキ", "calories": 441, "protein": 6.7, "fat": 22.1, "carbs": 54.0 }
+        {
+          "name": "ローソン 鮭おにぎり 1個",
+          "calories": 180,
+          "protein": 5.0,
+          "fat": 2.0,
+          "carbs": 35.0
+        },
+        {
+          "name": "ローソン 砂肝炒め",
+          "calories": 80,
+          "protein": 12.0,
+          "fat": 3.0,
+          "carbs": 1.0
+        },
+        {
+          "name": "ザバス プロテインパック（30g）",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0.0,
+          "carbs": 18.5
+        },
+        {
+          "name": "ローソン ふんわりたまご蒸しケーキ",
+          "calories": 441,
+          "protein": 6.7,
+          "fat": 22.1,
+          "carbs": 54.0
+        }
       ]
     },
     "2026-02-05": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏むねひき肉 200g", "calories": 234, "protein": 39.6, "fat": 8.2, "carbs": 0 },
-        { "name": "キャベツの千切り 100g", "calories": 23, "protein": 1.3, "fat": 0.2, "carbs": 5.2 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏むねひき肉 200g",
+          "calories": 234,
+          "protein": 39.6,
+          "fat": 8.2,
+          "carbs": 0
+        },
+        {
+          "name": "キャベツの千切り 100g",
+          "calories": 23,
+          "protein": 1.3,
+          "fat": 0.2,
+          "carbs": 5.2
+        }
       ],
       "dinner": [
-        { "name": "おにぎり（大きなおにぎり 鮭）1個", "calories": 283, "protein": 7.7, "fat": 2.5, "carbs": 58.6 },
-        { "name": "鶏肉つくね（なんこつ入り）80g", "calories": 128, "protein": 13.9, "fat": 6.2, "carbs": 4.5 },
-        { "name": "そうざい（蒸し鶏）80g × 2袋", "calories": 176, "protein": 23.6, "fat": 6.4, "carbs": 6.4 },
-        { "name": "明治 SAVAS ミルクプロテイン 430ml", "calories": 193, "protein": 30.0, "fat": 0, "carbs": 18.5 },
-        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 }
+        {
+          "name": "おにぎり（大きなおにぎり 鮭）1個",
+          "calories": 283,
+          "protein": 7.7,
+          "fat": 2.5,
+          "carbs": 58.6
+        },
+        {
+          "name": "鶏肉つくね（なんこつ入り）80g",
+          "calories": 128,
+          "protein": 13.9,
+          "fat": 6.2,
+          "carbs": 4.5
+        },
+        {
+          "name": "そうざい（蒸し鶏）80g × 2袋",
+          "calories": 176,
+          "protein": 23.6,
+          "fat": 6.4,
+          "carbs": 6.4
+        },
+        {
+          "name": "明治 SAVAS ミルクプロテイン 430ml",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0,
+          "carbs": 18.5
+        },
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "鶏むねひき肉 250g",
+          "calories": 293,
+          "protein": 49.5,
+          "fat": 10.3,
+          "carbs": 0
+        }
       ]
     },
     "2026-02-06": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 250g",
+          "calories": 293,
+          "protein": 49.5,
+          "fat": 10.3,
+          "carbs": 0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "白身魚の煮付け 60g × 3切れ", "calories": 216, "protein": 39.6, "fat": 1.8, "carbs": 9.0 },
-        { "name": "かぼちゃコロッケ 50g", "calories": 110, "protein": 2.5, "fat": 5.0, "carbs": 13.5 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "白身魚の煮付け 60g × 3切れ",
+          "calories": 216,
+          "protein": 39.6,
+          "fat": 1.8,
+          "carbs": 9.0
+        },
+        {
+          "name": "かぼちゃコロッケ 50g",
+          "calories": 110,
+          "protein": 2.5,
+          "fat": 5.0,
+          "carbs": 13.5
+        }
       ],
       "snack": [
-        { "name": "白米 150g（塩おにぎり）", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "ローソン ふんわり卵蒸しケーキ 1個", "calories": 200, "protein": 4.5, "fat": 7.0, "carbs": 30.0 },
-        { "name": "SAVAS プロテイン 15g", "calories": 60, "protein": 11.3, "fat": 0.5, "carbs": 6.0 },
-        { "name": "SAVAS ミルクプロテイン 紙パック 1本", "calories": 100, "protein": 15.0, "fat": 0, "carbs": 10.0 },
-        { "name": "有機栽培の干し芋スティック 1袋", "calories": 165, "protein": 1.5, "fat": 0.3, "carbs": 39.0 }
+        {
+          "name": "白米 150g（塩おにぎり）",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "ローソン ふんわり卵蒸しケーキ 1個",
+          "calories": 200,
+          "protein": 4.5,
+          "fat": 7.0,
+          "carbs": 30.0
+        },
+        {
+          "name": "SAVAS プロテイン 15g",
+          "calories": 60,
+          "protein": 11.3,
+          "fat": 0.5,
+          "carbs": 6.0
+        },
+        {
+          "name": "SAVAS ミルクプロテイン 紙パック 1本",
+          "calories": 100,
+          "protein": 15.0,
+          "fat": 0,
+          "carbs": 10.0
+        },
+        {
+          "name": "有機栽培の干し芋スティック 1袋",
+          "calories": 165,
+          "protein": 1.5,
+          "fat": 0.3,
+          "carbs": 39.0
+        }
       ],
       "dinner": [
-        { "name": "白米 120g", "calories": 202, "protein": 3.0, "fat": 0.4, "carbs": 44.4 },
-        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 }
+        {
+          "name": "白米 120g",
+          "calories": 202,
+          "protein": 3.0,
+          "fat": 0.4,
+          "carbs": 44.4
+        },
+        {
+          "name": "鶏むねひき肉 250g",
+          "calories": 293,
+          "protein": 49.5,
+          "fat": 10.3,
+          "carbs": 0
+        }
       ]
     },
     "2026-02-09": {
       "breakfast": [
-        { "name": "白米 150g", "calories": 252, "protein": 3.8, "fat": 0.5, "carbs": 55.5 },
-        { "name": "目玉焼き 1個", "calories": 109, "protein": 6.3, "fat": 8.6, "carbs": 0.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "目玉焼き 1個",
+          "calories": 109,
+          "protein": 6.3,
+          "fat": 8.6,
+          "carbs": 0.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "草大福（つぶあん）1個", "calories": 245, "protein": 3.9, "fat": 0.2, "carbs": 57.8 },
-        { "name": "イカから揚げ 1パック", "calories": 320, "protein": 13.4, "fat": 20.8, "carbs": 19.7 },
-        { "name": "鶏肉つくね（なんこつ入り）80g", "calories": 128, "protein": 13.9, "fat": 6.2, "carbs": 4.5 },
-        { "name": "おにぎり（国産もち麦入り枝豆と塩昆布）1個", "calories": 172, "protein": 5.1, "fat": 2.2, "carbs": 36.9 },
-        { "name": "おにぎり（大きな沢庵としそわかめ）1個", "calories": 264, "protein": 6.2, "fat": 2.7, "carbs": 55.1 },
-        { "name": "明治 SAVAS ミルクプロテイン カフェラテ味 430ml", "calories": 193, "protein": 30.0, "fat": 0, "carbs": 18.5 }
+        {
+          "name": "草大福（つぶあん）1個",
+          "calories": 245,
+          "protein": 3.9,
+          "fat": 0.2,
+          "carbs": 57.8
+        },
+        {
+          "name": "イカから揚げ 1パック",
+          "calories": 320,
+          "protein": 13.4,
+          "fat": 20.8,
+          "carbs": 19.7
+        },
+        {
+          "name": "鶏肉つくね（なんこつ入り）80g",
+          "calories": 128,
+          "protein": 13.9,
+          "fat": 6.2,
+          "carbs": 4.5
+        },
+        {
+          "name": "おにぎり（国産もち麦入り枝豆と塩昆布）1個",
+          "calories": 172,
+          "protein": 5.1,
+          "fat": 2.2,
+          "carbs": 36.9
+        },
+        {
+          "name": "おにぎり（大きな沢庵としそわかめ）1個",
+          "calories": 264,
+          "protein": 6.2,
+          "fat": 2.7,
+          "carbs": 55.1
+        },
+        {
+          "name": "明治 SAVAS ミルクプロテイン カフェラテ味 430ml",
+          "calories": 193,
+          "protein": 30.0,
+          "fat": 0,
+          "carbs": 18.5
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏むねひき肉 400g", "calories": 468, "protein": 79.2, "fat": 16.4, "carbs": 0 },
-        { "name": "目玉焼き 2個", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 400g",
+          "calories": 468,
+          "protein": 79.2,
+          "fat": 16.4,
+          "carbs": 0
+        },
+        {
+          "name": "目玉焼き 2個",
+          "calories": 218,
+          "protein": 12.6,
+          "fat": 17.2,
+          "carbs": 1.0
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
       ]
     },
     "2026-02-10": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "卵焼き（卵2個分）", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
-        { "name": "納豆 1パック（50g）", "calories": 100, "protein": 8.3, "fat": 5.0, "carbs": 6.1 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "卵焼き（卵2個分）",
+          "calories": 218,
+          "protein": 12.6,
+          "fat": 17.2,
+          "carbs": 1.0
+        },
+        {
+          "name": "納豆 1パック（50g）",
+          "calories": 100,
+          "protein": 8.3,
+          "fat": 5.0,
+          "carbs": 6.1
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏むねひき肉 400g", "calories": 468, "protein": 79.2, "fat": 16.4, "carbs": 0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏むねひき肉 400g",
+          "calories": 468,
+          "protein": 79.2,
+          "fat": 16.4,
+          "carbs": 0
+        }
       ],
       "dinner": [
-        { "name": "白米 410g", "calories": 689, "protein": 10.3, "fat": 1.2, "carbs": 151.7 },
-        { "name": "鮭切り身 180g", "calories": 234, "protein": 40.3, "fat": 7.6, "carbs": 0.2 },
-        { "name": "目玉焼き 1個", "calories": 109, "protein": 6.3, "fat": 8.6, "carbs": 0.5 }
+        {
+          "name": "白米 410g",
+          "calories": 689,
+          "protein": 10.3,
+          "fat": 1.2,
+          "carbs": 151.7
+        },
+        {
+          "name": "鮭切り身 180g",
+          "calories": 234,
+          "protein": 40.3,
+          "fat": 7.6,
+          "carbs": 0.2
+        },
+        {
+          "name": "目玉焼き 1個",
+          "calories": 109,
+          "protein": 6.3,
+          "fat": 8.6,
+          "carbs": 0.5
+        }
       ]
     },
     "2026-02-11": {
       "breakfast": [
-        { "name": "白米 350g", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 350g",
+          "calories": 588,
+          "protein": 8.8,
+          "fat": 1.1,
+          "carbs": 129.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 410g", "calories": 689, "protein": 10.3, "fat": 1.2, "carbs": 151.7 },
-        { "name": "鶏むねひき肉 400g", "calories": 468, "protein": 79.2, "fat": 16.4, "carbs": 0 }
+        {
+          "name": "白米 410g",
+          "calories": 689,
+          "protein": 10.3,
+          "fat": 1.2,
+          "carbs": 151.7
+        },
+        {
+          "name": "鶏むねひき肉 400g",
+          "calories": 468,
+          "protein": 79.2,
+          "fat": 16.4,
+          "carbs": 0
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏手羽元 6本（約300g）", "calories": 588, "protein": 55.8, "fat": 39.0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏手羽元 6本（約300g）",
+          "calories": 588,
+          "protein": 55.8,
+          "fat": 39.0,
+          "carbs": 0
+        }
       ]
     },
     "2026-02-12": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "納豆 2パック（100g）", "calories": 200, "protein": 16.6, "fat": 10.0, "carbs": 12.2 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "納豆 2パック（100g）",
+          "calories": 200,
+          "protein": 16.6,
+          "fat": 10.0,
+          "carbs": 12.2
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
       ],
       "dinner": [
-        { "name": "白米 350g", "calories": 588, "protein": 8.8, "fat": 1.1, "carbs": 129.5 },
-        { "name": "鶏むねひき肉 320g", "calories": 374, "protein": 63.4, "fat": 13.1, "carbs": 0 },
-        { "name": "バナナ 1本（100g）", "calories": 86, "protein": 1.1, "fat": 0.2, "carbs": 22.5 },
-        { "name": "蜂蜜 20g", "calories": 58, "protein": 0, "fat": 0, "carbs": 16.2 }
+        {
+          "name": "白米 350g",
+          "calories": 588,
+          "protein": 8.8,
+          "fat": 1.1,
+          "carbs": 129.5
+        },
+        {
+          "name": "鶏むねひき肉 320g",
+          "calories": 374,
+          "protein": 63.4,
+          "fat": 13.1,
+          "carbs": 0
+        },
+        {
+          "name": "バナナ 1本（100g）",
+          "calories": 86,
+          "protein": 1.1,
+          "fat": 0.2,
+          "carbs": 22.5
+        },
+        {
+          "name": "蜂蜜 20g",
+          "calories": 58,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 16.2
+        }
       ]
     },
     "2026-02-13": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "おにぎり（鮭）1個", "calories": 180, "protein": 4.5, "fat": 1.5, "carbs": 38.0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "おにぎり（鮭）1個",
+          "calories": 180,
+          "protein": 4.5,
+          "fat": 1.5,
+          "carbs": 38.0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "日替わり握りランチ 10貫", "calories": 750, "protein": 60.0, "fat": 10.0, "carbs": 140.0 },
-        { "name": "海苔の味噌汁 1杯", "calories": 35, "protein": 2.0, "fat": 0.8, "carbs": 5.0 },
-        { "name": "サーモン 2貫（追加）", "calories": 140, "protein": 16.0, "fat": 6.0, "carbs": 28.0 },
-        { "name": "マグロ赤身 2貫（追加）", "calories": 140, "protein": 24.0, "fat": 2.0, "carbs": 28.0 }
+        {
+          "name": "日替わり握りランチ 10貫",
+          "calories": 750,
+          "protein": 60.0,
+          "fat": 10.0,
+          "carbs": 140.0
+        },
+        {
+          "name": "海苔の味噌汁 1杯",
+          "calories": 35,
+          "protein": 2.0,
+          "fat": 0.8,
+          "carbs": 5.0
+        },
+        {
+          "name": "サーモン 2貫（追加）",
+          "calories": 140,
+          "protein": 16.0,
+          "fat": 6.0,
+          "carbs": 28.0
+        },
+        {
+          "name": "マグロ赤身 2貫（追加）",
+          "calories": 140,
+          "protein": 24.0,
+          "fat": 2.0,
+          "carbs": 28.0
+        }
       ],
       "snack": [
-        { "name": "バナナ 1本（100g）", "calories": 86, "protein": 1.1, "fat": 0.2, "carbs": 22.5 },
-        { "name": "ヨーグルト（脂質0）50g", "calories": 32, "protein": 3.5, "fat": 0, "carbs": 5.0 },
-        { "name": "蜂蜜 5g", "calories": 15, "protein": 0, "fat": 0, "carbs": 4.1 }
+        {
+          "name": "バナナ 1本（100g）",
+          "calories": 86,
+          "protein": 1.1,
+          "fat": 0.2,
+          "carbs": 22.5
+        },
+        {
+          "name": "ヨーグルト（脂質0）50g",
+          "calories": 32,
+          "protein": 3.5,
+          "fat": 0,
+          "carbs": 5.0
+        },
+        {
+          "name": "蜂蜜 5g",
+          "calories": 15,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 4.1
+        }
       ],
       "dinner": [
-        { "name": "白米 140g", "calories": 235, "protein": 3.5, "fat": 0.4, "carbs": 51.8 },
-        { "name": "鶏むねひき肉 444g", "calories": 520, "protein": 87.9, "fat": 18.2, "carbs": 0 }
+        {
+          "name": "白米 140g",
+          "calories": 235,
+          "protein": 3.5,
+          "fat": 0.4,
+          "carbs": 51.8
+        },
+        {
+          "name": "鶏むねひき肉 444g",
+          "calories": 520,
+          "protein": 87.9,
+          "fat": 18.2,
+          "carbs": 0
+        }
       ]
     },
     "2026-02-14": {
       "breakfast": [
-        { "name": "バナナ 2本（200g）", "calories": 172, "protein": 2.2, "fat": 0.4, "carbs": 45.0 },
-        { "name": "ヨーグルト（脂質0）50g", "calories": 32, "protein": 3.5, "fat": 0, "carbs": 5.0 },
-        { "name": "蜂蜜 10g", "calories": 29, "protein": 0, "fat": 0, "carbs": 8.1 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "バナナ 2本（200g）",
+          "calories": 172,
+          "protein": 2.2,
+          "fat": 0.4,
+          "carbs": 45.0
+        },
+        {
+          "name": "ヨーグルト（脂質0）50g",
+          "calories": 32,
+          "protein": 3.5,
+          "fat": 0,
+          "carbs": 5.0
+        },
+        {
+          "name": "蜂蜜 10g",
+          "calories": 29,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 8.1
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "鶏むねひき肉 300g", "calories": 351, "protein": 59.4, "fat": 12.3, "carbs": 0 },
-        { "name": "富士そば かけそば 大盛り", "calories": 520, "protein": 22.0, "fat": 4.0, "carbs": 98.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "鶏むねひき肉 300g",
+          "calories": 351,
+          "protein": 59.4,
+          "fat": 12.3,
+          "carbs": 0
+        },
+        {
+          "name": "富士そば かけそば 大盛り",
+          "calories": 520,
+          "protein": 22.0,
+          "fat": 4.0,
+          "carbs": 98.0
+        }
       ],
       "snack": [
-        { "name": "やわらか干し芋 55g", "calories": 139, "protein": 1.8, "fat": 0.1, "carbs": 31.0 }
+        {
+          "name": "やわらか干し芋 55g",
+          "calories": 139,
+          "protein": 1.8,
+          "fat": 0.1,
+          "carbs": 31.0
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏むねひき肉 350g", "calories": 410, "protein": 69.3, "fat": 14.4, "carbs": 0 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 350g",
+          "calories": 410,
+          "protein": 69.3,
+          "fat": 14.4,
+          "carbs": 0
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
       ]
     },
     "2026-02-15": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 250g",
+          "calories": 293,
+          "protein": 49.5,
+          "fat": 10.3,
+          "carbs": 0
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "まぐろ（赤身）4皿 8貫", "calories": 560, "protein": 96.0, "fat": 8.0, "carbs": 112.0 },
-        { "name": "いか 4皿 8貫", "calories": 480, "protein": 48.0, "fat": 4.0, "carbs": 112.0 },
-        { "name": "えんがわ 1皿 2貫", "calories": 140, "protein": 12.0, "fat": 6.0, "carbs": 28.0 },
-        { "name": "つぶ貝 2皿 4貫", "calories": 240, "protein": 24.0, "fat": 2.0, "carbs": 56.0 },
-        { "name": "たまご（厚焼き玉子）1皿 2貫", "calories": 154, "protein": 7.0, "fat": 6.0, "carbs": 21.0 }
+        {
+          "name": "まぐろ（赤身）4皿 8貫",
+          "calories": 560,
+          "protein": 96.0,
+          "fat": 8.0,
+          "carbs": 112.0
+        },
+        {
+          "name": "いか 4皿 8貫",
+          "calories": 480,
+          "protein": 48.0,
+          "fat": 4.0,
+          "carbs": 112.0
+        },
+        {
+          "name": "えんがわ 1皿 2貫",
+          "calories": 140,
+          "protein": 12.0,
+          "fat": 6.0,
+          "carbs": 28.0
+        },
+        {
+          "name": "つぶ貝 2皿 4貫",
+          "calories": 240,
+          "protein": 24.0,
+          "fat": 2.0,
+          "carbs": 56.0
+        },
+        {
+          "name": "たまご（厚焼き玉子）1皿 2貫",
+          "calories": 154,
+          "protein": 7.0,
+          "fat": 6.0,
+          "carbs": 21.0
+        }
       ],
       "dinner": [
-        { "name": "サーモン 2皿（シャリハーフ）", "calories": 210, "protein": 32.0, "fat": 12.0, "carbs": 28.0 },
-        { "name": "たまご（厚焼き玉子）1皿（シャリハーフ）", "calories": 152, "protein": 8.0, "fat": 8.0, "carbs": 14.0 }
+        {
+          "name": "サーモン 2皿（シャリハーフ）",
+          "calories": 210,
+          "protein": 32.0,
+          "fat": 12.0,
+          "carbs": 28.0
+        },
+        {
+          "name": "たまご（厚焼き玉子）1皿（シャリハーフ）",
+          "calories": 152,
+          "protein": 8.0,
+          "fat": 8.0,
+          "carbs": 14.0
+        }
       ]
     },
     "2026-02-16": {
       "breakfast": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "目玉焼き 3個", "calories": 327, "protein": 18.9, "fat": 25.8, "carbs": 1.5 },
-        { "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）", "calories": 0, "protein": 0, "fat": 0, "carbs": 0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
       ],
       "lunch": [
-        { "name": "白米 300g", "calories": 504, "protein": 7.5, "fat": 0.9, "carbs": 111.0 },
-        { "name": "ファミマ 鶏ささみ（たまり醤油味）1個", "calories": 95, "protein": 18.9, "fat": 0.5, "carbs": 4.0 },
-        { "name": "ファミマ 焼きそば 1個", "calories": 520, "protein": 15.0, "fat": 18.0, "carbs": 75.0 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+        {
+          "name": "白米 300g",
+          "calories": 504,
+          "protein": 7.5,
+          "fat": 0.9,
+          "carbs": 111.0
+        },
+        {
+          "name": "ファミマ 鶏ささみ（たまり醤油味）1個",
+          "calories": 95,
+          "protein": 18.9,
+          "fat": 0.5,
+          "carbs": 4.0
+        },
+        {
+          "name": "ファミマ 焼きそば 1個",
+          "calories": 520,
+          "protein": 15.0,
+          "fat": 18.0,
+          "carbs": 75.0
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
       ],
       "snack": [
-        { "name": "バナナ 1本（100g）", "calories": 86, "protein": 1.1, "fat": 0.2, "carbs": 22.5 },
-        { "name": "蜂蜜 5g", "calories": 15, "protein": 0, "fat": 0, "carbs": 4.1 },
-        { "name": "ヨーグルト（脂質0）50g", "calories": 32, "protein": 3.5, "fat": 0, "carbs": 5.0 }
+        {
+          "name": "バナナ 1本（100g）",
+          "calories": 86,
+          "protein": 1.1,
+          "fat": 0.2,
+          "carbs": 22.5
+        },
+        {
+          "name": "蜂蜜 5g",
+          "calories": 15,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 4.1
+        },
+        {
+          "name": "ヨーグルト（脂質0）50g",
+          "calories": 32,
+          "protein": 3.5,
+          "fat": 0,
+          "carbs": 5.0
+        }
       ],
       "dinner": [
-        { "name": "白米 250g", "calories": 420, "protein": 6.3, "fat": 0.8, "carbs": 92.5 },
-        { "name": "鶏むねひき肉 250g", "calories": 293, "protein": 49.5, "fat": 10.3, "carbs": 0 },
-        { "name": "目玉焼き 2個", "calories": 218, "protein": 12.6, "fat": 17.2, "carbs": 1.0 },
-        { "name": "マイプロテイン IMPACT Whey 2杯（50g）", "calories": 206, "protein": 42.0, "fat": 3.8, "carbs": 2.0 }
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 250g",
+          "calories": 293,
+          "protein": 49.5,
+          "fat": 10.3,
+          "carbs": 0
+        },
+        {
+          "name": "目玉焼き 2個",
+          "calories": 218,
+          "protein": 12.6,
+          "fat": 17.2,
+          "carbs": 1.0
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
+      ]
+    },
+    "2026-02-17": {
+      "breakfast": [
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "目玉焼き 3個",
+          "calories": 327,
+          "protein": 18.9,
+          "fat": 25.8,
+          "carbs": 1.5
+        },
+        {
+          "name": "サプリ類（クレアチン・マルチビタミン・イヌリン）",
+          "calories": 0,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 0
+        }
+      ],
+      "lunch": [
+        {
+          "name": "白米 500g",
+          "calories": 840,
+          "protein": 12.5,
+          "fat": 1.5,
+          "carbs": 185.0
+        },
+        {
+          "name": "ネギトロ 200g",
+          "calories": 350,
+          "protein": 36.0,
+          "fat": 20.0,
+          "carbs": 4.0
+        },
+        {
+          "name": "沢庵 20g",
+          "calories": 12,
+          "protein": 0.3,
+          "fat": 0.1,
+          "carbs": 2.7
+        },
+        {
+          "name": "マイプロテイン IMPACT Whey 2杯（50g）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
+      ],
+      "snack": [
+        {
+          "name": "おいも蒸しまん 2個",
+          "calories": 446,
+          "protein": 5.2,
+          "fat": 2.0,
+          "carbs": 102.2
+        }
+      ],
+      "dinner": [
+        {
+          "name": "白米 126g",
+          "calories": 212,
+          "protein": 3.2,
+          "fat": 0.4,
+          "carbs": 46.6
+        },
+        {
+          "name": "豚肩肉（赤身・脂身トリミング済み）500g",
+          "calories": 620,
+          "protein": 90.0,
+          "fat": 27.5,
+          "carbs": 0
+        }
       ]
     }
   },
@@ -857,6 +2683,24 @@
       "carbs": 394,
       "carbs_note": "下限",
       "current": true
+    },
+    {
+      "date": "2026-02-17",
+      "calories": 3400,
+      "protein": 213,
+      "fat": 75,
+      "carbs": 425,
+      "note": "トレーナー指示：摂取カロリー目標3,400kcal、炭水化物50%以上"
     }
-  ]
+  ],
+  "goals": {
+    "calories": 3400,
+    "calories_note": "3,400kcal",
+    "protein": 213,
+    "fat": 75,
+    "fat_note": "上限",
+    "carbs": 425,
+    "carbs_note": "下限（50%以上）",
+    "pfc_ratio": "2.5:2:5"
+  }
 }

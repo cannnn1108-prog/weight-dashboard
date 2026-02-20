@@ -2719,6 +2719,58 @@
           "carbs": 4.5
         }
       ]
+    },
+    "2026-02-19": {
+      "breakfast": [
+        {
+          "name": "朝食合計",
+          "calories": 922,
+          "protein": 28.6,
+          "fat": 26.8,
+          "carbs": 136.7
+        }
+      ],
+      "lunch": [
+        {
+          "name": "昼食合計",
+          "calories": 1050,
+          "protein": 51.9,
+          "fat": 24.0,
+          "carbs": 151.6
+        }
+      ],
+      "snack": [
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.0
+        }
+      ],
+      "dinner": [
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "鶏ささみ 200g",
+          "calories": 198,
+          "protein": 46.0,
+          "fat": 1.6,
+          "carbs": 0
+        },
+        {
+          "name": "セブン桜餅 2個",
+          "calories": 290,
+          "protein": 5.2,
+          "fat": 0,
+          "carbs": 67.2
+        }
+      ]
     }
   },
   "weekly_measurements": [

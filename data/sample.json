@@ -2771,6 +2771,20 @@
           "carbs": 67.2
         }
       ]
+    },
+    "2026-02-20": {
+      "breakfast": [
+        {
+          "name": "1日合計",
+          "calories": 3089,
+          "protein": 188.8,
+          "fat": 45.8,
+          "carbs": 464.6
+        }
+      ],
+      "lunch": [],
+      "snack": [],
+      "dinner": []
     }
   },
   "weekly_measurements": [

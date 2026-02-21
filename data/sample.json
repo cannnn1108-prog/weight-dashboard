@@ -2785,6 +2785,51 @@
       "lunch": [],
       "snack": [],
       "dinner": []
+    },
+    "2026-02-21": {
+      "breakfast": [
+        {
+          "name": "朝食合計",
+          "calories": 1037,
+          "protein": 107.5,
+          "fat": 8.6,
+          "carbs": 129.7
+        }
+      ],
+      "lunch": [
+        {
+          "name": "昼食合計",
+          "calories": 292,
+          "protein": 6.8,
+          "fat": 1.5,
+          "carbs": 60.0
+        }
+      ],
+      "snack": [
+        {
+          "name": "デキストリン水 2杯",
+          "calories": 416,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 104.6
+        },
+        {
+          "name": "マイプロテイン 4杯",
+          "calories": 412,
+          "protein": 84.0,
+          "fat": 7.6,
+          "carbs": 4.0
+        }
+      ],
+      "dinner": [
+        {
+          "name": "夕食合計",
+          "calories": 872,
+          "protein": 75.2,
+          "fat": 17.6,
+          "carbs": 93.1
+        }
+      ]
     }
   },
   "weekly_measurements": [

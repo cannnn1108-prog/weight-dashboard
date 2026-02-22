@@ -2830,6 +2830,114 @@
           "carbs": 93.1
         }
       ]
+    },
+    "2026-02-22": {
+      "breakfast": [
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "卵焼き（卵2個）",
+          "calories": 182,
+          "protein": 12.6,
+          "fat": 13.0,
+          "carbs": 0.6
+        },
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        }
+      ],
+      "lunch": [
+        {
+          "name": "釜揚げうどん（大）",
+          "calories": 473,
+          "protein": 14.2,
+          "fat": 2.8,
+          "carbs": 96.0
+        },
+        {
+          "name": "かしわ天",
+          "calories": 143,
+          "protein": 9.3,
+          "fat": 7.2,
+          "carbs": 10.3
+        },
+        {
+          "name": "舞茸天",
+          "calories": 106,
+          "protein": 2.2,
+          "fat": 7.3,
+          "carbs": 10.4
+        },
+        {
+          "name": "高菜おむすび",
+          "calories": 155,
+          "protein": 3.5,
+          "fat": 1.0,
+          "carbs": 33.0
+        }
+      ],
+      "snack": [
+        {
+          "name": "デキストリン水 1杯（間食①）",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        },
+        {
+          "name": "マイプロテイン 2杯（間食②）",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "デキストリン水 1杯（間食②）",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        }
+      ],
+      "dinner": [
+        {
+          "name": "白米 130g",
+          "calories": 218,
+          "protein": 3.3,
+          "fat": 0.4,
+          "carbs": 48.1
+        },
+        {
+          "name": "卵 2個",
+          "calories": 182,
+          "protein": 12.6,
+          "fat": 13.0,
+          "carbs": 0.6
+        },
+        {
+          "name": "マイプロテイン 3杯",
+          "calories": 309,
+          "protein": 63.0,
+          "fat": 5.7,
+          "carbs": 3.0
+        }
+      ]
     }
   },
   "weekly_measurements": [

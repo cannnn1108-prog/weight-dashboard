@@ -2938,6 +2938,250 @@
           "carbs": 3.0
         }
       ]
+    },
+    "2026-02-23": {
+      "breakfast": [
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "卵焼き（卵2個）",
+          "calories": 182,
+          "protein": 12.6,
+          "fat": 13.0,
+          "carbs": 0.6
+        },
+        {
+          "name": "バナナ 1本",
+          "calories": 86,
+          "protein": 1.1,
+          "fat": 0.2,
+          "carbs": 22.5
+        },
+        {
+          "name": "脂肪0ヨーグルト 50g",
+          "calories": 25,
+          "protein": 1.8,
+          "fat": 0,
+          "carbs": 4.5
+        },
+        {
+          "name": "はちみつ 10g",
+          "calories": 30,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 8.2
+        },
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        }
+      ],
+      "lunch": [
+        {
+          "name": "白米 200g",
+          "calories": 336,
+          "protein": 5.0,
+          "fat": 0.6,
+          "carbs": 74.0
+        },
+        {
+          "name": "鶏むねひき肉 200g",
+          "calories": 216,
+          "protein": 45.0,
+          "fat": 3.0,
+          "carbs": 0
+        },
+        {
+          "name": "卵 1個",
+          "calories": 91,
+          "protein": 6.3,
+          "fat": 6.5,
+          "carbs": 0.3
+        },
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        }
+      ],
+      "snack": [
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        },
+        {
+          "name": "マイプロテイン 1杯",
+          "calories": 103,
+          "protein": 21.0,
+          "fat": 1.9,
+          "carbs": 1.0
+        },
+        {
+          "name": "白米 50g",
+          "calories": 84,
+          "protein": 1.3,
+          "fat": 0.2,
+          "carbs": 18.5
+        }
+      ],
+      "dinner": [
+        {
+          "name": "白米 240g",
+          "calories": 403,
+          "protein": 6.0,
+          "fat": 0.7,
+          "carbs": 88.8
+        },
+        {
+          "name": "卵かけご飯（生卵2個）",
+          "calories": 182,
+          "protein": 12.6,
+          "fat": 13.0,
+          "carbs": 0.6
+        },
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
+      ]
+    },
+    "2026-02-24": {
+      "breakfast": [
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        },
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        },
+        {
+          "name": "ファミマ昆布おにぎり ×2",
+          "calories": 366,
+          "protein": 7.0,
+          "fat": 2.4,
+          "carbs": 78.6
+        },
+        {
+          "name": "カニカマバー 1本",
+          "calories": 75,
+          "protein": 10.1,
+          "fat": 0.2,
+          "carbs": 8.1
+        }
+      ],
+      "lunch": [
+        {
+          "name": "白米 250g",
+          "calories": 420,
+          "protein": 6.3,
+          "fat": 0.8,
+          "carbs": 92.5
+        },
+        {
+          "name": "鶏むねひき肉 200g",
+          "calories": 216,
+          "protein": 45.0,
+          "fat": 3.0,
+          "carbs": 0
+        },
+        {
+          "name": "卵 1個",
+          "calories": 91,
+          "protein": 6.3,
+          "fat": 6.5,
+          "carbs": 0.3
+        },
+        {
+          "name": "マイプロテイン 2杯",
+          "calories": 206,
+          "protein": 42.0,
+          "fat": 3.8,
+          "carbs": 2.0
+        }
+      ],
+      "snack": [
+        {
+          "name": "セブン大福餅",
+          "calories": 160,
+          "protein": 4.0,
+          "fat": 0.5,
+          "carbs": 35.0
+        },
+        {
+          "name": "セブン大きなおむすび鮭わかめ",
+          "calories": 290,
+          "protein": 7.5,
+          "fat": 3.0,
+          "carbs": 58.0
+        },
+        {
+          "name": "セブン油淋鶏 1個",
+          "calories": 185,
+          "protein": 13.6,
+          "fat": 10.8,
+          "carbs": 8.5
+        },
+        {
+          "name": "デキストリン水 1杯",
+          "calories": 208,
+          "protein": 0,
+          "fat": 0,
+          "carbs": 52.3
+        }
+      ],
+      "dinner": [
+        {
+          "name": "白米 150g",
+          "calories": 252,
+          "protein": 3.8,
+          "fat": 0.5,
+          "carbs": 55.5
+        },
+        {
+          "name": "卵かけご飯（生卵3個）",
+          "calories": 273,
+          "protein": 18.9,
+          "fat": 19.5,
+          "carbs": 0.9
+        }
+      ]
     }
   },
   "weekly_measurements": [
